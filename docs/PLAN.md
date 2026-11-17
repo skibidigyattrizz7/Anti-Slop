@@ -36,6 +36,14 @@ Taken from the owner's existing skills, which already work:
 
 SKILL.md stays under about 500 words. Anything countable gets a script.
 
+Rules from the open-source teardown (`research_notes/Building good skills and agents/open_source_teardown.md`):
+
+- The description holds triggers only: "Use when..." plus the moment or symptom, in everyday words.
+- SKILL.md routes: a small "read X when Y" table points to `references/`.
+- Bans (never) are listed apart from defaults (the brief can override them).
+- Every agent reports in one fixed format: location, severity, evidence, fix, verdict.
+- Checking agents get read-only tools. Only fixers can edit.
+
 ## 5. Folder layout
 
 ```
