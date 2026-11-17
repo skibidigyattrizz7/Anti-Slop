@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Chen's Cycle Repair</title>
+<meta name="description" content="Bike tune-ups for $65 and flat repairs for $15. Open Tuesday to Saturday, 9 to 5, on 4th Street.">
+<style>
+:root {
+  --bg: #f3ede2;
+  --surface: #fffdf8;
+  --text: #1d1b18;
+  --text-muted: #5b5448;
+  --accent: #b8460f;
+  --accent-text: #ffffff;
+  --focus: #1d1b18;
+  --display: Rockwell, "Roboto Slab", Georgia, "Times New Roman", serif;
+  --text-font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1815;
+    --surface: #242019;
+    --text: #f3ede2;
+    --text-muted: #bfb6a5;
+    --accent: #f08a4b;
+    --accent-text: #1a1815;
+    --focus: #f3ede2;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1815;
+  --surface: #242019;
+  --text: #f3ede2;
+  --text-muted: #bfb6a5;
+  --accent: #f08a4b;
+  --accent-text: #1a1815;
+  --focus: #f3ede2;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1rem/1.6 var(--text-font);
+}
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 16px; }
+
+header { border-top: 8px solid var(--accent); padding: 40px 0 32px; }
+.kicker {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2.25rem, 8vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 8px 0 16px;
+}
+.lede { font-size: 1.125rem; margin: 0 0 24px; max-width: 30rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+section { border-top: 1px solid var(--text); padding: 32px 0; }
+h2 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0;
+}
+@media (min-width: 30rem) { .tags { grid-template-columns: 1fr 1fr; } }
+.tag {
+  margin: 0;
+  padding: 20px;
+  border: 2px dashed var(--text-muted);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.tag dt { font-weight: 700; color: var(--text-muted); }
+.tag dd {
+  margin: 4px 0 0;
+  font-family: var(--display);
+  font-size: clamp(2.75rem, 10vw, 4rem);
+  line-height: 1;
+}
+
+.hours {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 24px;
+  margin: 0;
+}
+.hours dt { font-weight: 700; color: var(--text-muted); }
+.hours dd { margin: 0; }
+
+footer { padding: 24px 0 40px; font-size: 0.875rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <p class="kicker">Chen's Cycle Repair</p>
+    <h1>Bike repair on 4th Street</h1>
+    <p class="lede">Tune-ups and flat repairs. Open Tuesday to Saturday, 9 to 5.</p>
+    <a class="btn" href="tel:555-0142">Call 555-0142</a>
+  </header>
+
+  <section aria-labelledby="prices">
+    <h2 id="prices">Prices</h2>
+    <dl class="tags">
+      <div class="tag">
+        <dt>Tune-up</dt>
+        <dd>$65</dd>
+      </div>
+      <div class="tag">
+        <dt>Flat repair</dt>
+        <dd>$15</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="hours">
+    <h2 id="hours">Hours and location</h2>
+    <dl class="hours">
+      <dt>Open</dt>
+      <dd>Tuesday to Saturday</dd>
+      <dt>Time</dt>
+      <dd>9 am to 5 pm</dd>
+      <dt>Closed</dt>
+      <dd>Sunday and Monday</dd>
+      <dt>Find us</dt>
+      <dd>On 4th Street</dd>
+      <dt>Phone</dt>
+      <dd><a href="tel:555-0142">555-0142</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer class="wrap">
+  Chen's Cycle Repair, 4th Street. 555-0142.
+</footer>
+</body>
+</html>

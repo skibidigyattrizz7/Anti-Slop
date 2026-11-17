@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chen's Cycle Repair</title>
+<meta name="description" content="Chen's Cycle Repair on 4th Street. Tune-ups from $65, flat repairs from $15. Open Tuesday to Saturday, 9 to 5.">
+<style>
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --text: #1d1d1b;
+  --muted: #5c5a55;
+  --line: #ddd8cd;
+  --accent: #b5472b;
+  --accent-text: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161614;
+    --surface: #1f1f1c;
+    --text: #f2f0ea;
+    --muted: #b3b0a7;
+    --line: #3a3934;
+    --accent: #e0724f;
+    --accent-text: #161614;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161614;
+  --surface: #1f1f1c;
+  --text: #f2f0ea;
+  --muted: #b3b0a7;
+  --line: #3a3934;
+  --accent: #e0724f;
+  --accent-text: #161614;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+header { padding: 20px 0; border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.name { font-weight: 700; font-size: 1.1rem; }
+.phone { color: var(--text); font-weight: 600; text-decoration: none; }
+.hero { padding: 64px 0 48px; }
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.15; margin: 0 0 16px; font-weight: 700; }
+.lede { font-size: 1.125rem; color: var(--muted); margin: 0 0 28px; max-width: 36em; }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-text);
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:focus-visible, .phone:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+h2 { font-size: 1.5rem; margin: 0 0 20px; }
+.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.price { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+.price h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.amount { font-size: 1.75rem; font-weight: 700; margin: 0 0 4px; }
+.price p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
+dt { font-weight: 600; }
+dd { margin: 0; color: var(--muted); }
+footer { padding: 32px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 480px) {
+  .hero { padding: 40px 0 32px; }
+  dl { grid-template-columns: 1fr; gap: 2px 0; }
+  dd { margin-bottom: 12px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="name">Chen's Cycle Repair</span>
+    <a class="phone" href="tel:+15550142">555-0142</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <h1>Bike repair on 4th Street.</h1>
+    <p class="lede">Tune-ups and flat repairs, done by Chen's Cycle Repair. Open Tuesday to Saturday, 9 to 5.</p>
+    <a class="btn" href="tel:+15550142">Call 555-0142</a>
+  </div>
+
+  <section class="wrap" id="prices">
+    <h2>Prices</h2>
+    <div class="prices">
+      <div class="price">
+        <h3>Tune-up</h3>
+        <p class="amount">$65</p>
+        <p>Full tune-up for your bike.</p>
+      </div>
+      <div class="price">
+        <h3>Flat repair</h3>
+        <p class="amount">$15</p>
+        <p>Fixing a flat tire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="visit">
+    <h2>Visit us</h2>
+    <dl>
+      <dt>Location</dt><dd>4th Street</dd>
+      <dt>Hours</dt><dd>Tuesday to Saturday, 9 to 5</dd>
+      <dt>Phone</dt><dd><a href="tel:+15550142">555-0142</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Chen's Cycle Repair, 4th Street. Phone 555-0142.</div>
+</footer>
+</body>
+</html>
