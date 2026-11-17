@@ -26,3 +26,13 @@ Key: t-b used the skill. t-a did not.
 ## Limits
 
 One run per arm on one task is too few to be sure of anything. These scores predate the changes above, and the rubric changed after judging. Rerun with 3 tasks and 3 runs per arm before trusting the difference.
+
+## Rerun after the changes (same day)
+
+The brief was written again with the changed skill (file t-c) and scored by a new blind judge against the same no-skill brief (t-a), using the changed rubric. Report: `JUDGE-rerun.md`.
+
+| Without skill | With changed skill | Judge preferred |
+|---|---|---|
+| 5/7, Fix first | 6/7, Ship | With skill |
+
+The changed skill left the churn period as unknown and did not compute on it, which is what lost the first round. It still wrote exact counts ("1,302 annual") from a rounded 31%, so the rubric now says how to treat counts from rounded figures. Both the skill and the rubric changed between rounds. One run per arm.

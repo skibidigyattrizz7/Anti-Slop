@@ -15,6 +15,9 @@ Used by the judge agent and for self-checks. Each check is PASS, FAIL or N/A. A 
 
 ## How to read the edge cases
 
+- **Counts from a rounded percentage:** a count worked out from a rounded figure is written as rounded too ("about 1,300 of 4,200", from 31%). An exact-looking count such as "1,302" fails the false-precision check.
+- **One finding, one check:** when a derived number rests on an unstated assumption, fail the derived-number check only. Do not fail the precision check for the same line.
+
 - **R1, user data:** when the brief's own data is the only source, PASS if it is cited as the user's with a date and not called verified. Do not require it to be opened. Calling it "verified" is a FAIL.
 - **R3, short briefs:** one source and date line per section, or one under the numbers, is enough. Each paragraph need not repeat it.
 - **R3, derived numbers:** compounding, annualising or totalling needs the period or unit stated in the brief. If the brief leaves it open, a computed figure is a FAIL, even when the unknown is listed elsewhere. "If 6.8% is monthly, then..." with the arithmetic shown passes.

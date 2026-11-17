@@ -24,3 +24,13 @@ Key: t-a used the skill. t-b did not.
 ## Limits
 
 One run per arm and one task is too few to be sure of anything. The same model family wrote and judged the rubric changes. Rerun with 3 tasks and 3 runs per arm, and a different judge, before trusting the difference.
+
+## Rerun after the changes (same day)
+
+The scene was written again with the changed skill (file t-c) and scored by a new blind judge against the same no-skill scene (t-b), using the changed rubric. Report: `JUDGE-rerun.md`.
+
+| Without skill | With changed skill | Judge preferred |
+|---|---|---|
+| 4/8, Fix first | 8/8, Ship | With skill |
+
+Both the skill and the rubric changed between rounds, so part of this gap comes from the stricter rubric. The no-skill scene now fails on length (449 words), a moody-sky opening, narration that restates a shown feeling, and an ending on stillness. One run per arm.

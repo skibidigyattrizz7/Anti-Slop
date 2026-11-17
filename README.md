@@ -66,7 +66,7 @@ node skills/see-it-run/scripts/shoot.cjs --selftest
 
 ## How it is tested
 
-Each skill is run on the same task with and without the skill, then scored by the judge in a fresh context that does not know which is which. The first round is summarised in `evals/RESULTS.md`: the skill version was preferred in 6 of 8 categories, and the two that did not win cleanly (fiction and reports) were changed afterwards.
+Each skill is run on the same task with and without the skill, then scored by the judge in a fresh context that does not know which is which. The first round is summarised in `evals/RESULTS.md`: the skill version was preferred in 6 of 8 categories on the first pass. The two that did not win cleanly (fiction and reports) were changed and re-tested, and the skill version was preferred in both.
 
 Check the whole repo with one command:
 
@@ -79,7 +79,7 @@ python3 tools/check_repo.py
 Version 0.1.0. Honest state of things:
 
 - The eval round is small: one run per arm and one task per category. It shows the skills change the output. It does not prove how much.
-- The changes made after the eval round have not been re-tested yet.
+- Writing, fiction and reports were re-tested after their fixes. The rubric changes in the other categories have not been re-tested yet.
 - The scripts are tested on their own samples and a few eval files, not on large real projects.
 - The research notes for games and audio are thin, and some items are marked unverified.
 - Tells go out of date. Each `tells.md` carries a `last_verified` date and a re-check schedule.

@@ -13,11 +13,13 @@ Each row is one task, written once with the skill and once without (writer: Haik
 | human-games | 1/1 | 2/2 | With skill, but most of the rubric did not apply |
 | human-fiction | 8/8 | 7/8 | Judge liked the skill scene more as prose, but it dropped a supplied detail and failed the must-pass check |
 | real-reports | 6/7 | 6/7 | Without skill, narrowly |
+| human-fiction (after fixes) | 4/8 | 8/8 | With skill |
+| real-reports (after fixes) | 5/7 | 6/7 | With skill |
 
 ## What to take from it
 
 - The skills changed the output in every category, and usually for the better.
-- Two did not win cleanly. The fiction skill dropped a detail from the brief. The reports skill computed a number on an assumption it had not checked and left blanks in its recommendation. Both skills and their rubrics were changed after the run. Those changes have not been re-tested.
+- Two did not win cleanly. The fiction skill dropped a detail from the brief. The reports skill computed a number on an assumption it had not checked and left blanks in its recommendation. Both skills and their rubrics were changed after the run and re-tested the same day, and the skill version was then preferred in both. The rubrics changed too, so part of that gain comes from stricter checks.
 - Every rubric was reworded where a judge found a check unclear, and each now has an edge-case section.
 
 ## Limits
