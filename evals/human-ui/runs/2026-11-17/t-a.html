@@ -6,37 +6,50 @@
 <meta name="color-scheme" content="light dark">
 <title>Chen's Cycle Repair</title>
 <meta name="description" content="Bike tune-ups for $65 and flat repairs for $15. Open Tuesday to Saturday, 9 to 5, on 4th Street.">
+<!--
+  Design contract (static page, no data, so no loading, empty or error states apply)
+  Audience: a rider on a phone with a flat tire, who needs price, hours and a phone number fast.
+  Direction: the repair tag tied to a handlebar. Stamped mono prices, a heavy sans headline, a safety-yellow rule.
+  Why: a bike shop's tags and shop-floor labels, so the page reads like the shop.
+  Not this: cream paper, serif display and terracotta, the usual "editorial" default.
+  Type: Arial Black style display for headings, a monospace face for prices and hours. Two families with clear contrast.
+  Palette: concrete grey page, white tags, near-black text, safety-yellow accent with dark text on it.
+  Layout: one column. Prices are the biggest thing on the page, hours are a definition list, the phone call is the one button.
+  States: the only controls are the two tel: links, each with a visible :focus-visible ring. Not checked by tabbing in a browser.
+  Facts: no street number was given, so the page says only "4th Street". No testimonials, stats or logos.
+-->
 <style>
 :root {
-  --bg: #f3ede2;
-  --surface: #fffdf8;
-  --text: #1d1b18;
-  --text-muted: #5b5448;
-  --accent: #b8460f;
-  --accent-text: #ffffff;
-  --focus: #1d1b18;
-  --display: Rockwell, "Roboto Slab", Georgia, "Times New Roman", serif;
+  --bg: #ecebe6;
+  --surface: #ffffff;
+  --text: #161616;
+  --text-muted: #55534d;
+  --accent: #f2c200;
+  --accent-text: #161616;
+  --focus: #161616;
+  --display: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
   --text-font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1a1815;
-    --surface: #242019;
-    --text: #f3ede2;
-    --text-muted: #bfb6a5;
-    --accent: #f08a4b;
-    --accent-text: #1a1815;
-    --focus: #f3ede2;
+    --bg: #161616;
+    --surface: #222222;
+    --text: #ecebe6;
+    --text-muted: #a8a59c;
+    --accent: #f2c200;
+    --accent-text: #161616;
+    --focus: #f2c200;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1a1815;
-  --surface: #242019;
-  --text: #f3ede2;
-  --text-muted: #bfb6a5;
-  --accent: #f08a4b;
-  --accent-text: #1a1815;
-  --focus: #f3ede2;
+  --bg: #161616;
+  --surface: #222222;
+  --text: #ecebe6;
+  --text-muted: #a8a59c;
+  --accent: #f2c200;
+  --accent-text: #161616;
+  --focus: #f2c200;
 }
 
 * { box-sizing: border-box; }
@@ -48,20 +61,21 @@ body {
 }
 .wrap { max-width: 40rem; margin: 0 auto; padding: 0 16px; }
 
-header { border-top: 8px solid var(--accent); padding: 40px 0 32px; }
+header { border-top: 10px solid var(--accent); padding: 40px 0 32px; }
 .kicker {
   margin: 0;
   font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 h1 {
   font-family: var(--display);
-  font-size: clamp(2.25rem, 8vw, 3.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
   margin: 8px 0 16px;
 }
 .lede { font-size: 1.125rem; margin: 0 0 24px; max-width: 30rem; }
@@ -71,19 +85,22 @@ h1 {
   align-items: center;
   min-height: 44px;
   padding: 10px 20px;
-  border-radius: 6px;
+  border: 2px solid var(--text);
   background: var(--accent);
   color: var(--accent-text);
+  font-family: var(--mono);
   font-weight: 700;
   text-decoration: none;
 }
 a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
-section { border-top: 1px solid var(--text); padding: 32px 0; }
+section { border-top: 2px solid var(--text); padding: 32px 0; }
 h2 {
   font-family: var(--display);
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0 0 16px;
 }
 
@@ -97,15 +114,16 @@ h2 {
 .tag {
   margin: 0;
   padding: 20px;
-  border: 2px dashed var(--text-muted);
-  border-radius: 12px;
+  border: 2px solid var(--text);
+  border-radius: 4px;
   background: var(--surface);
 }
 .tag dt { font-weight: 700; color: var(--text-muted); }
 .tag dd {
   margin: 4px 0 0;
-  font-family: var(--display);
-  font-size: clamp(2.75rem, 10vw, 4rem);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 10vw, 3.75rem);
   line-height: 1;
 }
 
@@ -114,6 +132,7 @@ h2 {
   grid-template-columns: auto 1fr;
   gap: 8px 24px;
   margin: 0;
+  font-family: var(--mono);
 }
 .hours dt { font-weight: 700; color: var(--text-muted); }
 .hours dd { margin: 0; }
