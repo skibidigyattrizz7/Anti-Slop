@@ -6,14 +6,21 @@ Check in this order, every time.
 
 | ID | Check | PASS when | FAIL when |
 |---|---|---|---|
-| W1 | Point | The point fits in one sentence and the first two sentences deliver content | The opening restates the task, sets a scene of generalities or announces what is coming |
-| W2 | Specifics | Every paragraph of 40+ words holds a checkable name, number, date, place or example | A paragraph of 40+ words has none |
-| W3 | Fidelity | Every fact traces to the brief, the user or a cited source | A fact, quote, statistic or personal detail appears from nowhere, or a brief fact is changed or dropped |
-| W4 | Direct claims | Claims are stated plainly | Any "not X, it's Y" staging, vague attribution ("studies show") or inflated significance |
+| W1 | Point | The point fits in one sentence and the first two sentences deliver content | The opening restates the task, asks a warm-up question, announces what is coming or sets a scene before the first fact |
+| W2 | Specifics | Every paragraph of 40+ words holds a checkable name, number, date, place or example, and the whole piece has at least one per 100 words | A paragraph of 40+ words has none, or the piece falls under one per 100 words |
+| W3 | Fidelity (must pass) | Every event, motive, number, quote and source traces to the brief, the user or a cited source, with its meaning unchanged | One appears from nowhere, or a supplied fact is changed, stretched or dropped |
+| W4 | Direct claims | Claims are stated plainly | A "not X" half that nobody claimed, vague attribution ("studies show"), or an ordinary thing called the worst, pivotal or a turning point |
 | W5 | Rhythm | Sentence lengths vary and lists use the real count | Script reports variation under 0.35 on 150+ words, or more than one habitual triad per 300 words |
 | W6 | Words | Fewer than 3 cluster words and no stock phrases (lists in `tells.md`) | 3 or more cluster words, or any stock phrase |
-| W7 | Ending | The last paragraph adds a detail, consequence, decision or open question | The ending summarises, moralises or offers more help |
-| W8 | Format | Formatting fits where the text will be read | Decorative bold, headings on a short piece, bullets for prose, markdown where it won't render |
+| W7 | Ending | The last paragraph adds a detail, consequence, decision, open question or a concrete next step | The ending repeats the opening, summarises, or lists general lessons |
+| W8 | Format | Formatting fits where the text will be read | Decorative bold, section headings on a piece under 300 words, bullets for prose, markdown where it won't render |
+
+## How to read the edge cases
+
+- **W3, views:** a lesson or opinion drawn from the supplied facts passes when it is stated as a view ("we should check hardware first"). It fails when it is stated as something that happened ("we ran the course again").
+- **W4, real contrasts:** a contrast passes when it corrects something the reader believes or compares two real options ("a week before, in place of the night before"). The script's "Y, not X tail" count is a prompt to look. It is never a FAIL on its own.
+- **W5, near the line:** a variation score between 0.35 and 0.40 with same-shape sentences is a FAIL. Quote three sentences in a row.
+- **W8, titles:** one title is fine on any length.
 
 ## Verdict
 
