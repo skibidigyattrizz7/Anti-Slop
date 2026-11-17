@@ -9,7 +9,7 @@ Usage:
 Exit codes: 0 no flags, 1 one or more flags, 2 usage error.
 Lists last_verified: 2026-11-17 (see references/tells.md).
 
-Signs counted: purple or indigo gradients, gradient text, Inter or Geist as the only font,
+Signs counted: purple or indigo gradients, gradient text, system-only, Inter or Geist as the only fonts,
 backdrop-blur or glass, very large radius on most elements, 3-column grids, pill badge above an h1,
 emoji in headings, scroll fade-in classes, colored left-border cards, buzzword copy, em dashes.
 
@@ -21,10 +21,12 @@ purpose. Use the counts to know where to look, then look at the page at 375px an
 import colorsys, json, re, sys
 
 FLAGS_NOTE = "Counts are evidence, not proof. Open the page at 375px and 1280px and judge it."
-GENERIC_FONTS = {"sans-serif", "serif", "monospace", "system-ui", "ui-sans-serif", "ui-serif", "ui-monospace",
-                 "-apple-system", "blinkmacsystemfont", "segoe ui", "helvetica", "helvetica neue", "arial",
-                 "roboto", "inherit", "initial", "cursive", "fantasy", "emoji", "math"}
-DEFAULT_FONTS = {"inter", "geist", "geist sans"}
+KEYWORDS = {"sans-serif", "serif", "monospace", "system-ui", "ui-sans-serif", "ui-serif", "ui-monospace",
+            "ui-rounded", "inherit", "initial", "unset", "cursive", "fantasy", "emoji", "math"}
+# Fonts every device already has. A stack made only of these, Inter or Geist is the default look.
+SYSTEM_FONTS = {"-apple-system", "blinkmacsystemfont", "segoe ui", "helvetica", "helvetica neue", "arial", "roboto",
+                "sfmono-regular", "menlo", "consolas", "liberation mono", "courier new", "monaco"}
+DEFAULT_FONTS = {"inter", "geist", "geist sans", "geist mono"}
 EMOJI = "[\U0001F300-\U0001FAFF☀-⛿✅✨⭐❌❤]"
 BUZZ = ["elevate", "unlock", "seamless", "seamlessly", "supercharge", "all-in-one", "revolutionize"]
 PURPLE_NAMES = r"(?:purple|indigo|violet|fuchsia)"
@@ -48,18 +50,31 @@ def purple_gradients(t):
     return n
 
 
+def _split(value):
+    return [f.strip(" '\"").lower() for f in value.split(",") if f.strip(" '\"")]
+
+
 def font_check(t):
     families = []
     for m in re.finditer(r"font-family\s*:\s*([^;}]+)", t, re.I):
-        families += [f.strip(" '\"").lower() for f in m.group(1).split(",")]
+        families += _split(m.group(1))
+    # custom properties such as --display or --text-font
+    for m in re.finditer(r"--[\w-]*(?:font|display|mono|sans|serif|family)[\w-]*\s*:\s*([^;}]+)", t, re.I):
+        families += _split(m.group(1))
+    # shorthand: font: 400 1rem/1.6 Georgia, serif
+    for m in re.finditer(r"(?<![-\w])font\s*:\s*[^;}]*?\d(?:px|rem|em|%|pt)(?:\s*/\s*[\d.]+\w*)?\s+([^;}]+)", t, re.I):
+        families += _split(m.group(1))
     for m in re.finditer(r"fontFamily\s*:\s*['\"]([^'\"]+)['\"]", t):
-        families += [f.strip(" '\"").lower() for f in m.group(1).split(",")]
+        families += _split(m.group(1))
     for m in re.finditer(r"\b(Inter|Geist|Geist_Mono|Roboto|Lora|Playfair_Display)\s*\(\s*\{", t):  # next/font
         families.append(m.group(1).lower().replace("_", " "))
     for m in re.finditer(r"fonts\.googleapis\.com/css2?\?family=([^\"'&>]+)", t):
         families += [m.group(1).split(":")[0].replace("+", " ").lower()]
-    named = {f for f in families if f and f not in GENERIC_FONTS and not f.startswith("var(")}
-    return {"named_fonts": sorted(named), "default_only": bool(named) and named <= DEFAULT_FONTS}
+    families = [f for f in families if not f.startswith("var(") and not re.match(r"^[\d.]+\w*$", f)]
+    named = {f for f in families if f not in KEYWORDS}
+    # default_only: every family is a keyword, a system font, Inter or Geist
+    default_only = bool(families) and all(f in KEYWORDS | SYSTEM_FONTS | DEFAULT_FONTS for f in families)
+    return {"named_fonts": sorted(named), "default_only": default_only}
 
 
 def analyze(text):
@@ -96,7 +111,7 @@ def analyze(text):
     flags = []
     if r["purple_gradients"]: flags.append("purple or indigo gradient")
     if r["gradient_text"]: flags.append("gradient or transparent text")
-    if font["default_only"]: flags.append("only Inter or Geist named")
+    if font["default_only"]: flags.append("default fonts only (system stack, Inter or Geist)")
     if r["glass_blur"]: flags.append("backdrop blur or glass")
     if r["big_radius"] >= 3 and r["big_radius_share_of_classed_elements"] >= 0.3: flags.append("very large radius on many elements")
     if r["three_col_grids"]: flags.append("3-column grid (check whether the cards are equal)")
@@ -134,6 +149,13 @@ def selftest():
     for k in need:
         assert r[k], (k, r)
     assert r["fonts"]["default_only"] and r["big_radius"] == 3 and {"unlock", "seamless", "supercharge", "all-in-one"} <= set(r["buzzwords"]), r
+    sysonly = analyze("<style>body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}</style>")
+    assert sysonly["fonts"]["default_only"] and "segoe ui" in sysonly["fonts"]["named_fonts"], sysonly
+    var = analyze("<style>:root{--display:Rockwell,'Roboto Slab',Georgia,serif;--text-font:system-ui,sans-serif}"
+                  "body{font:400 1rem/1.6 var(--text-font)}h1{font-family:var(--display)}</style>")
+    assert var["fonts"]["named_fonts"] == ["georgia", "roboto slab", "rockwell"] and not var["fonts"]["default_only"], var
+    short = analyze("<style>p{font:16px/1.5 Georgia,serif}</style>")
+    assert short["fonts"]["named_fonts"] == ["georgia"], short
     c = analyze(CLEAN)
     assert c["flags"] == [] and c["buzzwords"] == {}, c
     print("selftest ok")

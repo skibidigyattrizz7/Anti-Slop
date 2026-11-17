@@ -13,12 +13,14 @@ Check in this order, every time.
 | W5 | Rhythm | Sentence lengths vary and lists use the real count | Script reports variation under 0.35 on 150+ words, or more than one habitual triad per 300 words |
 | W6 | Words | Fewer than 3 cluster words and no stock phrases (lists in `tells.md`) | 3 or more cluster words, or any stock phrase |
 | W7 | Ending | The last paragraph adds a detail, consequence, decision, open question or a concrete next step | The ending repeats the opening, summarises, or lists general lessons |
-| W8 | Format | Formatting fits where the text will be read | Decorative bold, section headings on a piece under 300 words, bullets for prose, markdown where it won't render |
+| W8 | Format and length | Formatting fits where the text will be read, and the length is within about 20 percent of what was asked | Decorative bold, section headings on a piece under 300 words, bullets for prose, markdown where it won't render, or a length well off the brief |
 
 ## How to read the edge cases
 
-- **W3, views:** a lesson or opinion drawn from the supplied facts passes when it is stated as a view ("we should check hardware first"). It fails when it is stated as something that happened ("we ran the course again").
+- **W2, counts:** a count of the writer's own list ("three lessons") is not a specific. A number from the brief or a source is.
+- **W3, views and plans:** a lesson, opinion or plan drawn from the supplied facts passes when it is stated as a view or an intention ("we should check hardware first", "next season we will"). It fails when it is stated as something that happened ("we ran the course again"), as a cause nobody supplied ("the screw bent because"), or when a supplied word is swapped for a different one ("bent" to "loose").
 - **W4, real contrasts:** a contrast passes when it corrects something the reader believes or compares two real options ("a week before, in place of the night before"). The script's "Y, not X tail" count is a prompt to look. It is never a FAIL on its own.
+- **W5, triads:** a habitual triad is three parallel words or phrases where the content has no natural count of three ("fast, simple and reliable"). Three real steps or three supplied facts are not one. The script's `triads` count is a prompt to look.
 - **W5, near the line:** a variation score between 0.35 and 0.40 with same-shape sentences is a FAIL. Quote three sentences in a row.
 - **W8, titles:** one title is fine on any length.
 

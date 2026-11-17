@@ -5,7 +5,7 @@ CANNOT open links or verify claims. It cannot tell if a source exists, says what
 or if a number is true. A clean run proves nothing about accuracy: open every source yourself.
 
 Counts: vague attributions, numbers with no link or citation marker in the same paragraph,
-links, a Sources section, trend filler, suspiciously round statistics.
+links, a Sources section, unfilled placeholders, trend filler, suspiciously round statistics.
 
 Usage:
   python3 check_report.py FILE          human-readable report
@@ -21,6 +21,7 @@ VAGUE = r"(?i)\b(?:studies (?:show|suggest|have shown)|experts (?:say|agree|argu
 FILLER = r"(?i)\b(?:growing rapidly|rapidly growing|increasingly (?:important|popular|common)|plays? a (?:crucial|vital|key) role|highlights? the importance|in today's (?:fast-paced|digital))"
 NUM = r"\b\d[\d,.]*\s?%|\b\d{1,3}(?:,\d{3})+\b|\b\d+(?:\.\d+)?\s?(?:million|billion|trillion)\b|\$\s?\d[\d,.]*"
 CITE = r"https?://|\[\d+\]|\[[^\]]+\]\(|\([A-Z][A-Za-z-]+(?: et al\.)?,? \d{4}\)|\[source|\[link"
+PLACEHOLDER = r"(?i)\[[^\]\n]*\b(?:needed|tbd|todo|insert|placeholder)\b[^\]\n]*\]|\bTBD\b"
 SOURCES_HEAD = r"(?im)^\s*(?:#+\s*)?(?:\*\*)?(?:sources|references|bibliography|works cited)(?:\*\*)?:?\s*$"
 
 
@@ -42,6 +43,7 @@ def analyze(text):
         "has_sources_section": bool(re.search(SOURCES_HEAD, text)),
         "paragraphs_with_numbers_but_no_citation": len(uncited),
         "uncited_examples": uncited[:3],
+        "placeholders": len(re.findall(PLACEHOLDER, text)),
         "round_percentages": round_stats,
     }
     flags = []
@@ -50,6 +52,7 @@ def analyze(text):
     if r["paragraphs_with_numbers_but_no_citation"]: flags.append("numbers with no citation in the same paragraph")
     if r["words"] > 300 and r["links"] == 0: flags.append("no links in 300+ words")
     if r["words"] > 300 and not r["has_sources_section"]: flags.append("no Sources section")
+    if r["placeholders"]: flags.append("unfilled placeholders")
     if len(round_stats) >= 3: flags.append("3+ round percentages")
     r["flags"] = flags
     return r
@@ -73,6 +76,8 @@ def selftest():
     g = analyze(good)
     assert g["links"] == 1 and g["paragraphs_with_numbers_but_no_citation"] == 0 and g["flags"] == [], g
     assert g["has_sources_section"], g
+    p = analyze("Approve a budget of [figure needed], by [date needed]. Owner TBD.")
+    assert p["placeholders"] == 3 and "unfilled placeholders" in p["flags"], p
     print("selftest ok")
 
 

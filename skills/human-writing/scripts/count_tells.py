@@ -45,6 +45,8 @@ def analyze(text):
         "expired_words": find(EXPIRED, text),
         "patterns": {k: len(re.findall(p, text)) for k, p in PATTERNS.items() if re.search(p, text)},
         # numbers are a rough stand-in for checkable specifics
+        # "fast, simple and reliable": three short parallel items; evidence only
+        "triads": len(re.findall(r"\b[\w'-]+(?: [\w'-]+)?, [\w'-]+(?: [\w'-]+)?,? (?:and|or) [\w'-]+\b", text)),
         "numbers_per_100_words": round(len(re.findall(r"\b\d[\d,.:]*\b", text)) * 100 / n, 2),
         "sentence_len_mean": round(statistics.mean(lens), 1) if lens else 0,
         # low variation = even rhythm
@@ -80,6 +82,7 @@ def selftest():
     for p in ("not X, it's Y", "stock phrase", "-ing tail", "vague attribution"):
         assert p in r["patterns"], (p, r["patterns"])
     assert r["flags"]
+    assert analyze("It is fast, simple and reliable.")["triads"] == 1
     assert "Y, not X tail" in analyze("Check the hardware a week before, not the night before.")["patterns"]
     clean = analyze("I fixed the bent screw at 11 p.m. The arm held.")
     assert clean["patterns"] == {} and clean["flags"] == [], clean

@@ -5,30 +5,30 @@ description: Use when writing or checking a report, research summary, literature
 
 # Real Reports
 
-A model writes the most plausible next sentence, so a report comes out confident, vague and neat: "studies show", round statistics, a source that looks right and was never opened. Some of those sources do not exist, or do not say what they are cited for. A skilled analyst opens every source, checks every number and says what is still unknown.
+A model writes the most plausible next sentence, so a report comes out confident, vague and neat: "studies show", round statistics, a source that looks right and was never opened. A skilled analyst opens every source, checks every number and says what is unknown.
 
 ## Top rules
 
-1. **Open the source before keeping the claim.** Search, open the page, find the passage. Memory is not a source.
-2. **Cite only what you read.** Each citation gets a link, and the page says what you cite it for.
-3. **Match the claim to the evidence.** Give the sample, scope and date. "One small study" stays "one small study".
-4. **Lead with the finding.** Start the report, section and slide with the conclusion, then the proof. Slide titles are sentences that claim something.
-5. **Replace adjectives with numbers.** Give figure, unit, baseline, date. With no figure, write "not measured".
-6. **Read the data yourself.** Check axes, units and columns. Recompute each figure from source rows, in code when you can.
-7. **End on a decision.** Recommendation, options, cost, owner, date. Then a Sources list.
+1. **Open the source before keeping the claim.** Find the passage. Memory is not a source. User-supplied data cannot be opened: cite it as "your data, name, date", never as verified.
+2. **Cite only what you read.** Link each citation; the page must say what you cite it for.
+3. **Match the claim to the evidence.** Give sample, scope and date. Put missing inputs as questions at the top of your reply, never as placeholders.
+4. **Lead with the finding.** Start the report, section and slide with the conclusion, then the proof. Slide titles claim something.
+5. **Replace adjectives with numbers.** Give figure, unit, baseline. With no figure, write "not measured".
+6. **Read the data yourself.** Check axes, units and columns. Recompute figures from source rows. Show the arithmetic for any derived number and build it only on stated facts. If the period or unit is unknown, do not compute: ask.
+7. **End on a decision.** Recommendation, cost, owner, date. Never leave a blank: give the recommendation the known facts support and say what would change it.
 
 ## Never
 
 - Invent a citation, statistic, quote, study or framework name.
-- Cite a page you did not open, or one that does not say it.
-- Present an unverified claim as checked. Label it "unverified" or cut it.
+- Cite a page you did not open or that does not say it.
+- Present an unverified claim as checked. Label or cut it.
+- Leave a placeholder such as "[figure needed]" in the finished text.
 
 ## Defaults
 
-- Prefer primary sources (paper, dataset, official page) over summaries of them.
-- Mark claims strong, moderate or weak when stakes are high.
-- Put source, date and unit under every chart.
-- Say once, clearly, what is uncertain or missing.
+- Prefer primary sources over summaries of them.
+- Put source and unit under every chart.
+- Name what is uncertain once.
 
 ## Read when
 
@@ -47,11 +47,11 @@ A model writes the most plausible next sentence, so a report comes out confident
 
 **After:** "A 2024 survey of 800 staff at one logistics firm found self-reported output rose for 60% of remote workers. [link] It is self-reported and from one firm, so it does not show a general effect."
 
-(Invented numbers to show the format. A real report uses verified figures.)
+(Invented numbers, form only.)
 
-**Before:** Slide title "Q3 overview".
+**Before:** "Churn is 6.8%, so we lose 57% a year." (period never stated)
 
-**After:** "Q3 refunds fell 18% after the checkout fix" (invented numbers, form only).
+**After:** "Churn is 6.8% (your export, Oct 2026). The period is not stated, so I have not annualised it. Which is it?"
 
 ## Final check
 

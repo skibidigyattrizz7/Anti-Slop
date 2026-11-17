@@ -9,7 +9,7 @@ A model builds the most common version of a game: a genre template, default numb
 
 ## Top rules
 
-1. **Run or play it first.** Start the game, do the core action, and watch the feedback before judging anything else.
+1. **Run or play it first.** Start the game, do the core action, and watch the feedback before judging anything else. If you cannot run it, write a test plan with numbers and pass/fail thresholds: frame time in ms, particle or triangle count, the lowest quality level, and a cleanup check (nothing left behind afterward).
 2. **Pick one core verb and give it a twist.** "Every shot pushes you back, so firing is also movement."
 3. **Tune by playing.** Change one number, play, repeat. Gray-box the fun before any polish.
 4. **Answer every input.** Layer sound, flash, knockback, particles, small shake and brief hit-stop. Scale to importance and keep the action readable.

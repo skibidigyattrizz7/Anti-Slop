@@ -2,11 +2,12 @@
 /* Open a page at phone and desktop size, save screenshots, and report what can be measured.
 
 Usage:
-  node shoot.cjs <url-or-html-file> [--out DIR]
+  node shoot.cjs <url-or-html-file> [--out DIR] [--dark]
   node shoot.cjs --selftest
 
 Prints a JSON report: page title, HTTP status, console errors, failed requests,
-horizontal overflow, tap targets under 24 px, images with no alt text.
+horizontal overflow, tap targets under 24 px (with the first few named), images with
+no alt text. --dark renders the page with a dark colour-scheme preference.
 Exit codes: 0 no problems, 1 problems found, 2 usage or setup error.
 
 Needs Playwright with Chromium (npm i playwright && npx playwright install chromium).
@@ -25,7 +26,7 @@ function toUrl(target) {
   return 'file://' + p;
 }
 
-async function shoot(target, outDir) {
+async function shoot(target, outDir, dark = false) {
   let chromium;
   try { ({ chromium } = require('playwright')); }
   catch { throw new Error('Playwright is not installed. Run: npm i playwright && npx playwright install chromium'); }
@@ -35,7 +36,7 @@ async function shoot(target, outDir) {
   const report = { url, screenshots: {}, views: {}, problems: [] };
   try {
     for (const [name, viewport] of Object.entries(SIZES)) {
-      const page = await browser.newPage({ viewport });
+      const page = await browser.newPage({ viewport, colorScheme: dark ? 'dark' : 'light' });
       const consoleErrors = [], failedRequests = [];
       page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text().slice(0, 200)); });
       page.on('pageerror', e => consoleErrors.push(String(e).slice(0, 200)));
@@ -45,10 +46,12 @@ async function shoot(target, outDir) {
       const m = await page.evaluate(() => {
         const visible = el => { const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; };
         const targets = [...document.querySelectorAll('a, button, input, select, textarea, [role=button]')].filter(visible);
+        const small = targets.filter(el => { const r = el.getBoundingClientRect(); return r.width < 24 || r.height < 24; });
         return {
           title: document.title,
           overflowPx: Math.max(0, document.documentElement.scrollWidth - window.innerWidth),
-          smallTapTargets: targets.filter(el => { const r = el.getBoundingClientRect(); return r.width < 24 || r.height < 24; }).length,
+          smallTapTargets: small.length,
+          smallTapTargetExamples: small.slice(0, 5).map(el => { const r = el.getBoundingClientRect(); return `<${el.tagName.toLowerCase()}> "${(el.innerText || el.getAttribute('aria-label') || '').trim().slice(0, 30)}" ${Math.round(r.width)}x${Math.round(r.height)}`; }),
           imagesWithoutAlt: [...document.images].filter(i => !i.hasAttribute('alt')).length,
         };
       });
@@ -71,11 +74,12 @@ async function shoot(target, outDir) {
 async function selftest() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'shoot-'));
   const bad = path.join(dir, 'bad.html'), good = path.join(dir, 'good.html');
-  fs.writeFileSync(bad, '<title>bad</title><div style="width:900px">wide</div><img src="data:,"><script>console.error("boom")</script>');
+  fs.writeFileSync(bad, '<title>bad</title><div style="width:900px">wide</div><a href="#" style="font-size:8px">x</a><img src="data:,"><script>console.error("boom")</script>');
   fs.writeFileSync(good, '<title>good</title><meta name="viewport" content="width=device-width"><p>fine</p>');
   const b = await shoot(bad, path.join(dir, 'bad'));
   const g = await shoot(good, path.join(dir, 'good'));
   const has = s => b.problems.some(p => p.includes(s));
+  if (!b.views.phone.smallTapTargetExamples.length) throw new Error('small tap target not named');
   if (!has('phone: page scrolls sideways') || !has('console error') || !has('no alt text')) throw new Error('bad page not flagged: ' + JSON.stringify(b.problems));
   if (g.problems.length) throw new Error('good page flagged: ' + JSON.stringify(g.problems));
   if (!fs.existsSync(b.screenshots.phone) || !fs.existsSync(g.screenshots.desktop)) throw new Error('screenshots missing');
@@ -88,8 +92,10 @@ async function selftest() {
     if (args[0] === '--selftest') { await selftest(); return; }
     const i = args.indexOf('--out');
     const outDir = i >= 0 ? args.splice(i, 2)[1] : null;
-    if (args.length !== 1) { console.error('Usage: node shoot.cjs <url-or-html-file> [--out DIR]'); process.exit(2); }
-    const report = await shoot(args[0], outDir || fs.mkdtempSync(path.join(os.tmpdir(), 'shots-')));
+    const d = args.indexOf('--dark');
+    const dark = d >= 0 && args.splice(d, 1).length > 0;
+    if (args.length !== 1) { console.error('Usage: node shoot.cjs <url-or-html-file> [--out DIR] [--dark]'); process.exit(2); }
+    const report = await shoot(args[0], outDir || fs.mkdtempSync(path.join(os.tmpdir(), 'shots-')), dark);
     console.log(JSON.stringify(report, null, 2));
     process.exit(report.problems.length ? 1 : 0);
   } catch (e) { console.error(String(e.message || e)); process.exit(2); }

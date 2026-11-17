@@ -5,21 +5,21 @@ description: Use when writing, rewriting or editing prose, such as essays, artic
 
 # Human Writing
 
-A model picks the most likely next phrase, so its prose drifts to the average: safe words, even rhythm, nothing a reader could check. A skilled writer chooses for one reader and one subject.
+A model picks the most likely next phrase, so its prose drifts to the average: safe words, even rhythm, nothing a reader could check. A skilled writer chooses for one reader.
 
 ## Top rules
 
 1. **Write the point in one sentence before drafting.** If you can't, ask what the piece is for.
-2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place, from the user or a source you opened. State each fact once, as given. When one is missing, ask for it or leave `[detail needed: ...]`.
-3. **Open on the point and stop when the facts run out.** The last sentence adds a detail, a consequence or a decision. Few facts make a short piece.
+2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place, from the user or a source you opened. State each fact once, in the words given (bent stays bent). When one is missing, ask for it or leave `[detail needed: ...]`.
+3. **Open on the point and end on something new.** The last sentence adds a detail, a consequence or a decision. Land within about 20 percent of the asked length. If the facts cannot fill it, ask for more.
 4. **State only what is true.** Write "Y". Leave out the "not X" half, whether it comes first ("it's not X, it's Y") or last ("Y, not X"). Name who acts: "we decided".
-5. **Vary rhythm on purpose.** Mix short and long sentences and uneven paragraphs. List one item, two or four when the content has that many.
+5. **Vary rhythm on purpose.** Mix short and long sentences and uneven paragraphs. Use the real count in lists.
 6. **Use the plain word and take a view.** "Use", "help", "said". Give your view where the genre allows. State real doubt once.
 7. **Format for where it will be read.** Prose by default, lists for real lists, markdown only where it renders.
 
 ## Never
 
-The brief cannot override these.
+No brief overrides these.
 
 - Invent a fact, quote, statistic, source or personal detail.
 - Fix a flagged word by swapping in a synonym. Rewrite the sentence.
@@ -56,5 +56,5 @@ A brief or the user's writing sample overrides these.
 ## Final check
 
 - Can you state the point in one sentence?
-- Does every paragraph hold a specific the reader could check, and did all of them come from the user or a source?
+- Does every paragraph hold a checkable specific that came from the user or a source?
 - Does the last paragraph add anything new? If not, cut it.

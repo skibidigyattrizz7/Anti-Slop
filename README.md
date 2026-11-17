@@ -45,7 +45,7 @@ Claude Code:
 /plugin install anti-slop@anti-slop
 ```
 
-ChatGPT and other tools: copy the text of a skill's `SKILL.md` into a Custom GPT's instructions or a project's instructions, and upload that skill's `references/` files as knowledge. An automatic export is planned and not built yet.
+ChatGPT and other tools: each skill has a ready copy in `dist/chatgpt/<skill>/`. Paste `instructions.md` into a Custom GPT's instructions or a project's instructions, and upload the files in `knowledge/`. The copies are built by `python3 tools/build_chatgpt.py`. Scripts and agents do not carry over.
 
 ## How a skill is laid out
 
@@ -66,14 +66,21 @@ node skills/see-it-run/scripts/shoot.cjs --selftest
 
 ## How it is tested
 
-Each skill is meant to be run on the same tasks with and without the skill, then scored by the judge in a fresh context that does not know which is which. The first run for `human-writing` is in `evals/human-writing/runs/`. It is small, and it says so.
+Each skill is run on the same task with and without the skill, then scored by the judge in a fresh context that does not know which is which. The first round is summarised in `evals/RESULTS.md`: the skill version was preferred in 6 of 8 categories, and the two that did not win cleanly (fiction and reports) were changed afterwards.
+
+Check the whole repo with one command:
+
+```
+python3 tools/check_repo.py
+```
 
 ## Status
 
 Version 0.1.0. Honest state of things:
 
-- `human-writing` has one small eval run. The other skills have test prompts and no run yet.
-- The scripts are tested on their own samples, not on large real projects.
+- The eval round is small: one run per arm and one task per category. It shows the skills change the output. It does not prove how much.
+- The changes made after the eval round have not been re-tested yet.
+- The scripts are tested on their own samples and a few eval files, not on large real projects.
 - The research notes for games and audio are thin, and some items are marked unverified.
 - Tells go out of date. Each `tells.md` carries a `last_verified` date and a re-check schedule.
 

@@ -5,7 +5,7 @@ description: Use when writing or fixing stories, scenes, characters, character n
 
 # Human Fiction
 
-A model drifts to the average story: the same names, a lighthouse or a shop, one clean plot line, a feeling explained, a gentle lesson at the end. Studies of tens of thousands of stories found this across models. Skilled writers start from a specific odd thing and let the cost fall on someone. Fix the shape first; new names alone will not do.
+A model drifts to the average story: the same names, a lighthouse or a shop, one clean plot line, a feeling explained, a gentle lesson at the end. Skilled writers start from a specific odd thing and let the cost fall on someone. Fix the shape first; new names alone will not do.
 
 ## Top rules
 
@@ -23,15 +23,17 @@ No brief overrides these.
 
 - Invent facts, quotes, sources or real events and present them as real.
 - Swap a flagged phrase for a synonym. Rewrite the beat.
+- Drop a brief detail (age, count, time). Show it concretely if not stated.
 - Tune a story to beat an AI detector, or hide AI use where it is not allowed.
 
 ## Defaults
 
 A brief or the user's own style overrides these.
 
-- Allow humor and mess. Each scene raises the stakes.
-- Worldbuilding: three odd rules that cause problems. NPC lines are short, with a quirk, and never a lore paragraph.
-- Open on the scene, not weather. Vary the shape: letters, a list.
+- Land within 10% of the asked length.
+- Allow humor and mess.
+- Worldbuilding: three odd rules that cause problems. NPC lines are short, with a quirk.
+- Open on the scene, not weather.
 
 ## Read when
 
