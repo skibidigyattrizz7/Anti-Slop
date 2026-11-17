@@ -1,0 +1,8 @@
+{
+  "name": "anti-slop",
+  "version": "0.1.0",
+  "description": "Skills and agents that help AI tools make writing, code, UI, games and media the way a skilled human would. Includes a judge, a viewer that looks at the real result, and a specialist per category.",
+  "license": "MIT",
+  "repository": "https://github.com/skibidigyattrizz7/Anti-Slop",
+  "keywords": ["writing", "design", "code-quality", "review", "skills", "agents"]
+}

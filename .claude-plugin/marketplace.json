@@ -1,0 +1,11 @@
+{
+  "name": "anti-slop",
+  "owner": { "name": "skibidigyattrizz7" },
+  "plugins": [
+    {
+      "name": "anti-slop",
+      "source": "./",
+      "description": "Skills and agents that help AI tools make work a skilled human would be proud of."
+    }
+  ]
+}
