@@ -34,7 +34,9 @@ Two agents that had never run were tested once each, on Sonnet, following their 
 |---|---|
 | 4/8, Fix first | 6/8, Fix first |
 
-It removed every invented event the judge had listed. It still failed the must-pass fidelity check: it kept a cause the brief never gave ("A part that small was behind the drops"), which it had noticed and listed under "Left alone", and it added "pit kit". It also came out 28 percent short. The test prompt told it not to load skills, and it read that as not reading the skill files, so it worked without the rubric. The agent file now says that an unstated cause or motive counts as new, that fidelity problems are never left alone, that a short result lists the missing details in place of padding, and that it checks W3 and W8 before it reports. Not re-tested.
+It removed every invented event the judge had listed. It still failed the must-pass fidelity check: it kept a cause the brief never gave ("A part that small was behind the drops"), which it had noticed and listed under "Left alone", and it added "pit kit". It also came out 28 percent short. The test prompt told it not to load skills, and it read that as not reading the skill files, so it worked without the rubric. The agent file now says that an unstated cause or motive counts as new, that fidelity problems are never left alone, that a short result lists the missing details in place of padding, and that it checks W3 and W8 before it reports.
+
+Rerun with the changed agent file and full access to the skill folder (`p3-a-fixed2.md`, judged in `JUDGE-fixed2.md`): 6/8, Fix first. The must-pass fidelity check now passes: every supplied fact kept, no cause or place added. It fails W8 because it came out at 100 words against about 200, and it listed the five details it would need from the user to fill that out, in place of padding. That "Fix first" is the right result: the post cannot reach 200 honest words without facts nobody supplied. It also fails W2 on one 40-word paragraph with nothing checkable in it. No tool call was denied.
 
 ## Limits
 

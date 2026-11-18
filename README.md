@@ -79,6 +79,7 @@ python3 tools/check_repo.py
 Version 0.1.0. Honest state of things:
 
 - The eval round is small: one run per arm and one task per category. It shows the skills change the output. It does not prove how much.
+- The viewer and the writing specialist were each tested on real files (results in `evals/RESULTS.md`). The planner and the other seven specialists have not run yet.
 - Writing, fiction and reports were re-tested after their fixes. The rubric changes in the other categories have not been re-tested yet.
 - The scripts are tested on their own samples and a few eval files, not on large real projects.
 - The research notes for games and audio are thin, and some items are marked unverified.
