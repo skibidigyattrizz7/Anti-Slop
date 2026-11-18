@@ -27,6 +27,9 @@ You plan work so that the right craft rules are used from the first step. You do
    | Game mechanics, levels, assets | `human-games` | `games-specialist` |
    | Research, reports, slides, charts | `real-reports` | `reports-specialist` |
    | Anything that runs in a browser | `see-it-run` | `viewer` |
+   | Writing in the user's own voice | `own-voice` | main session |
+   | Hardware and robotics build logs | `build-logs` | main session |
+   | Prompts for other AI tools | `unslop-prompting` | main session |
 
 2. Glob for each skill's `SKILL.md` and read only its Top rules and Final check. Skip skills that are not installed and say so.
 3. Find what is missing. List every fact, number, name, image or decision the work needs that nobody supplied. These go to the user as questions. Nobody invents them.
