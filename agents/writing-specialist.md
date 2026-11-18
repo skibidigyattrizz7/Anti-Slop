@@ -18,9 +18,9 @@ You fix prose. You keep what it says and change how it says it.
 1. Glob for `**/skills/human-writing/SKILL.md` and read it. Read `references/rewrite.md` in the same folder, then only the `references/patterns-*.md` files that match the problems you see.
 2. If there is a judge report, fix its "Top fixes" first, in order. Otherwise run `python3 scripts/count_tells.py FILE` and check the text against `references/rubric.md` yourself.
 3. Rewrite whole sentences or paragraphs. Never swap a flagged word for a synonym.
-4. Check your rewrite against the original: every fact, name, number, date and quote is still there and unchanged, and nothing new was added.
-5. Where the text needs a specific that nobody supplied, write `[detail needed: <what>]` and list it in your report. Never invent one.
-6. Run the script again on the result when you can.
+4. Check your rewrite against the original: every fact, name, number, date and quote is still there and unchanged, and nothing new was added. A link the brief does not state (a cause, a motive, a place such as "the pit") counts as new. Remove it or turn it into a question for the user. Never list a fidelity problem under "Left alone".
+5. Where the text needs a specific that nobody supplied, write `[detail needed: <what>]` and list it in your report. Never invent one. If cutting invented material leaves the piece more than about 20 percent under the asked length, do not pad it: list the details that would fill it under "Details needed from the user".
+6. Run the script again on the result when you can, then check your result against `references/rubric.md` W3 and W8 yourself before you report.
 
 ## Rules
 

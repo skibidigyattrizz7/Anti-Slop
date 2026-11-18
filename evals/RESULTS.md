@@ -22,6 +22,20 @@ Each row is one task, written once with the skill and once without (writer: Haik
 - Two did not win cleanly. The fiction skill dropped a detail from the brief. The reports skill computed a number on an assumption it had not checked and left blanks in its recommendation. Both skills and their rubrics were changed after the run and re-tested the same day, and the skill version was then preferred in both. The rubrics changed too, so part of that gain comes from stricter checks.
 - Every rubric was reworded where a judge found a check unclear, and each now has an edge-case section.
 
+## Agent tests (2026-11-18)
+
+Two agents that had never run were tested once each, on Sonnet, following their own files.
+
+**Viewer** opened the no-skill bike shop page (`human-ui/runs/2026-11-17/t-b.html`) with the bundled screenshot script and a keyboard walk-through. It found, unprompted, the spacing bug the UI judge had seen: headings tight against the divider lines and hero text flush to the screen edge on phone. It also found two things the judge missed: a phone link under the 24 px tap size, and a 1 px default focus ring on that link. 0 console errors. It did not edit any file.
+
+**Writing specialist** fixed the weakest writing sample (`human-writing/runs/2026-11-17/p3-a.md`) using the judge's report. A fresh judge scored the result (`JUDGE-fixed.md`).
+
+| Before fix | After fix |
+|---|---|
+| 4/8, Fix first | 6/8, Fix first |
+
+It removed every invented event the judge had listed. It still failed the must-pass fidelity check: it kept a cause the brief never gave ("A part that small was behind the drops"), which it had noticed and listed under "Left alone", and it added "pit kit". It also came out 28 percent short. The test prompt told it not to load skills, and it read that as not reading the skill files, so it worked without the rubric. The agent file now says that an unstated cause or motive counts as new, that fidelity problems are never left alone, that a short result lists the missing details in place of padding, and that it checks W3 and W8 before it reports. Not re-tested.
+
 ## Limits
 
 - One run per arm, one task per category (writing had three). That is far too few to call any difference proven.
