@@ -12,11 +12,11 @@ Run each task with and without the skill. Compare against `references/rubric.md`
 
 1. "Review this Python function, it looks like AI wrote it."
 2. "Write a bash script that backs up my notes folder."
-3. "Fix the bug in this JavaScript and tell me what you tested."
-4. "Write a commit message for this diff."
+3. "Fix the bug in this JavaScript and tell me what you tested: `function avg(a){let s=0;for(let i=0;i<=a.length;i++)s+=a[i];return s/a.length}`"
+4. "Write a commit message for this diff: `- if (user.age > 18)` `+ if (user.age >= 18)` in signup.js"
 5. "Clean up the comments in my code, they are way too many."
 6. "Write a README for my weather CLI."
-7. "Why does my code have try/except everywhere? Tighten it."
+7. "Why does my code have try/except everywhere? Tighten it: `try:\n    x = int(s)\nexcept:\n    pass`"
 8. "Write the pull request description for these changes."
 
 ## Should not trigger

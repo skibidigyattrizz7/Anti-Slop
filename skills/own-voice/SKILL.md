@@ -1,40 +1,55 @@
 ---
 name: own-voice
-description: Use for writing that must sound like the user (emails, messages, posts, bios, resumes, cover letters, personal statements, speeches), or when drafts "don't sound like me". Real details come from the user.
+description: Load before starting, even for a short task, whenever you are writing something that must sound like the user or that the user will submit as their own, such as emails, messages, posts, bios, resumes, cover letters, personal statements, speeches, or when a draft "doesn't sound like me". Not for general prose (human-writing), chat replies (human-chat), stories (human-fiction), UI text (human-ui) or cited research (real-reports).
 ---
 
 # Own Voice
 
-Personal writing works because it's specific to one person. Readers (including admissions officers) notice flat rhythm, stock lines like "this experience shaped who I am today", polished tone with no concrete detail, and vocabulary that doesn't match the rest of the person's work. Claude can't supply the personal part. The user has to.
+Personal writing works because it belongs to one person. A model has no life to draw on, so it fills the gap with flat rhythm, stock lines ("this experience shaped who I am today"), polish with no detail, and words the person never uses. Readers, admissions officers included, notice. The personal part has to come from the user.
 
-## How to help
+## Top rules
 
-1. **Get the real material first.** Ask for the actual moments, numbers, names, and feelings. One question at a time, short. Example: "What's one specific moment from that project you still remember?"
-2. **Check for a saved voice.** If a writing-voice skill or the user's stored voice sample exists, use it. If the user pastes a sample, match its sentence length, word choice, and quirks.
-3. **Let the user draft first when the stakes are high** (applications, anything graded or judged). Then give feedback and edits. Offer outlines, questions, and critiques rather than a full ghostwritten version.
-4. **Edit lightly.** Fix clarity and grammar. Don't rewrite their sentences into smoother, blander ones. Keep a slightly rough line if it sounds like them.
-5. **Anchor every claim in a scene.** "I'm resilient" becomes the specific night the robot failed at the competition and what they did.
-6. **Plain words.** Write the way they talk, then tighten.
-7. **Vary rhythm.** A short sentence after a long one. One fragment is fine.
-8. **End on something real**, not a lesson.
+1. **Get the real material first.** Ask for the moment, number, name or feeling. One short question at a time: "What's one moment from that project you still remember?"
+2. **Match their voice.** Use a saved voice profile or a pasted sample: its sentence length, word choice and quirks.
+3. **High stakes means they draft first.** For applications and anything graded or judged, offer questions, outlines and feedback on their draft, not a ghostwritten version.
+4. **Edit lightly.** Fix clarity and grammar. Keep a rough line if it sounds like them.
+5. **Anchor every claim in a scene.** "I'm resilient" becomes the night the arm dropped the cube and what they did.
+6. **Plain words, uneven rhythm.** Write how they talk, then tighten. A short sentence after a long one. One fragment is fine.
+7. **End on something real**: a detail, a decision, a next step. Not a lesson.
 
 ## Never
 
-- Invent experiences, achievements, grades, awards, or feelings and write them as true.
-- Pad a resume or application with claims the user didn't give you.
-- Help disguise AI-written work where the rules ban AI (a class, contest, application policy). Offer coaching on their own draft instead.
+- Invent experiences, achievements, grades, awards, feelings or any personal detail and write them as true.
+- Pad a resume or application with claims the user did not give you.
+- Help disguise AI-written work where the rules ban AI (a class, contest or application policy). Coach their own draft instead.
 
-## Formats
+## Defaults
 
-- **Emails and messages:** short, direct, a clear ask, a human greeting. No "I hope this email finds you well".
-- **Resumes:** verbs plus results with real numbers the user gave you. No "responsible for", no "passionate team player".
-- **Cover letters:** one specific reason this person wants this role, one real example, no restating the resume.
-- **Personal statements and essays:** one small true scene as the spine, honest reflection, a distinct voice, no grand claims about changing the world.
-- **Speeches and scripts:** write for the ear, short sentences, one story, a clear point.
-- **Social posts and bios:** one specific, slightly odd detail beats a list of adjectives.
+A brief or the user's own style overrides these.
+
+- **Emails and messages:** short, one clear ask, a human greeting, no "I hope this finds you well".
+- **Resumes:** verb plus result, with numbers the user gave. No "responsible for".
+- **Cover letters:** one reason for this role, one real example, no resume recap.
+- **Personal statements:** one small true scene as the spine, honest reflection.
+- **Speeches:** for the ear, one story, one point.
+- **Bios and posts:** one odd, specific detail beats adjectives.
+
+## Read when
+
+| When | Read |
+|---|---|
+| Drafting or editing in the user's voice | `references/craft.md` |
+| Scanning a draft for generic tells | `references/tells.md` |
+| Checking a finished piece | `references/rubric.md` |
 
 ## Before and after
 
-**Before:** "Robotics has shaped who I am today and taught me the value of perseverance and teamwork."
+**Before:** "Volunteering at the shelter taught me compassion and what it means to give back."
 
-**After (user supplied the scene):** "At 11 p.m. the night before the competition, our arm still dropped the cube every third try. I took the claw apart on the floor of the garage and found one bent screw."
+**After (user supplied the scene):** "My first Saturday at the shelter I was told to walk Biscuit, a beagle who wouldn't leave his crate. I sat on the floor next to him for 40 minutes. On the way out he followed me to the door."
+
+## Final check
+
+- Is every detail something the user told you?
+- Would the user say these sentences out loud?
+- Does it end on something real, not a lesson?

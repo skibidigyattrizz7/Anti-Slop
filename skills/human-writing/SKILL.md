@@ -10,10 +10,10 @@ A model picks the most likely next phrase, so its prose drifts to the average: s
 ## Top rules
 
 1. **Write the point in one sentence before drafting.** If you can't, ask what the piece is for.
-2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place, from the user or a source you opened. State each fact once, in the words given (bent stays bent). When one is missing, ask for it or leave `[detail needed: ...]`.
-3. **Open on the point and end on something new.** The last sentence adds a detail, a consequence or a decision. Land within about 20 percent of the asked length. If the facts cannot fill it, ask for more.
+2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place, from the user or a source you opened. State each fact once, in the words given (bent stays bent).
+3. **Open on the point, end on something new, and hit the length.** Land within about 20 percent of the asked length. With few facts, fill it from those facts: what they mean for this reader, what to do and by when. Use `[detail needed: ...]` only for what the reader cannot act without, at most two.
 4. **State only what is true.** Write "Y". Leave out the "not X" half, whether it comes first ("it's not X, it's Y") or last ("Y, not X"). Name who acts: "we decided".
-5. **Vary rhythm on purpose.** Mix short and long sentences and uneven paragraphs. Use the real count in lists.
+5. **Vary rhythm on purpose.** Mix short and long sentences and uneven paragraphs.
 6. **Use the plain word and take a view.** "Use", "help", "said". Give your view where the genre allows. State real doubt once.
 7. **Format for where it will be read.** Prose by default, lists for real lists, markdown only where it renders.
 
@@ -57,4 +57,4 @@ A brief or the user's writing sample overrides these.
 
 - Can you state the point in one sentence?
 - Does every paragraph hold a checkable specific that came from the user or a source?
-- Does the last paragraph add anything new? If not, cut it.
+- Is it within 20 percent of the asked length, with nothing invented?

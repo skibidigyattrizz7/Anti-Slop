@@ -10,7 +10,7 @@ A model writes the most likely code for the prompt, not for your project. It res
 ## Top rules
 
 1. **Search the project before writing.** Grep for an existing helper, pattern or naming style. Reuse it and match it.
-2. **Handle an error where you can act on it.** Otherwise let it surface with a message that says what failed.
+2. **Handle the failures a real user will hit, even if the brief is silent.** Missing file, empty input, wrong arguments: print what went wrong and exit non-zero. Let other errors surface with a clear message.
 3. **Name things after the problem.** `rewardSurvivors`, `retryQueue`, not `handler`, `data`.
 4. **Comment the why.** A constraint, a workaround, a bug link. Skip comments the code already says.
 5. **Write the smallest thing that works.** No factory, config or abstraction without a second real use.
