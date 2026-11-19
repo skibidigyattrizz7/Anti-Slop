@@ -25,7 +25,7 @@ Use a table: signal, from, to, pin, wire colour. Add a photo or diagram note. Pr
 
 ## Measurements
 
-- Give the unit and the condition: "11.1 V battery, 6.8 V at motor under load", not "voltage drop".
+- Give the unit and the condition: "[battery V] battery, [motor V] at the motor under load", not "voltage drop".
 - Give the sample: "0 errors in 200 readings", not "reliable".
 - Give the tool if known: multimeter, serial monitor, stopwatch.
 - If the user gave a range, keep the range.

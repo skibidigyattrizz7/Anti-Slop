@@ -54,5 +54,26 @@
     "ext": "md",
     "task": "Write a half-page summary for a school principal on whether to move lunch from 12:00 to 12:30. Facts from the school's own survey (Oct 2026, 410 students answered): 58 percent prefer 12:30; the cafeteria seats 300; two classes end at 12:25. Include a recommendation and sources.",
     "brief": "Half-page summary for a principal on moving lunch from 12:00 to 12:30. Facts supplied, and only these: school survey, Oct 2026, 410 students answered, 58 percent prefer 12:30; cafeteria seats 300; two classes end at 12:25."
+  },
+  {
+    "skill": "own-voice",
+    "id": "v-heldout-1",
+    "ext": "md",
+    "task": "Write a 100-word message from me to my coach asking to move from midfield to goalkeeper. My writing is short and direct, like this sample: \"Coach, I can't make Thursday. Work. I'll run extra on Saturday.\" Facts: I am Sam; I played goalkeeper for the under-14s for two seasons; I have played midfield this season; I saved 3 penalties last season; I want to try keeper in the match on 8 December.",
+    "brief": "100-word message to a coach in the user's own short, direct voice. Facts supplied, and only these: Sam; goalkeeper for two seasons in the under-14s; midfield this season; saved 3 penalties last season; wants to try keeper in the 8 December match."
+  },
+  {
+    "skill": "build-logs",
+    "id": "b-heldout-1",
+    "ext": "md",
+    "task": "Write a build log entry (about 130 words) for 12 November. Facts: ESP32 DevKit board with a DHT22 temperature sensor on GPIO 4; code uses the Arduino IDE 2.3.2; readings were returning NaN every few tries; I added a 10 kilohm pull-up resistor between data and 3.3 V; after that I ran it for 100 readings and got 0 NaN. No other measurements.",
+    "brief": "Build log entry dated 12 November, about 130 words. Facts supplied, and only these: ESP32 DevKit; DHT22 on GPIO 4; Arduino IDE 2.3.2; NaN readings every few tries; added 10 kilohm pull-up between data and 3.3 V; 100 readings afterward with 0 NaN. No other measurements were given."
+  },
+  {
+    "skill": "unslop-prompting",
+    "id": "p-heldout-1",
+    "ext": "md",
+    "task": "Write a prompt I can paste into an AI to get a 60-second script for a podcast trailer. Facts: the podcast is called Night Shift Stories; it is about hospital cleaners and porters; episodes are 25 minutes; the host is Maria; new episodes are on Tuesdays; the listeners are mostly people who work nights.",
+    "brief": "A prompt for an AI to write a 60-second podcast trailer script. Facts supplied, and only these: Night Shift Stories; hospital cleaners and porters; 25-minute episodes; host Maria; new episodes on Tuesdays; listeners mostly night workers. The prompt must keep every fact."
   }
 ]

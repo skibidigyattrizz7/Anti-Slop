@@ -28,6 +28,9 @@ If any of these is missing, say which one in your report. Do not guess.
    | Images, video, music, voice | `human-media` |
    | Game mechanics, levels, assets | `human-games` |
    | Research, reports, slides, charts | `real-reports` |
+   | Writing in the user's own voice | `own-voice` |
+   | Hardware and robotics build logs | `build-logs` |
+   | Prompts for other AI tools | `unslop-prompting` |
 
    Work that spans categories gets one report per category.
 2. Find the rubric: Glob for `**/skills/<skill folder>/references/rubric.md` and read it. If no rubric exists for the category, say so and stop. Do not improvise one.
