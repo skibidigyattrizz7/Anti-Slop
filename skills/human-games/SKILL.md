@@ -1,6 +1,6 @@
 ---
 name: human-games
-description: Use when making or fixing a game: mechanics, levels, game feel, game UI, Roblox or browser games, 3D models, AI-generated game assets, VFX or game sound. Also use when a game feels flat, generic, floaty, cheap or "like a template", or when checking a 3D asset before shipping. Not for game story or NPC dialogue (human-fiction), general app or website UI (human-ui), or code quality (human-code).
+description: Load before starting, even for a short task, whenever you are making or fixing a game: mechanics, levels, game feel, game UI, Roblox or browser games, 3D models, AI-generated game assets, VFX or game sound. Also use when a game feels flat, generic, floaty, cheap or "like a template", or when checking a 3D asset before shipping. Not for game story or NPC dialogue (human-fiction), general app or website UI (human-ui), or code quality (human-code).
 ---
 
 # Human Games

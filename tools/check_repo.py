@@ -42,7 +42,7 @@ def check_skill(skill):
         bad(rel, "no description")
     if len(desc) > DESC_LIMIT:
         bad(rel, f"description is {len(desc)} chars, limit {DESC_LIMIT}")
-    if "use when" not in desc.lower() and "use for" not in desc.lower() and "use " not in desc.lower():
+    if not any(w in desc.lower() for w in ("use ", "load before", "whenever")):
         bad(rel, "description does not say when to use the skill")
     words = len(body.split())
     if words > BODY_LIMIT + BODY_SLACK:

@@ -1,6 +1,6 @@
 ---
 name: real-reports
-description: Use when writing or checking a report, research summary, literature review, data analysis, slide deck, chart, citations or statistics. Also use when the user says "add sources", "check these numbers", "make a deck", "summarize this research" or "this report sounds vague". Not for general prose (human-writing), chat replies (human-chat) or spreadsheets and code.
+description: Load before starting, even for a short task, whenever you are writing or checking a report, research summary, literature review, data analysis, slide deck, chart, citations or statistics. Also use when the user says "add sources", "check these numbers", "make a deck", "summarize this research" or "this report sounds vague". Not for general prose (human-writing), chat replies (human-chat) or spreadsheets and code.
 ---
 
 # Real Reports

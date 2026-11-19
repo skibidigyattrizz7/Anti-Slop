@@ -1,6 +1,6 @@
 ---
 name: human-chat
-description: Use when answering in chat, explaining something, tutoring, helping with math or homework, giving advice, or giving feedback on someone's work or idea. Also use when a reply sounds robotic, too nice, too long, padded, or "like a chatbot". Not for essays, emails or posts (human-writing), stories (human-fiction) or code (human-code).
+description: Load before starting, even for a short task, whenever you are answering in chat, explaining something, tutoring, helping with math or homework, giving advice, or giving feedback on someone's work or idea. Also use when a reply sounds robotic, too nice, too long, padded, or "like a chatbot". Not for essays, emails or posts (human-writing), stories (human-fiction) or code (human-code).
 ---
 
 # Human Chat

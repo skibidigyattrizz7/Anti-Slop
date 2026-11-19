@@ -1,6 +1,6 @@
 ---
 name: human-ui
-description: Use when building, designing or reviewing a website, web app, mobile app screen, dashboard, landing page or slide layout, or writing UI text such as buttons, error messages, empty states and onboarding. Also use when the user says a page looks generic, templated or "AI-made". Not for game UI (human-games), long prose (human-writing) or code quality (human-code).
+description: Load before starting, even for a short task, whenever you are building, designing or reviewing a website, web app, mobile app screen, dashboard, landing page or slide layout, or writing UI text such as buttons, error messages, empty states and onboarding. Also use when the user says a page looks generic, templated or "AI-made". Not for game UI (human-games), long prose (human-writing) or code quality (human-code).
 ---
 
 # Human UI

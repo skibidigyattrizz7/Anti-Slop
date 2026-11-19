@@ -11,13 +11,13 @@ Run each task twice with the same model: once with no skill, once after reading 
 ## Should trigger the skill
 
 - write a blog post about our school fundraiser
-- can you rewrite this paragraph, it sounds robotic
-- make this email sound more natural
+- can you rewrite this paragraph, it sounds robotic: "Our platform empowers teams to unlock seamless collaboration and drive meaningful outcomes."
+- make this email sound more natural: "I hope this email finds you well. I am reaching out to touch base regarding the deliverables."
 - edit my essay intro
-- this reads like AI wrote it, fix it
+- this reads like AI wrote it, fix it: "In today's fast-paced world, reading is more important than ever. It is not just a hobby, it is a journey."
 - write product copy for my app's homepage
 - summarise this article for our newsletter
-- tighten up this caption
+- tighten up this caption: "Here is a picture of our amazing team having an incredible time at the wonderful annual picnic this year!"
 
 ## Should not trigger the skill
 

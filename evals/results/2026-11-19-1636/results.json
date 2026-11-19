@@ -1,0 +1,43 @@
+{
+  "quality": [
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "B adds facts nobody supplied (\"Monday\", sign-up details at the garden gate and website, volunteers helping choose a bed) and leans on stock phrases and a closing clich\u00e9, while A stays within the brief and only weakens at a summarising ending."
+      },
+      "with": {
+        "score": 0.875,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    }
+  ],
+  "triggers": []
+}

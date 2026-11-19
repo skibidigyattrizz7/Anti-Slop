@@ -1,6 +1,6 @@
 ---
 name: human-fiction
-description: Use when writing or fixing stories, scenes, characters, character names, worldbuilding, dialogue, game narrative, quests, NPC lines or poems, or when a story feels generic, samey or "like AI". Not for essays or copy (human-writing), chat replies (human-chat) or pieces in the user's own voice (own-voice).
+description: Load before starting, even for a short task, whenever you are writing or fixing stories, scenes, characters, character names, worldbuilding, dialogue, game narrative, quests, NPC lines or poems, or when a story feels generic, samey or "like AI". Not for essays or copy (human-writing), chat replies (human-chat) or pieces in the user's own voice (own-voice).
 ---
 
 # Human Fiction

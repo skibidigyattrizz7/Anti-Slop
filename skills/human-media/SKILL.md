@@ -1,6 +1,6 @@
 ---
 name: human-media
-description: Use when generating or directing images, illustrations, thumbnails, logos, video, animation, music, voiceover or sound, or when AI media looks plastic, generic, stock or "like AI". Covers image and video prompts, shot lists and audio direction. Not for UI screens (human-ui), game assets and feel (human-games) or written text (human-writing).
+description: Load before starting, even for a short task, whenever you are generating or directing images, illustrations, thumbnails, logos, video, animation, music, voiceover or sound, or when AI media looks plastic, generic, stock or "like AI". Covers image and video prompts, shot lists and audio direction. Not for UI screens (human-ui), game assets and feel (human-games) or written text (human-writing).
 ---
 
 # Human Media

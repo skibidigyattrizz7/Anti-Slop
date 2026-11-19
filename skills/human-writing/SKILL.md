@@ -1,6 +1,6 @@
 ---
 name: human-writing
-description: Use when writing, rewriting or editing prose, such as essays, articles, posts, captions, emails, product or marketing copy, summaries and scripts. Also use when the user says text sounds robotic, generic, stiff or "like AI", or asks to make it sound human or natural. Not for chat replies (human-chat), stories (human-fiction) or pieces in the user's own voice (own-voice).
+description: Use for any prose writing or editing task, even a short one, before drafting or rewriting. Covers essays, articles, blog posts, newsletters, captions, emails, product and marketing copy, summaries and scripts, and requests like "rewrite this", "edit this", "tighten this", "make this sound natural" or "this sounds robotic". Not for chat replies (human-chat), stories (human-fiction), writing in the user's own voice (own-voice), UI text (human-ui) or research with citations (real-reports).
 ---
 
 # Human Writing

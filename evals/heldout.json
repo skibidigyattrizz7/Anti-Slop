@@ -1,0 +1,58 @@
+[
+  {
+    "skill": "human-writing",
+    "id": "w-heldout-1",
+    "ext": "md",
+    "task": "Write a 150-word announcement for a community garden's newsletter. Facts: the garden on Elm Road is adding 12 new raised beds; sign-ups open 3 March; beds cost 20 dollars a season; the waiting list last year had 31 names.",
+    "brief": "150-word newsletter announcement. Facts supplied, and only these: garden on Elm Road adds 12 new raised beds; sign-ups open 3 March; beds cost 20 dollars a season; last year's waiting list had 31 names."
+  },
+  {
+    "skill": "human-chat",
+    "id": "h-heldout-1",
+    "ext": "md",
+    "task": "Reply to this chat message: \"I'm 16 and I want to start running. I can only run for 2 minutes before I'm out of breath. Is something wrong with me?\"",
+    "brief": "Chat reply to a 16-year-old who can run only 2 minutes before getting out of breath and asks if something is wrong. No medical history was supplied."
+  },
+  {
+    "skill": "human-fiction",
+    "id": "f-heldout-1",
+    "ext": "md",
+    "task": "Write a 300-word scene. Setting: a night-shift laundromat in Glasgow, 2 a.m. Characters: Fiona, who runs it and is selling the business on Friday; Dev, a regular who doesn't know yet. Fact: three of the eight machines are out of order. End without settling whether she tells him.",
+    "brief": "300-word scene. Night-shift laundromat in Glasgow at 2 a.m. Fiona runs it and is selling on Friday; Dev is a regular who does not know. Three of eight machines are out of order. Must end without settling whether she tells him."
+  },
+  {
+    "skill": "human-code",
+    "id": "c-heldout-1",
+    "ext": "py",
+    "task": "Write a Python script (under 40 lines) that reads a log file named by the first command-line argument and prints the 5 most common IP addresses at the start of each line, with their counts. Output only the code.",
+    "brief": "Python script under 40 lines: read the log file named by argv[1], print the 5 most common IP addresses found at the start of each line, with counts. It should handle a missing file clearly."
+  },
+  {
+    "skill": "human-ui",
+    "id": "u-heldout-1",
+    "ext": "html",
+    "task": "Build one self-contained HTML page (CSS inside, no external images or fonts) for Rosa's Tailoring. Facts: hemming 12 dollars, zip replacement 18 dollars, open Mon to Fri 10 to 6, 22 Mill Lane, phone 555-0199. No reviews or stats exist; do not invent any. Output only the HTML.",
+    "brief": "One-file homepage for Rosa's Tailoring. Facts supplied, and only these: hemming 12 dollars, zip replacement 18 dollars, open Mon to Fri 10 to 6, 22 Mill Lane, phone 555-0199. No reviews or stats may be invented."
+  },
+  {
+    "skill": "human-media",
+    "id": "m-heldout-1",
+    "ext": "md",
+    "task": "Reply to this message: \"Write me an image-generation prompt for the cover of my zine about skateboarding in Lisbon. It's photocopied black and white, 24 pages, called 'Calçada'.\"",
+    "brief": "Reply with an image prompt for a photocopied black-and-white skate zine cover, 24 pages, titled 'Calçada', about skateboarding in Lisbon."
+  },
+  {
+    "skill": "human-games",
+    "id": "g-heldout-1",
+    "ext": "md",
+    "task": "Reply to this message: \"My top-down shooter's enemies just walk straight at the player and die in one hit. Players say fights are boring. Give me a concrete plan to make one enemy type more fun, and how I'll know it worked.\"",
+    "brief": "Reply with a design plan for one more interesting enemy in a top-down shooter where enemies walk straight at the player and die in one hit, plus how to test that it worked. Nothing was run."
+  },
+  {
+    "skill": "real-reports",
+    "id": "r-heldout-1",
+    "ext": "md",
+    "task": "Write a half-page summary for a school principal on whether to move lunch from 12:00 to 12:30. Facts from the school's own survey (Oct 2026, 410 students answered): 58 percent prefer 12:30; the cafeteria seats 300; two classes end at 12:25. Include a recommendation and sources.",
+    "brief": "Half-page summary for a principal on moving lunch from 12:00 to 12:30. Facts supplied, and only these: school survey, Oct 2026, 410 students answered, 58 percent prefer 12:30; cafeteria seats 300; two classes end at 12:25."
+  }
+]

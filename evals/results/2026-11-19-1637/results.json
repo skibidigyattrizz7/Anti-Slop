@@ -1,0 +1,131 @@
+{
+  "quality": [],
+  "triggers": [
+    {
+      "skill": "human-writing",
+      "phrase": "can you rewrite this paragraph, it sounds robotic",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "make this email sound more natural",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "edit my essay intro",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "this reads like AI wrote it, fix it",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing",
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "summarise this article for our newsletter",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "tighten up this caption",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write product copy for my app's homepage",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "explain how recursion works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write my personal statement so it sounds like me",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a commit message for this change",
+      "expected": false,
+      "called": [
+        "ziad-skills:caveman-commit",
+        "ziad-skills:caveman-commit"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "fix the bug in this function",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a short story about a lighthouse",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    }
+  ]
+}

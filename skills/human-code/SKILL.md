@@ -1,6 +1,6 @@
 ---
 name: human-code
-description: Use when writing, fixing or reviewing code, scripts, a README, code comments, a commit message or a pull request description, or when the user says code looks generic, over-commented, copy-pasted or "like AI wrote it". Not for chat replies (human-chat), prose (human-writing) or game and UI design (human-games, human-ui).
+description: Load before starting, even for a short task, whenever you are writing, fixing or reviewing code, scripts, a README, code comments, a commit message or a pull request description, or when the user says code looks generic, over-commented, copy-pasted or "like AI wrote it". Not for chat replies (human-chat), prose (human-writing) or game and UI design (human-games, human-ui).
 ---
 
 # Human Code
