@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa's Tailoring</title>
+<style>
+  :root {
+    --bg: #eef2ee;
+    --surface: #ffffff;
+    --text: #1d2421;
+    --text-muted: #4f5b55;
+    --rule: #b9c5bd;
+    --accent: #b3261e;
+    --accent-text: #ffffff;
+    --danger: #8a1c16;
+    --focus: #1a4d8f;
+    --display: "Didot", "Bodoni 72", "Bodoni MT", "Times New Roman", Times, serif;
+    --text-face: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+    --s1: 4px; --s2: 8px; --s3: 16px; --s4: 24px; --s5: 40px; --s6: 64px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: var(--text-face);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 880px;
+    margin: var(--s5) auto;
+    padding: var(--s5) var(--s4);
+    background: var(--surface);
+    border: 2px solid var(--text);
+    border-radius: 4px;
+    box-shadow: 8px 8px 0 var(--text);
+  }
+
+  a { color: var(--text); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+  a:focus-visible,
+  .call:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  header {
+    display: grid;
+    gap: var(--s2);
+    padding-bottom: var(--s4);
+    border-bottom: 2px solid var(--text);
+  }
+
+  .kicker {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(44px, 9vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    overflow-wrap: anywhere;
+  }
+
+  .intro {
+    margin: var(--s2) 0 0;
+    max-width: 52ch;
+    font-size: 19px;
+    color: var(--text);
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--s5);
+    padding-top: var(--s4);
+  }
+
+  h2 {
+    margin: 0 0 var(--s3);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  /* Price list: the content is a list of services with prices */
+  .prices {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .prices caption {
+    text-align: left;
+    padding: 0 0 var(--s2);
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .prices th,
+  .prices td {
+    text-align: left;
+    padding: var(--s3) 0;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: baseline;
+  }
+
+  .prices thead th {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--text);
+  }
+
+  .prices .service { font-size: 19px; font-weight: 700; }
+  .prices .note { display: block; font-size: 15px; font-weight: 400; color: var(--text-muted); }
+
+  .prices .price {
+    text-align: right;
+    font-family: var(--display);
+    font-size: clamp(36px, 6vw, 52px);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    font-variant-numeric: lining-nums;
+  }
+
+  .prices thead .price-head { text-align: right; }
+
+  /* Visit block: hours and where to find us */
+  .visit {
+    display: grid;
+    gap: var(--s5);
+  }
+
+  @media (min-width: 680px) {
+    .visit { grid-template-columns: 1fr 1fr; }
+  }
+
+  dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s2) var(--s3);
+  }
+
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+
+  .address {
+    font-style: normal;
+    font-size: 19px;
+  }
+
+  .call {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: var(--s3);
+    padding: var(--s2) var(--s4);
+    background: var(--accent);
+    color: var(--accent-text);
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 700;
+    font-size: 19px;
+    text-decoration: none;
+    transition: transform 120ms ease, background-color 120ms ease;
+  }
+
+  .call:hover { background: var(--danger); border-color: var(--danger); }
+  .call:active { transform: translateY(2px); }
+
+  .call-line {
+    margin: var(--s2) 0 0;
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+
+  footer {
+    margin-top: var(--s5);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  /* Phones: keep the table readable without horizontal scroll */
+  @media (max-width: 480px) {
+    .sheet {
+      margin: var(--s3) var(--s2);
+      padding: var(--s4) var(--s3);
+      box-shadow: 4px 4px 0 var(--text);
+    }
+    .prices .price { font-size: 34px; }
+    .prices .service { font-size: 17px; }
+    .prices th.hide-small, .prices td.hide-small { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .call { transition: none; }
+    .call:active { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <p class="kicker">Tailoring and alterations</p>
+      <h1>Rosa's Tailoring</h1>
+      <p class="intro">Hemming and zip replacement, priced per garment. Bring it in on a weekday and we will tell you what it needs.</p>
+    </header>
+
+    <div class="grid">
+      <section aria-labelledby="prices-title">
+        <h2 id="prices-title">What we charge</h2>
+        <table class="prices">
+          <caption>Prices in US dollars, per garment.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col" class="price-head">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="service">Hemming</th>
+              <td class="price">$12</td>
+            </tr>
+            <tr>
+              <th scope="row" class="service">Zip replacement</th>
+              <td class="price">$18</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="visit" aria-labelledby="visit-title">
+        <div>
+          <h2 id="visit-title">Visit us</h2>
+          <dl>
+            <dt>Open</dt>
+            <dd>Monday to Friday, 10 am to 6 pm</dd>
+            <dt>Closed</dt>
+            <dd>Saturday and Sunday</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2>Find us</h2>
+          <address class="address">22 Mill Lane</address>
+          <a class="call" href="tel:555-0199">Call 555-0199</a>
+          <p class="call-line">Call during opening hours and we will answer.</p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      Rosa's Tailoring, 22 Mill Lane. Phone 555-0199.
+    </footer>
+  </main>
+</body>
+</html>

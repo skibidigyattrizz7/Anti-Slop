@@ -1,0 +1,2447 @@
+{
+  "quality": [
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A flatly says \"Nothing is wrong with you\" with no medical history, which fails the must-pass facts check, while B hedges that and lists fuller warning signs, even though it is too long and uses bold bullet labels for a short chat reply to a teenager."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "without"
+    },
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "run": 2,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 3,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B opens with the answer, names going too fast as the common mistake, and gives one concrete interval plan in short prose with no bold labels or recap, while A is long, bullet-heavy with bold labels, and ends by repeating its own reassurance."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.42857142857142855,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": null
+    },
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 3,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B keeps the skater off-center, uses one named light source, hides hands and face, and leaves the title for real type, while A asks the image model to render text, never says where the skater sits, doesn't name a light source, and names no hand finishing pass."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.42857142857142855,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 3,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A names one light source, places the subject off-center, hides the hands and face, keeps all text out of the image, and sets the title afterward in a real font. B asks the model to render \"CAL\u00c7ADA\" and \"24 pages\", names no light, gives no subject position, and has no hand finishing pass."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.42857142857142855,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B puts the skater off-center, keeps the title and all text out of the render and names a real-font finishing pass, while A asks the image model to render text, leaves the skater's position unspecified and names no hand pass."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 1,
+            "applicable": 5,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A prints a clear error for a missing file and counts only lines that start with an IPv4 address, while B crashes with a traceback on a missing file, counts non-IP tokens like 'foo' as addresses, and leaves an unused `ip_pattern = None`."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.2,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 2,
+            "applicable": 6,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A exits with a clear 'cannot read' message on a missing file and checks argv, while B crashes with a raw FileNotFoundError traceback, has no argv check, and leaves an unused `IP_RE = None`."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.3333333333333333,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "run": 3,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 4,
+            "applicable": 6,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A prints a clear 'error: cannot read ...' message and exits 1 on a missing file, while B crashes with a raw FileNotFoundError traceback."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.6666666666666666,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A keeps to the supplied facts, shows its arithmetic and lists its unknowns, while B adds a margin of error that assumes a random sample the brief never gave and asserts a class-conflict effect and an afternoon-schedule concern that the supplied facts do not support."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 3,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A cites only the supplied facts as the user's own, opens with the recommendation, and states what is unknown. B names sources the brief never gave (a class timetable, a facilities dataset), asserts a benefit the facts don't support, and opens with a question rather than the finding."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.42857142857142855,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B opens with the recommendation, shows its arithmetic, rounds the counts and cites the supplied facts as the user's own, while A opens with background, gives an exact-looking 'about 238' with no arithmetic, and invents 'facilities data' and 'timetable data' as sources."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 2,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A invents facts that were not in the brief (an early-applicant advantage, volunteers on hand, 'bring your gloves') and pads with filler and a summary ending, while B stays within the supplied facts and flags the missing sign-up detail with a placeholder instead of making one up."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.25,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "run": 2,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B opens with the facts and has no stock phrases, while A opens with 'Exciting news for our community!', uses stock phrases ('right in the heart of', 'We can't wait to welcome you'), and has two habitual triads in 150 words."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "run": 3,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A keeps to the supplied facts and flags the missing sign-up detail with a placeholder, while B invents 'vegetables, herbs, and flowers', a 'community bulletin board' and 'expected to fill quickly', and it leans on stock phrases like 'green thumbs' and 'eager to dig in'."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "B",
+        "reason": "B is the stronger scene, with sharper dialogue, an escalation and a concrete pending ending, but it fails the must-pass fidelity check (339 words against a 300 ask, and it never shows three of eight machines out of order), while A passes fidelity but has a personified-light opener, a flat shape and a mood-image ending."
+      },
+      "with": {
+        "score": 0.875,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A has conflict, an escalating surveyor thread and sharp dialogue, and it is within length at 288 words. Its \"Aye. Right.\" ending is weak but still leaves it open. B stays flat at one pitch, has little conflict, leans on weather and personification, and ends on mood with the clock ticking."
+      },
+      "with": {
+        "score": 0.875,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A runs 340 words against a 300-word ask, over the 10% limit, and its narration spells out the dilemma that the scene already shows. B stays at about 318 words, keeps every brief fact, and ends with the telling still open."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.75,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 1,
+            "applicable": 4,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A has a numeric test plan with thresholds, a cleanup check and a low-graphics frame-time limit, and it says it was not run, while B has no frame-time or cleanup check, no sound or shake feedback, and no one-at-a-time tuning plan."
+      },
+      "with": {
+        "score": 0.8333333333333334,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.25,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "run": 2,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 2,
+            "applicable": 5,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B's test plan has numeric thresholds, a frame-time check on the lowest setting, and a cleanup check, and it says nothing was run, while A has no performance or cleanup check, no stated core verb, and only a thin telegraph for feedback."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.4,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 2,
+            "applicable": 4,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B's test plan has numeric thresholds, a lowest-settings frame-time check, a cleanup count and an explicit 'not run' statement, and its design layers several feedback channels, while A has no cleanup check, no lowest-quality test, and only flash and aim-line feedback."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "b-heldout-1",
+      "skill": "build-logs",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A keeps to the supplied facts, uses placeholders for the gaps, and follows the dated goal/tried/changed/result/next shape with a wiring table. B states an unsupplied fact (\"I wrote and uploaded the code\"), keeps wiring only in prose, and ends with no next step."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "b-heldout-1",
+      "skill": "build-logs",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A follows the goal/tried/changed/result/next shape, puts the wiring in a table and leaves placeholders for missing facts, while B is a prose narrative with no wiring table and no next step (failing B5, B6 and B7)."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "b-heldout-1",
+      "skill": "build-logs",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B keeps to the supplied facts, uses a wiring table, follows the goal/tried/result/changed/next shape and leaves placeholders for gaps, while A has wiring only in prose, no next step, and adds an unsupplied cause explanation about floating data lines."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "p-heldout-1",
+      "skill": "unslop-prompting",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A keeps every fact and adds a good and bad opening example, reasoned avoid-list entries and a request for three different scripts, while B has no example, gives no reasons for its avoids, makes a one-shot request and leans on a filler role line."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "p-heldout-1",
+      "skill": "unslop-prompting",
+      "run": 2,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "Both prompts keep all six facts, but B gives a committed voice, asks for a voice sample with [need:], explains why each stock phrase should be avoided and asks for three varied openings. A leans on an empty role line and adjectives, gives no example, and gives no reason for its avoid list."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "p-heldout-1",
+      "skill": "unslop-prompting",
+      "run": 3,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": null
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 1,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A works at both widths, has a visible focus ring and a clear tape-measure and price-board direction, but fails on invented claims ('done while you wait on the bench', 'Fixed prices for the two most common jobs'); B has the same kind of invented claims ('Hems for trousers, skirts', 'done with care'), plus cramped hours text at 375px, only an underline on focus (no ring), a single serif face, and cards nested inside cards. I did not run the scanner script, so U8 is not counted for either file.",
+        "note": "Scores are out of 7 applicable checks (U8 excluded)."
+      },
+      "with": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.14285714285714285,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "run": 2,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 2,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A uses only the supplied facts and has a distinct price-board look with visible focus styles, while B adds an unsupplied claim ('Careful alterations and repairs') and is a generic single-serif page with a card grid."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.2857142857142857,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "run": 3,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "Both render cleanly at phone and desktop widths, but A has a clear price-board direction, two type faces and tokens, while B is a generic single-serif cream page; A still needs fixing because it adds unsupplied claims ('priced per garment', 'we will tell you what it needs', 'we will answer') that fail U6. I did not run the UI scanner, so U8 is excluded from both scores."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "v-heldout-1",
+      "skill": "own-voice",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "B",
+        "reason": "Both add details Sam never supplied, so both fail fidelity, but A adds more (\"I miss being in goal\", a training trial, coming early or staying late) and turns a one-match request into a move \"from midfield to goalkeeper\", and it ends on a pleasantry. B's additions are fewer (a Friday deadline, \"not asking to swap full time\", \"confident\") and it ends on a next step."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "v-heldout-1",
+      "skill": "own-voice",
+      "run": 2,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A invents commitments not in the brief (staying after training for distribution and positioning, a keeper possibly already picked), asserts 'I can handle pressure' and closes on a pleasantry, while B keeps to the supplied facts, in plain short lines, and ends on a concrete request."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "v-heldout-1",
+      "skill": "own-voice",
+      "run": 3,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": null
+    }
+  ],
+  "triggers": [
+    {
+      "skill": "build-logs",
+      "phrase": "write my engineering notebook entry for today's robot work",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "document my Arduino project for the science fair",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "make a wiring guide for my sensor setup",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs",
+        "ziad-skills:using-agent-skills"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "turn my notes into a build log",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write up how I built my line follower",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "make a parts list table for my robot",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs",
+        "ziad-skills:using-agent-skills"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a project write-up for my electronics class",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:my-writing-voice",
+        "anti-slop:human-chat"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the README for my VEX robot",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write my personal statement",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the Arduino code for a blinking LED",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "explain how a servo works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Can you help me with this algebra problem?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Explain how interest compounds like I'm 15.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Your last answer was too long and too nice. Just tell me.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "I'm a beginner. What's the difference between a virus and a bacterium?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "This reply sounds like a chatbot. Fix it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Should I take the job offer or stay? I want your actual opinion.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Give me honest feedback on my business idea.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write a 1,500-word essay on the causes of World War I.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Draft a cold email to a recruiter.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write a short story about a lighthouse.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Why does my sourdough come out dense? Quick answer please.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Refactor this Python function to use a dict.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Design a landing page for my app.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write this in my own voice using these past posts.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Make this slide deck look better.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Translate this paragraph into Spanish.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Review this Python function, it looks like AI wrote it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a bash script that backs up my notes folder.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Fix the bug in this JavaScript and tell me what you tested: `function avg(a){let s=0;for(let i=0;i<=a.length;i++)s+=a[i];return s/a.length}`",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a commit message for this diff: `- if (user.age > 18)` `+ if (user.age >= 18)` in signup.js",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Clean up the comments in my code, they are way too many.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a README for my weather CLI.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write the pull request description for these changes.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Why does my code have try/except everywhere? Tighten it: `try:\\n    x = int(s)\\nexcept:\\n    pass`",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a blog post about learning Rust.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Reply to my friend's text about the party.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Design a landing page for my bakery.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a story about a robot who learns to dance",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Explain how a for loop works to a 10-year-old.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a short story about a programmer.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Make the jump feel better in my platformer.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Summarize this paper on sorting algorithms.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Make this logo look less generic.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write me a short story about a woman who inherits a farm.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "My fantasy story feels generic, how do I fix it?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Help me write dialogue between two brothers at a funeral.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Give me names for characters in a 1920s Chicago crime novel.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write quest text and NPC lines for my RPG tavern.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Make my villain's speech sound less cliche.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Build a magic system for my novel that causes problems.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Rewrite my product page so it sounds less robotic.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write a poem about the first snow.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Fix this Python function that parses dates.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Summarize this research paper in 200 words.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write this blog post in my own voice using my past posts.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Reply to my friend's text about dinner.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Design a menu screen for my game.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write a cover letter for a nursing job.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "My jump feels floaty, help me tune it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Explain the plot of Hamlet for my class notes.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Make this Roblox explosion look better.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Is this AI-generated 3D model okay to use in my game?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Design level 2 for my puzzle platformer.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "My game's health bar and menus look generic.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "The enemies in my game feel boring to fight.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Check the triangle count on this .obj file.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Add hit effects and sounds to my shooter.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write the backstory for my game's villain.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write dialogue for the shopkeeper NPC.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Make my SaaS dashboard look less generic.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Refactor this Python function.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Which game engine is faster, in general?",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write a launch post for my game.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Draw a logo for my studio.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Explain how a hash map works.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a Midjourney prompt for a book cover.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "My AI thumbnails look plastic, how do I fix them?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Help me plan shots for a 30-second product video.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "How do I make AI music sound less generic?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Direct a voiceover for my explainer.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Make a logo concept for my bakery.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a Sora prompt for a rainy street scene.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Design the settings page for my app.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "This image looks like AI, what gives it away?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write the product description for my bakery.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a short story about a lighthouse keeper.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Fix this Python function.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Add a jump sound and screen shake to my platformer.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Reply to my friend's text about dinner.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Convert this MP4 to GIF with ffmpeg.\" (plain tool use)",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Build me a landing page for my dog-walking business.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Summarize this PDF report.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "This dashboard looks generic, fix it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Redesign this settings screen for mobile.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Design the onboarding screens for a budgeting app.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write the error message for when payment fails.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Make my React page look less like AI made it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Lay out these 6 slides so they don't look like a template.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write a 1,000-word blog post about our launch.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "What should the empty state say when there are no orders?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Design the HUD and pause menu for my platformer.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Review this Python function for bugs.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Reply to this customer email.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write a story about a lighthouse keeper.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Fix the SQL query that times out.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Make a logo as a PNG image.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Explain how CSS grid works.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "can you rewrite this paragraph, it sounds robotic: \"Our platform empowers teams to unlock seamless collaboration and drive meaningful outcomes.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "make this email sound more natural: \"I hope this email finds you well. I am reaching out to touch base regarding the deliverables.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "this reads like AI wrote it, fix it: \"In today's fast-paced world, reading is more important than ever. It is not just a hobby, it is a journey.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "edit my essay intro",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write product copy for my app's homepage",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "summarise this article for our newsletter",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "tighten up this caption: \"Here is a picture of our amazing team having an incredible time at the wonderful annual picnic this year!",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "explain how recursion works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a short story about a lighthouse",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write my personal statement so it sounds like me",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a commit message for this change",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "fix the bug in this function",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write my college personal statement, it has to sound like me",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "this draft doesn't sound like me, can you fix it",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "help me write a cover letter for a barista job",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a speech for my brother's wedding",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "make my resume bullets stronger, here are my jobs: cashier, dog walker",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a bio for my Instagram",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "email my landlord about the broken heater, in my voice",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write my LinkedIn About section",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "explain how photosynthesis works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a short story about a ghost ship",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a commit message for this change",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "document my Arduino build",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Add sources to this summary",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a market research report on electric bikes",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Check these statistics before I send the report",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make a slide deck from this analysis",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Summarize these three papers for me",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Are these citations real?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "This report sounds vague, fix it",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make a chart showing our sales by region",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a short story about a lighthouse",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a blog post about my trip to Lisbon",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Reply to this email from my landlord",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Build a budget spreadsheet with formulas",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make my logo look better",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Fix this Python function that crashes",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Rewrite this paragraph in my own voice",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "What is the capital of Peru?",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a prompt for ChatGPT to plan my study schedule",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "improve this prompt: \"write a story about a dragon",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "every image my AI makes looks the same, help",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "I'm about to ask Claude to write my newsletter, help me brief it",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "how do I get better results from AI",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "give me a prompt for Midjourney to make a poster",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "make a prompt for an app builder to make a quiz game",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a prompt for a video generator",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write my personal statement so it sounds like me",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "document my robot build",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a short story about a lighthouse",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "fix the bug in this function",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "explain how recursion works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [],
+      "ok": true
+    }
+  ]
+}

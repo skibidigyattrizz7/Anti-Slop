@@ -1,0 +1,3 @@
+No, nothing is wrong with you. Being out of breath after two minutes is what most people experience when they start running, because your heart and lungs get fitter over weeks of practice. Start with run-walk intervals: jog for 60 seconds, walk for 90 seconds, and repeat 8 times. Do that 3 times a week. Each week, shorten the walks or lengthen the jogs a little. Most people can run 20 minutes continuously within a couple of months.
+
+Get checked by a doctor before you push harder if you have chest pain or tightness, faint or nearly faint, feel dizzy, or get wheezy in a way that doesn't ease with rest. Those are different from ordinary breathlessness.

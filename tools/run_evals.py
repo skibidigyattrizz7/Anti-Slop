@@ -183,7 +183,9 @@ def skills_called(stream):
 
 
 def run_trigger(skill, phrase, expected, model, cwd):
-    args = ["--plugin-dir", str(ROOT), "--tools", "Skill", "--model", model,
+    # hooks are off in every run, so add the plugin's startup note the way the real hook would
+    note = (ROOT / "hooks" / "chat-rules.md").read_text(encoding="utf-8")
+    args = ["--plugin-dir", str(ROOT), "--append-system-prompt", note, "--tools", "Skill", "--model", model,
             "--output-format", "stream-json", "--verbose", "--max-turns", "2"]
     called = skills_called(claude(args, phrase, cwd, timeout=300))
     hit = any(c.split(":")[-1] == skill for c in called)

@@ -93,6 +93,30 @@ All 8 raised the score, and 7 of 8 reached Ship. The writing specialist kept eve
 
 The chat skill loaded for only 1 of 8 plain questions, because the model answers questions without loading anything. The plugin now has a startup hook (`hooks/hooks.json`) that adds a 7-rule chat summary to every session. A test run showed the hook context arriving and the reply opening with the answer. The full `human-chat` skill is still there for deeper work.
 
+## Full run, 3 per side, all 11 skills (2026-11-19)
+
+`python3 tools/run_evals.py --runs 3`. Held-out tasks, Haiku writer, Sonnet judge, blind A/B. Results in `evals/results/2026-11-19-1752/` and, for triggers, `2026-11-19-2052/`. Three skills got only 2 judged runs, because the usage limit cut off the last calls.
+
+| Skill | Runs | With skill | Without | Judge preferred with skill | Must-pass held (with / without) |
+|---|---|---|---|---|---|
+| build-logs | 3 | 1.00 | 0.58 | 3 of 3 | 3 / 2 |
+| human-chat | 2 | 0.93 | 0.57 | 1 of 2 | 1 / 2 |
+| human-code | 3 | 1.00 | 0.40 | 3 of 3 | 3 / 0 |
+| human-fiction | 3 | 0.92 | 0.58 | 3 of 3 | 2 / 2 |
+| human-games | 3 | 0.90 | 0.38 | 3 of 3 | 3 / 0 |
+| human-media | 3 | 0.95 | 0.48 | 3 of 3 | 3 / 3 |
+| human-ui | 3 | 0.86 | 0.38 | 3 of 3 | 3 / 2 |
+| human-writing | 3 | 1.00 | 0.46 | 3 of 3 | 3 / 1 |
+| own-voice | 2 | 0.93 | 0.64 | 2 of 2 | 1 / 0 |
+| real-reports | 3 | 1.00 | 0.57 | 3 of 3 | 3 / 1 |
+| unslop-prompting | 2 | 1.00 | 0.56 | 2 of 2 | 2 / 2 |
+
+The judge preferred the skill version in 29 of 30 judged runs. The skill average beat the no-skill average in every category, and the no-skill runs varied far more (spread up to 0.57).
+
+### Triggers, final
+
+The startup note (`hooks/chat-rules.md`) now maps each kind of work to its skill, and the trigger test includes that note the way the real hook does. Plain requests then loaded the right skill 80 times out of 88 (was 61), and skills stayed out of the way 86 times out of 88. Lowest: human-chat 5 of 8 (its rules are always on anyway) and real-reports 6 of 8.
+
 ## Limits
 
 - One run per arm, one task per category (writing had three). That is far too few to call any difference proven.

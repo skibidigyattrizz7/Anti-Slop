@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosa's Tailoring</title>
+<style>
+  :root {
+    --ink: #2b2118;
+    --muted: #6b5a4a;
+    --cream: #fbf6ef;
+    --thread: #9b3d2e;
+    --line: #e4d6c3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+    border-bottom: 2px solid var(--line);
+  }
+  header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 0.04em;
+    color: var(--thread);
+  }
+  header p {
+    margin: 0.5rem 0 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: var(--thread);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.4rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #fff;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    font-weight: normal;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+  td.price {
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .hours-list, .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  .hours-list li, .contact-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .contact-list a {
+    color: var(--thread);
+    text-decoration: none;
+  }
+  .contact-list a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 2px solid var(--line);
+  }
+  @media (max-width: 500px) {
+    .hours-list li, .contact-list li {
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rosa's Tailoring</h1>
+  <p>Careful alterations and repairs</p>
+</header>
+
+<main>
+
+  <section id="services">
+    <h2>Services &amp; Prices</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Service</th>
+          <th scope="col" style="text-align:right">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hemming</td>
+          <td class="price">$12</td>
+        </tr>
+        <tr>
+          <td>Zip replacement</td>
+          <td class="price">$18</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="hours">
+    <h2>Opening Hours</h2>
+    <ul class="hours-list">
+      <li><span>Monday – Friday</span><span>10:00 AM – 6:00 PM</span></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Visit or Call</h2>
+    <ul class="contact-list">
+      <li><span>Address</span><span>22 Mill Lane</span></li>
+      <li><span>Phone</span><a href="tel:+15550199">555-0199</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; Rosa's Tailoring</p>
+</footer>
+
+</body>
+</html>

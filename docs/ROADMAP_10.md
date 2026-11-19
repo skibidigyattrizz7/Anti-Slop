@@ -14,7 +14,7 @@ Status on 2026-11-18: 7/10. The library is built and every category was tested o
 
 ## The fix, in order (each step is small)
 
-### 1. One eval runner (fixes 1, 2 and 4). Built 2026-11-19, first run done; 3 runs per side and the human check still to do
+### 1. One eval runner (fixes 1, 2 and 4). Done 2026-11-19: 3 runs per side for all 11 skills, triggers 80 of 88. Human check still to do
 
 Write `tools/run_evals.py`. It uses `claude -p` (headless Claude Code) to:
 - run each task 3 times with the skill and 3 times without, on held-out tasks (new prompts, not the ones the rubrics were tuned on)
@@ -26,7 +26,7 @@ One command reruns everything, so every future change can be checked. Cost: abou
 
 Then add a human check: you score 5 pairs blind. If your picks agree with the judge's, say so in the README. That is the strongest single proof you can add.
 
-### 2. Test every agent once (fixes 3)
+### 2. Test every agent once (fixes 3). Done 2026-11-19: all 8 specialists, the viewer and the planner
 
 Each category already has a failing no-skill sample in `evals/*/runs/`. For each specialist: fix that sample, then a fresh judge scores the fix. Pass bar: the score rises and the must-pass check holds. The planner gets one mixed request ("landing page with copy and a hero image").
 
@@ -44,7 +44,7 @@ One page with a row per category: no-skill output, skill output, judge scores, a
 - Paste `dist/chatgpt/human-writing` into a Custom GPT and run eval task 1.
 - Add an icon (`.claude-plugin/icon.png`, 512 px or more), the validator's only warning.
 
-### 6. Research second pass (fixes 6)
+### 6. Research second pass (fixes 6). Done 2026-11-19
 
 Rerun the games and audio research only, with search quota fresh. Move anything still unverified out of `tells.md`.
 

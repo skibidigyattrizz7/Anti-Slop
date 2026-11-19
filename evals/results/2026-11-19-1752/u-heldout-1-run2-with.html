@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa's Tailoring, 22 Mill Lane</title>
+<meta name="description" content="Rosa's Tailoring at 22 Mill Lane. Hemming $12, zip replacement $18. Open Monday to Friday, 10 am to 6 pm. Phone 555-0199.">
+<style>
+  :root {
+    --bg: #eef2f5;          /* pattern-paper blue-grey */
+    --surface: #ffffff;     /* price and hours panels */
+    --text: #1d2a36;        /* about 13:1 on --bg */
+    --text-muted: #4a5a68;  /* about 6:1 on --bg */
+    --rule: #c5d0da;        /* dividers and panel borders */
+    --accent: #b3261e;      /* chalk red: prices and the call button */
+    --accent-text: #ffffff; /* about 7:1 on --accent */
+    --focus: #0b5cad;       /* focus ring, about 6:1 on --bg */
+    --display: "Franklin Gothic Medium", "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+    --text-face: Georgia, "Times New Roman", serif;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s5: 48px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    font-family: var(--text-face);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(to right, rgba(29, 42, 54, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(29, 42, 54, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: var(--s4) var(--s2) var(--s5);
+  }
+
+  .masthead {
+    border-bottom: 4px solid var(--text);
+    padding-bottom: var(--s3);
+    margin-bottom: var(--s4);
+  }
+
+  .kicker {
+    font-family: var(--display);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 var(--s1);
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: clamp(2.4rem, 9vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.005em;
+    margin: 0 0 var(--s2);
+  }
+
+  .lede {
+    margin: 0 0 var(--s3);
+    max-width: 36em;
+    color: var(--text);
+  }
+
+  .btn {
+    display: inline-block;
+    min-height: 44px;
+    padding: 10px 20px;
+    font-family: var(--display);
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--accent-text);
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+  }
+
+  .btn:hover { background: #961d17; border-color: #961d17; }
+
+  a:focus-visible,
+  .btn:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  section {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: var(--s3);
+    margin-bottom: var(--s3);
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1.25rem;
+    margin: 0 0 var(--s2);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  tr:last-child th,
+  tr:last-child td { border-bottom: none; }
+
+  th { font-weight: normal; }
+
+  td.price {
+    font-family: var(--display);
+    font-size: 1.6rem;
+    color: var(--accent);
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+    padding-left: var(--s2);
+  }
+
+  .hours-table th { width: 55%; }
+
+  .address {
+    font-style: normal;
+    margin: 0 0 var(--s2);
+  }
+
+  .phone {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .phone:hover { color: var(--accent); }
+
+  @media (min-width: 640px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--s3);
+      align-items: start;
+    }
+    .grid section { margin-bottom: 0; }
+    .grid .wide { grid-row: span 2; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">22 Mill Lane</p>
+    <h1>Rosa's Tailoring</h1>
+    <p class="lede">Hemming and zip replacement, priced below. Call to check that we can take your garment before you visit.</p>
+    <a class="btn" href="tel:555-0199">Call 555-0199</a>
+  </header>
+
+  <main class="grid">
+
+    <section class="wide" aria-labelledby="prices-heading">
+      <h2 id="prices-heading">Prices</h2>
+      <table>
+        <caption class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Current prices</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Hemming</th>
+            <td class="price">$12</td>
+          </tr>
+          <tr>
+            <th scope="row">Zip replacement</th>
+            <td class="price">$18</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="hours-heading">
+      <h2 id="hours-heading">Opening hours</h2>
+      <table class="hours-table">
+        <caption class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Opening hours</caption>
+        <tbody>
+          <tr>
+            <th scope="row">Monday to Friday</th>
+            <td>10 am to 6 pm</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday and Sunday</th>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Visit or call</h2>
+      <address class="address">
+        Rosa's Tailoring<br>
+        22 Mill Lane
+      </address>
+      <p style="margin:0;">
+        <a class="phone" href="tel:555-0199">555-0199</a>
+      </p>
+    </section>
+
+  </main>
+
+</div>
+</body>
+</html>

@@ -68,7 +68,7 @@ node skills/see-it-run/scripts/shoot.cjs --selftest
 
 Each skill is run on the same task with and without the skill, then scored by the judge in a fresh context that does not know which is which. The first round is summarised in `evals/RESULTS.md`: the skill version was preferred in 6 of 8 categories on the first pass. The two that did not win cleanly (fiction and reports) were changed and re-tested, and the skill version was preferred in both.
 
-Rerun every eval (quality and triggers) with `python3 tools/run_evals.py`. On new held-out tasks the skill version was preferred in 8 of 8 categories, and plain requests loaded the right skill 43 times out of 64.
+Rerun every eval (quality and triggers) with `python3 tools/run_evals.py`. On held-out tasks, 3 runs per side, the skill version was preferred in 29 of 30 judged runs across 11 skills, and plain requests loaded the right skill 80 times out of 88.
 
 Check the whole repo with one command:
 

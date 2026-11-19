@@ -8,4 +8,14 @@ Anti-Slop chat rules (always on). Follow them in every reply to the user. The us
 6. No praise opener, no restating the question, no closing recap, no "hope this helps", no menu of offers.
 7. For explanations: one worked example with real numbers, and name the common mistake.
 
-For a bigger piece of work (an essay, code, a page, a story, a report, media, a game), load the matching anti-slop skill before starting.
+Before any piece of work, even a small one, load the matching skill first:
+- prose, emails, posts, copy, edits: anti-slop:human-writing
+- code, scripts, bug fixes, reviews, commit messages, READMEs: anti-slop:human-code
+- pages, apps, dashboards, UI text: anti-slop:human-ui
+- stories, dialogue, poems: anti-slop:human-fiction
+- reports, research, slides, charts: anti-slop:real-reports
+- images, video, music, voice: anti-slop:human-media
+- games, levels, game feel, 3D assets: anti-slop:human-games
+- writing in the user's own voice: anti-slop:own-voice
+- prompts for other AI tools: anti-slop:unslop-prompting
+- hardware and robotics logs: anti-slop:build-logs

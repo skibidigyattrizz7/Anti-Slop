@@ -1,0 +1,1519 @@
+{
+  "quality": [],
+  "triggers": [
+    {
+      "skill": "build-logs",
+      "phrase": "turn my notes into a build log",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write up how I built my line follower",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the README for my VEX robot",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:human-code"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "make a wiring guide for my sensor setup",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "run"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write my engineering notebook entry for today's robot work",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "make a parts list table for my robot",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a project write-up for my electronics class",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the Arduino code for a blinking LED",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write my personal statement",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "explain how a servo works",
+      "expected": false,
+      "called": [
+        "anti-slop:human-chat"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Can you help me with this algebra problem?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Your last answer was too long and too nice. Just tell me.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Explain how interest compounds like I'm 15.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Give me honest feedback on my business idea.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Why does my sourdough come out dense? Quick answer please.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "I'm a beginner. What's the difference between a virus and a bacterium?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "This reply sounds like a chatbot. Fix it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "document my Arduino project for the science fair",
+      "expected": true,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Refactor this Python function to use a dict.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-code",
+        "ziad-skills:using-agent-skills"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Should I take the job offer or stay? I want your actual opinion.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Draft a cold email to a recruiter.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Design a landing page for my app.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "build-logs",
+      "phrase": "write a story about a robot who learns to dance",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Make this slide deck look better.",
+      "expected": false,
+      "called": [
+        "anthropic-skills:pptx"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Translate this paragraph into Spanish.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write this in my own voice using these past posts.",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Review this Python function, it looks like AI wrote it.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a commit message for this diff: `- if (user.age > 18)` `+ if (user.age >= 18)` in signup.js",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Fix the bug in this JavaScript and tell me what you tested: `function avg(a){let s=0;for(let i=0;i<=a.length;i++)s+=a[i];return s/a.length}`",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a bash script that backs up my notes folder.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write a short story about a lighthouse.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Clean up the comments in my code, they are way too many.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-code"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a README for my weather CLI.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-code"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Why does my code have try/except everywhere? Tighten it: `try:\\n    x = int(s)\\nexcept:\\n    pass`",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Reply to my friend's text about the party.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a blog post about learning Rust.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing",
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Make the jump feel better in my platformer.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-games",
+        "anthropic-skills:game-feel",
+        "anthropic-skills:physics-tuning"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Explain how a for loop works to a 10-year-old.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Design a landing page for my bakery.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui",
+        "anti-slop:see-it-run"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Summarize this paper on sorting algorithms.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-chat"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write the pull request description for these changes.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-code"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-chat",
+      "phrase": "Write a 1,500-word essay on the causes of World War I.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Make this logo look less generic.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media",
+        "taste-skill:brandkit",
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-code",
+      "phrase": "Write a short story about a programmer.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "My fantasy story feels generic, how do I fix it?",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Make my villain's speech sound less cliche.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction",
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Give me names for characters in a 1920s Chicago crime novel.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Help me write dialogue between two brothers at a funeral.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write a poem about the first snow.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Reply to my friend's text about dinner.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write me a short story about a woman who inherits a farm.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Fix this Python function that parses dates.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-code",
+        "ziad-skills:debugging-and-error-recovery"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write this blog post in my own voice using my past posts.",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice",
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Rewrite my product page so it sounds less robotic.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write quest text and NPC lines for my RPG tavern.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Write a cover letter for a nursing job.",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "My jump feels floaty, help me tune it.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games",
+        "anthropic-skills:physics-tuning"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Make this Roblox explosion look better.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games",
+        "anthropic-skills:game-feel"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Explain the plot of Hamlet for my class notes.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Is this AI-generated 3D model okay to use in my game?",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games",
+        "anti-slop:human-chat",
+        "anti-slop:human-chat"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "The enemies in my game feel boring to fight.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games",
+        "anthropic-skills:game-feel",
+        "ziad-skills:find-skills"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Summarize this research paper in 200 words.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Build a magic system for my novel that causes problems.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Check the triangle count on this .obj file.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-fiction",
+      "phrase": "Design a menu screen for my game.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-games",
+        "unity:ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Add hit effects and sounds to my shooter.",
+      "expected": true,
+      "called": [
+        "anthropic-skills:game-feel"
+      ],
+      "ok": false
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Make my SaaS dashboard look less generic.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui",
+        "frontend-design:frontend-design"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Refactor this Python function.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Design level 2 for my puzzle platformer.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "My game's health bar and menus look generic.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-games"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Which game engine is faster, in general?",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write the backstory for my game's villain.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Draw a logo for my studio.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write dialogue for the shopkeeper NPC.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Explain how a hash map works.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-games",
+      "phrase": "Write a launch post for my game.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing",
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a Midjourney prompt for a book cover.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "My AI thumbnails look plastic, how do I fix them?",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Direct a voiceover for my explainer.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media",
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "This image looks like AI, what gives it away?",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Help me plan shots for a 30-second product video.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Make a logo concept for my bakery.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write the product description for my bakery.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "How do I make AI music sound less generic?",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a Sora prompt for a rainy street scene.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Fix this Python function.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Add a jump sound and screen shake to my platformer.",
+      "expected": false,
+      "called": [
+        "anthropic-skills:game-feel"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Reply to my friend's text about dinner.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "This dashboard looks generic, fix it.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Summarize this PDF report.",
+      "expected": false,
+      "called": [
+        "anthropic-skills:pdf"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Convert this MP4 to GIF with ffmpeg.\" (plain tool use)",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Redesign this settings screen for mobile.",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write the error message for when payment fails.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Design the settings page for my app.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Make my React page look less like AI made it.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Design the onboarding screens for a budgeting app.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui",
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Design the HUD and pause menu for my platformer.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-games",
+        "unity:ui",
+        "anti-slop:human-games"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-media",
+      "phrase": "Write a short story about a lighthouse keeper.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "What should the empty state say when there are no orders?",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Reply to this customer email.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write a 1,000-word blog post about our launch.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Build me a landing page for my dog-walking business.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui",
+        "anti-slop:see-it-run"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Fix the SQL query that times out.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Lay out these 6 slides so they don't look like a template.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Explain how CSS grid works.",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "can you rewrite this paragraph, it sounds robotic: \"Our platform empowers teams to unlock seamless collaboration and drive meaningful outcomes.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Review this Python function for bugs.",
+      "expected": false,
+      "called": [
+        "code-review",
+        "code-review"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "edit my essay intro",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write product copy for my app's homepage",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing",
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "make this email sound more natural: \"I hope this email finds you well. I am reaching out to touch base regarding the deliverables.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "this reads like AI wrote it, fix it: \"In today's fast-paced world, reading is more important than ever. It is not just a hobby, it is a journey.",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "summarise this article for our newsletter",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "tighten up this caption: \"Here is a picture of our amazing team having an incredible time at the wonderful annual picnic this year!",
+      "expected": true,
+      "called": [
+        "anti-slop:human-writing"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "explain how recursion works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Write a story about a lighthouse keeper.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a commit message for this change",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write my personal statement so it sounds like me",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-ui",
+      "phrase": "Make a logo as a PNG image.",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "fix the bug in this function",
+      "expected": false,
+      "called": [
+        "anti-slop:human-code"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a short story about a lighthouse",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "this draft doesn't sound like me, can you fix it",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "human-writing",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write my college personal statement, it has to sound like me",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "help me write a cover letter for a barista job",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a speech for my brother's wedding",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a bio for my Instagram",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write my LinkedIn About section",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "email my landlord about the broken heater, in my voice",
+      "expected": true,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "make my resume bullets stronger, here are my jobs: cashier, dog walker",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "explain how photosynthesis works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a commit message for this change",
+      "expected": false,
+      "called": [
+        "ziad-skills:caveman-commit"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a prompt for an image generator",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make a slide deck from this analysis",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "document my Arduino build",
+      "expected": false,
+      "called": [
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Check these statistics before I send the report",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports",
+        "anthropic-skills:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Are these citations real?",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports",
+        "anti-slop:human-chat"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "This report sounds vague, fix it",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports",
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "own-voice",
+      "phrase": "write a short story about a ghost ship",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Add sources to this summary",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Reply to this email from my landlord",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make a chart showing our sales by region",
+      "expected": true,
+      "called": [
+        "dataviz"
+      ],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a blog post about my trip to Lisbon",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Fix this Python function that crashes",
+      "expected": false,
+      "called": [
+        "anti-slop:human-code",
+        "ziad-skills:debugging-and-error-recovery"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a market research report on electric bikes",
+      "expected": true,
+      "called": [
+        "anti-slop:real-reports"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Make my logo look better",
+      "expected": false,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Rewrite this paragraph in my own voice",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "What is the capital of Peru?",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Summarize these three papers for me",
+      "expected": true,
+      "called": [],
+      "ok": false
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Build a budget spreadsheet with formulas",
+      "expected": false,
+      "called": [
+        "anthropic-skills:xlsx",
+        "anthropic-skills:xlsx"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "improve this prompt: \"write a story about a dragon",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "every image my AI makes looks the same, help",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a prompt for ChatGPT to plan my study schedule",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "real-reports",
+      "phrase": "Write a short story about a lighthouse",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "I'm about to ask Claude to write my newsletter, help me brief it",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "give me a prompt for Midjourney to make a poster",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "document my robot build",
+      "expected": false,
+      "called": [
+        "anti-slop:build-logs",
+        "anti-slop:build-logs"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write my personal statement so it sounds like me",
+      "expected": false,
+      "called": [
+        "anti-slop:own-voice",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a blog post about our school fundraiser",
+      "expected": false,
+      "called": [
+        "anti-slop:human-writing",
+        "anthropic-skills:my-writing-voice"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "how do I get better results from AI",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a prompt for a video generator",
+      "expected": true,
+      "called": [
+        "anti-slop:human-media"
+      ],
+      "ok": false
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "fix the bug in this function",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "make a prompt for an app builder to make a quiz game",
+      "expected": true,
+      "called": [
+        "anti-slop:unslop-prompting"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a research summary with citations",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "explain how recursion works",
+      "expected": false,
+      "called": [],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write the error message for a failed upload",
+      "expected": false,
+      "called": [
+        "anti-slop:human-ui"
+      ],
+      "ok": true
+    },
+    {
+      "skill": "unslop-prompting",
+      "phrase": "write a short story about a lighthouse",
+      "expected": false,
+      "called": [
+        "anti-slop:human-fiction"
+      ],
+      "ok": true
+    }
+  ]
+}
