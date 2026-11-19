@@ -1,0 +1,43 @@
+{
+  "quality": [
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "Both open with a flat 'Nothing is wrong with you' despite no medical history, which fails H1, but A is short, in prose and fits a teenager's casual question, while B adds a bulleted list with bold labels and extra length that fail H4 and H7."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    }
+  ],
+  "triggers": []
+}

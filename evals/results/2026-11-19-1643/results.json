@@ -1,0 +1,243 @@
+{
+  "quality": [
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B keeps the subject off-center, leaves room for the title, and tells the generator to render no text, while A centers the skater, asks the image to render the title and caption, and names no hand finishing pass; both skip a hand finishing pass."
+      },
+      "with": {
+        "score": 0.8571428571428571,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": null
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 6,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 3,
+            "applicable": 6,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "Neither handles a missing file, since both end in a raw FileNotFoundError traceback, but A checks argv and only counts lines that start with a real IP, while B counts any first token and raises IndexError when no argument is given."
+      },
+      "with": {
+        "score": 0.6666666666666666,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship the plan",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 2,
+            "applicable": 4,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A has numeric pass/fail thresholds, a cleanup check, a frame-time limit at the lowest graphics setting, layered feedback with a readability rule, and an explicit \"not run\" statement, while B has no cleanup or performance check, no sound feedback, and never says it was untested."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship the plan",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "run": 1,
+      "labels": {
+        "A": "with",
+        "B": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A has real pressure (Dev's half-asked question, Fiona's deflection, the buzzing phone) and ends on a concrete pending thing, while B stays flat and ends on stasis (\"Neither of them moves to leave\")."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "better": "with"
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B opens with the recommendation and only uses the supplied facts, while A opens with a question, invents a \"class schedule\" source, and treats the other 42% as opposed when the brief gives no basis for that."
+      },
+      "with": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      },
+      "without": {
+        "score": 0.5714285714285714,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "run": 1,
+      "labels": {
+        "B": "with",
+        "A": "without"
+      },
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "B",
+        "reason": "B has a shop-specific tape-measure direction, a serif and sans pairing, explicit focus rings, and only derived facts such as 'Closed Saturday and Sunday'. A is a generic centred serif page with a single typeface and a malformed viewport meta ('initial-scale:1.0'). Neither page was opened in a browser, so U1 is unverified and both get Fix first and must_pass FAIL under the rubric."
+      },
+      "with": {
+        "score": 0.875,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "without": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "better": "with"
+    }
+  ],
+  "triggers": []
+}

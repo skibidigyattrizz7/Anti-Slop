@@ -38,6 +38,40 @@ It removed every invented event the judge had listed. It still failed the must-p
 
 Rerun with the changed agent file and full access to the skill folder (`p3-a-fixed2.md`, judged in `JUDGE-fixed2.md`): 6/8, Fix first. The must-pass fidelity check now passes: every supplied fact kept, no cause or place added. It fails W8 because it came out at 100 words against about 200, and it listed the five details it would need from the user to fill that out, in place of padding. That "Fix first" is the right result: the post cannot reach 200 honest words without facts nobody supplied. It also fails W2 on one 40-word paragraph with nothing checkable in it. No tool call was denied.
 
+## Held-out run with the eval runner (2026-11-19)
+
+`python3 tools/run_evals.py` now does all of this in one command. These tasks are new (`evals/heldout.json`) and were never used to tune a rubric. Writer: Haiku. Judge: Sonnet, blind, random A/B labels. One run per side so far. Raw outputs and judge reports are in `evals/results/`.
+
+| Skill | With skill | Without | Judge preferred |
+|---|---|---|---|
+| human-writing | 0.88 | 0.50 | With skill |
+| human-chat | 0.86 | 0.57 | With skill |
+| human-code | 0.67 | 0.50 | With skill |
+| human-fiction | 1.00 | 0.62 | With skill |
+| human-games | 1.00 | 0.50 | With skill |
+| human-media | 0.86 | 0.57 | With skill |
+| human-ui | 0.88 | 0.62 | With skill |
+| real-reports | 1.00 | 0.57 | With skill |
+
+Scores are rubric checks passed over checks that apply. The skill version was preferred in 8 of 8 categories on tasks the rubrics never saw. The code skill still let a missing file crash with a raw traceback. The code and UI must-pass checks failed in both arms.
+
+### Trigger test
+
+Does a plain request, with no slash command, load the right skill? 16 phrases per skill, Sonnet, plugin installed.
+
+| Skill | Loaded when it should | Stayed quiet when it should |
+|---|---|---|
+| human-writing | 6 of 8 (was 1 of 8) | 8 of 8 |
+| human-fiction | 8 of 8 | 8 of 8 |
+| human-ui | 7 of 8 | 8 of 8 |
+| human-media | 6 of 8 | 8 of 8 |
+| real-reports | 6 of 8 | 8 of 8 |
+| human-games | 5 of 8 | 8 of 8 |
+| human-code | 4 of 8 | 8 of 8 |
+| human-chat | 1 of 8 | 7 of 8 |
+
+The first trigger run found the writing skill loading only when the request mentioned AI. All 8 descriptions now start "Load before starting, even for a short task", which lifted writing from 1 to 6 of 8. Chat stays low because the model answers a question directly without loading anything. Chat rules probably belong in an always-on output style, not a skill.
+
 ## Limits
 
 - One run per arm, one task per category (writing had three). That is far too few to call any difference proven.

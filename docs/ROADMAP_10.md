@@ -14,7 +14,7 @@ Status on 2026-11-18: 7/10. The library is built and every category was tested o
 
 ## The fix, in order (each step is small)
 
-### 1. One eval runner (fixes 1, 2 and 4)
+### 1. One eval runner (fixes 1, 2 and 4). Built 2026-11-19, first run done; 3 runs per side and the human check still to do
 
 Write `tools/run_evals.py`. It uses `claude -p` (headless Claude Code) to:
 - run each task 3 times with the skill and 3 times without, on held-out tasks (new prompts, not the ones the rubrics were tuned on)

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa's Tailoring: Hemming and Zip Replacement</title>
+<meta name="description" content="Rosa's Tailoring at 22 Mill Lane. Hemming $12, zip replacement $18. Open Monday to Friday, 10am to 6pm. Call 555-0199.">
+<style>
+  :root {
+    --bg: #f1f0ea;
+    --surface: #ffffff;
+    --text: #1c2230;
+    --text-muted: #4d5566;
+    --rule: #c9c6bb;
+    --accent: #e0b020;
+    --accent-text: #1c2230;
+    --focus: #1c2230;
+    --display: Georgia, "Times New Roman", serif;
+    --body: "Helvetica Neue", Arial, sans-serif;
+    --s1: 8px;
+    --s2: 16px;
+    --s3: 24px;
+    --s4: 40px;
+    --s5: 64px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--s2);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  /* Header: a tape-measure strip */
+  .site-head {
+    background: var(--text);
+    color: var(--bg);
+    padding: var(--s2) 0;
+  }
+  .site-head .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s1) var(--s2);
+  }
+  .shop-name {
+    margin: 0;
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .site-head a {
+    color: var(--bg);
+    font-weight: 700;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--s1);
+  }
+
+  .ruler {
+    height: 14px;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--text) 0 1px,
+      transparent 1px 8px
+    );
+    border-bottom: 2px solid var(--text);
+    opacity: 0.55;
+  }
+  .ruler.long {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--text) 0 1px,
+      transparent 1px 8px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--text) 0 2px,
+      transparent 2px 40px
+    );
+    height: 22px;
+  }
+
+  /* Intro */
+  .intro {
+    padding: var(--s5) 0 var(--s4);
+    max-width: 680px;
+  }
+  .eyebrow {
+    margin: 0 0 var(--s1);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  h1 {
+    margin: 0 0 var(--s2);
+    font-family: var(--display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .lede {
+    margin: 0 0 var(--s3);
+    font-size: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 var(--s3);
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--accent-text);
+    border: 2px solid var(--accent);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .btn:hover { filter: brightness(0.96); }
+  .btn:active { transform: translateY(1px); }
+
+  /* Sections */
+  section { padding: var(--s4) 0; }
+  h2 {
+    margin: 0 0 var(--s3);
+    font-family: var(--display);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  /* Prices: two items in a measured list */
+  .prices {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s2);
+  }
+  .price-item {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: var(--s3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+  }
+  .price-item dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .price-item dd {
+    margin: 0;
+    font-family: var(--display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .price-note {
+    margin: var(--s2) 0 0;
+    color: var(--text-muted);
+  }
+
+  /* Visit */
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s4) var(--s3);
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: var(--s3);
+  }
+  .card h3 {
+    margin: 0 0 var(--s2);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .card p { margin: 0; }
+  .card p + p { margin-top: var(--s1); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: var(--s2);
+    color: var(--text-muted);
+  }
+  th, td {
+    text-align: left;
+    padding: var(--s2) 0;
+    border-top: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th { font-weight: 400; padding-right: var(--s2); }
+  td { font-weight: 700; white-space: nowrap; }
+  tr:last-child th, tr:last-child td { border-bottom: 1px solid var(--rule); }
+
+  .address {
+    font-style: normal;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .phone-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+
+  footer {
+    background: var(--text);
+    color: var(--bg);
+    padding: var(--s3) 0;
+    font-size: 0.95rem;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); justify-content: space-between; }
+  footer p { margin: 0; }
+
+  /* Wider screens */
+  @media (min-width: 640px) {
+    .prices { grid-template-columns: 1fr 1fr; }
+    .visit-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <p class="shop-name">Rosa's Tailoring</p>
+    <a href="tel:555-0199">555-0199</a>
+  </div>
+</header>
+
+<div class="ruler long" aria-hidden="true"></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="intro" aria-labelledby="top">
+      <p class="eyebrow">22 Mill Lane</p>
+      <h1 id="top">Hems and zips, done at Rosa's Tailoring.</h1>
+      <p class="lede">Two common jobs, with their prices listed below. Bring the garment in on a weekday.</p>
+      <a class="btn" href="tel:555-0199">Call 555-0199 to ask about your job</a>
+    </section>
+
+    <section aria-labelledby="prices">
+      <h2 id="prices">Prices</h2>
+      <dl class="prices">
+        <div class="price-item">
+          <dt>Hemming</dt>
+          <dd>$12</dd>
+        </div>
+        <div class="price-item">
+          <dt>Zip replacement</dt>
+          <dd>$18</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="visit">
+      <h2 id="visit">Visit us</h2>
+      <div class="visit-grid">
+        <div class="card">
+          <h3>Opening hours</h3>
+          <table>
+            <caption>Rosa's Tailoring hours</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Monday to Friday</th>
+                <td>10am to 6pm</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday and Sunday</th>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3>Address and phone</h3>
+          <address class="address">
+            Rosa's Tailoring<br>
+            22 Mill Lane
+          </address>
+          <p style="margin-top: var(--s2);">
+            <a class="phone-link" href="tel:555-0199">555-0199</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<div class="ruler" aria-hidden="true"></div>
+
+<footer>
+  <div class="wrap">
+    <p>Rosa's Tailoring, 22 Mill Lane</p>
+    <p>Monday to Friday, 10am to 6pm · 555-0199</p>
+  </div>
+</footer>
+
+</body>
+</html>
