@@ -1,0 +1,276 @@
+{
+  "agents": [
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "agent": "chat-specialist",
+      "report": "Changed: /tmp/agent-fmxx_rwu/fixed.md (the draft is untouched)\n\nFixed:\n- **Certainty:** \"Nothing is wrong with you\" became \"Probably not\". With no medical history, a flat all-clear was a guess stated as certain. The doctor caveat stays.\n- **Format:** the five bold bullets became short prose, since the content isn't a real list. The first sentence still answers the question.\n- **Reasons and worked example:** added the arithmetic for the run-walk plan, 8 to 10 rounds of 1 minute running plus 1 minute walking, which is 16 to 20 minutes of moving. I also added the reason the walking breaks help.\n- **Script check:** the tell-counter showed no flags before or after. The bullet share went from 0.62 to 0.\n\nLeft alone: nothing was flagged. The reply is still four short paragraphs, which seems right for a worried teen.\n\nDetails needed from the user: none\n\nFacts check: all kept. These are unchanged:\n- two-minute breathlessness being common\n- improvement within a few weeks\n- talking in full sentences\n- 1 minute run / 1 minute walk \u00d7 8\u201310\n- 3 runs a week with a rest day\n- 5-minute brisk-walk warm-up\n- tracking progress by time before walking rather than speed\n- the symptom list: chest pain or pressure, dizziness, fainting, unusual wheezing or coughing, an unaddressed heart condition or asthma\n\nThe only additions are the 16\u201320 minute total, which I computed, and the reason the walking breaks help.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A opens with the flat claim \"Nothing is wrong with you\" although no medical history was given, which fails H1, and it uses bold-labelled bullets on a short reply, which fails H7; B hedges with \"Probably not\" and answers in prose."
+      },
+      "before": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "agent": "media-specialist",
+      "report": " greys. The yellow tram, which contradicted \"no colour\", is now grey. Light is one source, hard midday sun from the upper right.\n- M5: the one named flaw is a copier-glass streak, plus toner specks. The specific is Lisbon cal\u00e7ada with Tram 28.\n- M7: the draft had no finishing step. It now has one: pick the best version, set the type, print and photocopy on a real copier, and run a greyscale and thumbnail check.\n- M1: a label note is added, since the zine will be published.\n- Also fixed: the draft had a rider \"mid-ollie\" with \"one foot pushing off the ground\". That is contradictory, and I removed the push.\n\nCould not check: I did not generate or view any image, so how the generator handles the cal\u00e7ada pattern, the rider's pose and the tram is unseen. Print results are also unchecked.\n\nDetails needed from the user:\n- Whether you want the rider unnamed and generic, as written. I used no real skater.\n- Whether you want any other details, such as a specific street. I did not invent one.\n\nLabel or rights note: the artwork is AI-generated. Disclose that if the zine is sold, distributed or entered in a contest that requires it, and don't present it as hand-made.\n\nIntent check: kept. The subject, the title \"Cal\u00e7ada\", 24 pages, Lisbon skateboarding and the photocopied black-and-white zine look are unchanged. Two things changed in how it is made. The title and page-count text is now added as real type instead of generated. The rider is smaller and seen from behind, instead of centered.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 3,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "A",
+        "reason": "A keeps the rider off-center, keeps all text out of the prompt, names a single light and a limited palette, and lists hand finishing and an AI-disclosure note. B centers the rider, asks the image to render the title and caption text, and has no finishing step or disclosure."
+      },
+      "before": {
+        "score": 0.42857142857142855,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "agent": "reports-specialist",
+      "report": "2:** The draft said the 42% \"do not\" prefer 12:30 and that the two classes \"would have no lunch period\" at 12:00. Your facts support neither. The fixed text says the other 42% did not choose 12:30, and that the classes overlap a 12:00 lunch only if they run through 12:00. Start times were not supplied.\n- **R4:** The recommendation now opens the page, and the \"Why\" section starts each point with the finding.\n- **R7:** The unknowns are named once: total enrollment, and whether the 410 respondents represent the school.\n- **R8:** The page ends on the decision needed and has a Sources list. There are no placeholders, because the skill's rubric fails any that are left in the text. The needed details are listed below instead of inline as `[detail needed: \u2026]`.\n\nDetails needed from the user:\n- Total enrollment, or the number of students per lunch period. This decides between one 12:30 lunch and two sittings.\n- Start times for the two classes that end at 12:25, if you want to claim a 12:00 clash.\n- What the other 42% preferred, if the survey recorded it.\n\nFacts check: changed. The \"about 172\" figure, the \"no lunch period\" claim and the \"school's own data\" source line were removed or corrected. The 410, 58%, 300 and 12:25 are unchanged.\n\nScript run on the result: 289 words, 0 placeholders, Sources section present. It still flags paragraphs with numbers but no citation, because the sources are listed once at the end. The rubric allows one source line under the numbers for a short brief.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 7,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B opens with the recommendation and treats the unsupplied class start times as unknown, while A opens with a question and states as likely that the two classes would have no lunch period at 12:00, which the brief does not support."
+      },
+      "before": {
+        "score": 0.7142857142857143,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "agent": "writing-specialist",
+      "report": "to sign up (web address, email, or a table at the garden).\n- Who to contact with questions.\n- What happens once all 12 beds are taken.\n- The weekday for 3 March, if you want it. The draft said Monday, but nobody supplied that. 3 March 2026 has passed, and 3 March 2027 is a Wednesday. Please confirm the year before anyone prints a weekday.\n- Anything else for the garden that you want in the announcement (for example, what a bed measures or what is included in the 20 dollars).\nFacts check: all kept (12 beds, Elm Road, sign-ups open 3 March, 20 dollars a season, 31 names last year). Nothing was added.\n```\n\n**Length:** The fixed version is 87 words against the 150 requested. That is well under the 20 percent tolerance. Removing the invented material left only four facts, and padding them would mean inventing more. The placeholders show where the missing details go. Once you supply them, the piece should come close to 150 words.\n\n**Final text** (the same as the contents of `/tmp/agent-8ms4hk40/fixed.md`):\n\n> The garden on Elm Road is adding 12 new raised beds. Sign-ups open 3 March.\n>\n> A bed costs 20 dollars a season. Last year the waiting list had 31 names, so if demand is similar this year, 12 beds will not reach everyone who asks. If you want one, sign up when the list opens.\n>\n> [detail needed: where and how to sign up, for example a web address, an email or a table at the garden]\n>\n> [detail needed: who to contact with questions, and what happens when all 12 beds are taken]\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 2,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A adds facts nobody supplied (Monday, the garden's full name, volunteers, a website and gate notice) and is full of stock phrases, while B keeps to the supplied facts but is about 42% short of 150 words and ends on placeholders."
+      },
+      "before": {
+        "score": 0.25,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 0.75,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "agent": "fiction-specialist",
+      "report": "always in.\"). Before, the speakers mostly agreed with each other.\n- F5 (subtext): I cut the passage where Fiona imagines telling Dev and him being kind. Her recounting of the float and one plainly named feeling, shame, now carry it. I also cut the lines that explained how she felt about the sale.\n- F7 (ending): the draft ended on stasis (\"Neither of them moves to leave\"). It now ends on the nib resting on Friday's diary page, with Dev watching. Whether she tells him is not settled.\n- Smaller cuts: \"Nobody in Glasgow needs more than that\" and the \"apology\" simile.\n\nLeft alone:\n- The script flagged nothing in the draft or the fixed version.\n- I kept the Duke Street bus as a bit of local texture.\n- I kept the biro, the float tin and the envelope from the draft.\n\nDetails needed from the user: none strictly required. I added a few things the draft didn't have, so please check them:\n- the card reader replacing the coin slots,\n- Dev's brother-in-law style detail \"Callum's wedding\" on the Saturday,\n- the float total of \u00a341.60,\n- the Friday diary page that nobody has ever booked.\n\nFacts check: all kept. These are unchanged from the draft: Fiona and Dev, Glasgow, 2 a.m., three of eight machines out (four, seven and eight, leaving five working), the sale on Friday at eleven, and Dev not knowing. I dropped the draft's \"the lease is gone\" line, because the brief didn't give it. The Tuesday/Thursday routine, four years, the solicitor's envelope and the buyer keeping the name are all kept.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 4,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B raises the stakes when Dev asks Fiona to book a machine for Friday, the day of the sale, and it ends on the pen touching the page. A stays at one pitch, narrates Fiona's thoughts about telling him, and ends on 'Neither of them moves to leave'."
+      },
+      "before": {
+        "score": 0.5,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "agent": "code-specialist",
+      "report": "nt and first 10 line numbers, and the script exits 1 after printing the top 5.\n- C4/C5: `counts` and `n` became `hits_per_ip` and `hits`. The one comment gives a reason: `errors=\"replace\"` so one bad byte doesn't abort the count.\n- C6: the work is in a `main()` function with no extras, 38 lines against the 40-line cap.\nReused: none found. The project folder holds only the skill files, so there was no existing helper to reuse.\nVerified:\n- ok.log (IPv4 and IPv6 lines) printed \"10.0.0.1 2\", \"::1 1\", \"10.0.0.2 1\".\n- bad.log (a blank line and a \"GET junk\" line) printed \"10.0.0.1 2\", then \"2 lines did not start with an IP (first: 2, 3)\" on stderr.\n- /nope.log printed \"cannot read /nope.log: No such file or directory\".\n- No argument printed \"usage: fixed.py LOGFILE\".\n- All four ran with `python3 -I`.\n- `count_code_smells.py` shows 30 code lines, no flags.\nNot verified:\n- The exit codes (1 for skipped lines, non-zero for a missing file or no argument). My shell wrapper blocked those checks, so they come from reading the code. `sys.exit` with a string exits 1.\n- Very large files and non-UTF-8 input.\n- I did not run the draft, so I can't confirm the old output was identical.\n- I did not break the code to check that a failure case fails.\nLeft alone:\n- The output format \"IP count\" and the `errors=\"replace\"` open are kept from the draft.\n- The exit 1 on skipped lines is my choice (the rubric treats skipping with exit 0 as a fail). Say if you would rather have a quiet skip and exit 0.\n```\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 2,
+            "applicable": 5,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 6,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "A crashes with a raw FileNotFoundError traceback on a missing file, which the brief said to handle clearly, while B exits with a specific message and also reports lines that don't start with an IP."
+      },
+      "before": {
+        "score": 0.4,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "agent": "ui-specialist",
+      "report": "a system sans for body text. Colors are CSS variables, and contrast is above AA.\n- **U4 (layout):** the table is now a price list with leader dots and large prices. Hours, address and phone are a definition list instead of a three-column grid. On a phone the call button goes full width at the top.\n- **U5 (copy):** the button reads \"Call 555-0199\", the heading \"Come in\", and the tagline \"Alterations and repairs at 22 Mill Lane.\"\n- **U8:** the scanner reports no flags. Its font check is not a pass on its own, so I judged the type choices by hand.\n\nLeft alone: the \"Alterations and repairs\" tagline, which was already in the draft. I also kept the 10:00 AM to 6:00 PM format. I added no motion because the page is static, so it has no empty, loading or error states (N/A).\n\nBrowser check: not verified in a browser. The Chrome screenshot command needed approval, so I did not run it, and U1 stays \"unverified\". Please check the page at 375px and 1280px before shipping.\n\nNeeded from the user: nothing is required. No brand colors, fonts or writing sample were supplied, so the palette and type are my choices (reasons are in `DESIGN.md`). A real photo or a shop description would help later, but I did not invent either.\n\nFacts check: all kept. The facts are hemming $12, zip replacement $18, Mon to Fri 10 to 6, 22 Mill Lane, and 555-0199, with the `tel:` link kept. The footer now shows only the copyright line, because the address and phone were repeated there. No reviews or stats were added.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 7,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "B",
+        "reason": "Neither page was opened in a browser, so U1 is unverified for both and both get Fix first. A's viewport tag has a typo (\"initial-scale:1.0\") that can break phone layout, and A has a generic one-serif look. B has a clear price-board direction, two type faces, a call button, and focus styles, and it invents no facts."
+      },
+      "before": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 0.875,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      }
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "agent": "games-specialist",
+      "report": "hether a shot counts.\n  G3: all numbers are labeled starting values. They are tuned one at a time, in a stated order. The draft said \"implement all four changes together\", which breaks that rule.\n  G4: feedback is layered (flash, sound, sparks, shove) and scaled to importance. It states one readability rule: effects must not cover the enemy body or the bullet path.\n  G5: the shield uses the existing palette, and placeholder art is labeled. The palette itself is a detail needed.\n  G6: the plan says platform limits were not checked, and it calls the 50-spark cap a starting cap, not a limit.\n  G7, G8: N/A for a single-enemy design, except the varied-sound check, which is in the plan.\n  Also fixed from the draft:\n    - It changed the existing Chaser and broke the one-hit rule, instead of adding one more enemy.\n    - It used 5-player fun-rating medians as pass/fail. The playtest is now only for finding problems.\nNot tested: everything. The game, its engine and its numbers were not supplied.\nDetails needed from the user: engine, screen size and smallest supported size, Chaser speed, bullet speed and fire rate, palette or style bible, particle budget, frame-time target.\n```\n\n**Score and verdict:** G1\u2013G6 pass as a plan, and G7 and G8 are N/A (the sound check sits under G8). The verdict is **Ship the plan**, and the work itself is untested.\n\nI replaced the draft's design instead of patching it. Its four changes all targeted the existing Chaser, but the brief asked for one more enemy.\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 7,
+            "applicable": 7,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 0,
+            "applicable": 4,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "A",
+        "reason": "A designs a new enemy with starting values, layered feedback and a numeric test plan that includes cleanup and frame time, while B rewrites the existing Chaser instead of adding an enemy and its plan has no cleanup check for the projectiles it spawns, no sound, and no one-at-a-time tuning."
+      },
+      "before": {
+        "score": 0.0,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    }
+  ]
+}

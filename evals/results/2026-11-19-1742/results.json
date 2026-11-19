@@ -1,0 +1,87 @@
+{
+  "agents": [
+    {
+      "task": "h-heldout-1",
+      "skill": "human-chat",
+      "agent": "chat-specialist",
+      "report": " 3 times a week and 5-minute warm-up figures, which I kept exactly.\nDetails needed from the user: none\nFacts check: all kept (the only changes are the calibrated opener and the one added reason noted above)\n```\n\nFinal reply:\n\nProbably nothing is wrong. Getting out of breath after two minutes is common when you're new to running, because your lungs, heart and leg muscles haven't adapted yet, and it usually improves within a few weeks. I can't rule anything out without knowing your health history, so the exceptions are below.\n\nRun slower than feels right. You should be able to talk in full sentences, and if you can't, slow down or walk. Most beginners go too fast, which is why two minutes feels impossible.\n\nTry 1 minute running and 1 minute walking, repeated 8 to 10 times, after 5 minutes of brisk walking to warm up. Do it 3 times a week with a rest day between, since your body adapts during recovery. As the weeks go on, make the running parts longer and the walking parts shorter. Measure progress by how long you can run before you need to walk, not by speed.\n\nSee a doctor before you push harder if you get chest pain or pressure, dizziness, fainting, or unusual wheezing or coughing when you exercise, or if you have a heart condition or asthma you haven't talked about with a doctor. Breathlessness alone usually just means you're getting fitter, but those symptoms are worth getting checked.\n\nIf you approve writes to that path, I'll save it to `fixed.md` and run the script on it.\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "c-heldout-1",
+      "skill": "human-code",
+      "agent": "code-specialist",
+      "report": "version prints a usage line.\n- **C3, non-IP lines:** the draft counted any first word as an IP, including blank-line or junk text. The new version validates with `ipaddress`. It skips non-IP lines, names the count and first line number on stderr, and exits non-zero after printing the top 5.\n- **C4:** `counts`, `parts` and `n` became `hits`, `first_field` and `count`.\n- **C5:** the only comment gives the reason for the exit code.\n- **C6:** about 28 lines, under the 40 limit.\n\n**Reused:** none found. I did not search the project, since the task is a standalone script. I used the standard library only: `ipaddress` and `collections.Counter`.\n\n**Verified:** only that I read the skill, `craft.md`, `rubric.md` and the draft. No code was run.\n\n**Not verified:**\n- The normal case, the missing file, no argument, a file with non-IP lines, and IPv6 input. I planned to run all of these, so C1 is currently unmet.\n- `count_code_smells.py` was not run.\n\n**Left alone:**\n- Output format `IP count`, taken from the draft.\n- `errors=\"replace\"`, kept from the draft so bad bytes in a log don't crash it.\n\n**Decision for you:** I changed behavior in one place. Lines that don't start with an IP now cause a non-zero exit. If you'd rather skip them without failing, remove the final `if skipped:` block, though the rubric treats a silent skip as a C3 fail.\n\nTo finish, grant write permission for `/tmp/agent-2mv7yelz/fixed.py` and I'll write it and run the checks. You can also save the code above yourself.\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "w-heldout-1",
+      "skill": "human-writing",
+      "agent": "writing-specialist",
+      "report": "ebsite, the volunteers, the \"Community Garden\" name, and \"newest growing season\".\n- W6 stock phrases and tone: removed \"brand-new\", \"just $20\", \"right in the heart of our neighborhood\", \"seasoned gardener\", \"curiosity\", \"Mark your calendars\", \"dig in\".\n- W5 triads: removed both (the three crops, the three things to bring).\n- W7 ending: the old closer was a slogan. The new text ends on the next step, signing up early.\nLeft alone: nothing flagged was kept.\nDetails needed from the user:\n- Where and how to sign up (website, form, in person).\n- Who to contact with questions.\n- Anything else you want in the notice, such as what the beds are like, who can apply, or a deadline. Without these the text is about 60 words, far under the 150 asked. I did not pad it, because the four supplied facts cannot fill 150 words without inventing material.\nFacts check: all kept (12 beds, Elm Road, sign-ups 3 March, 20 dollars a season, 31 names last year). One addition to confirm: \"12 beds will not cover everyone who wants one\" is my inference from 12 beds against 31 names. It is stated as a view, but cut it if you prefer.\n```\n\n**Final version**\n\nThe garden on Elm Road is adding 12 new raised beds, and sign-ups open on 3 March.\n\nA bed costs 20 dollars a season. Last year's waiting list had 31 names, so 12 beds will not cover everyone who wants one. If you want a bed, sign up early.\n\n[detail needed: where and how to sign up (website, form, in person)]\n\n[detail needed: who to contact with questions]\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "r-heldout-1",
+      "skill": "real-reports",
+      "agent": "reports-specialist",
+      "report": " Text is above.\nSources opened: none. All three facts are the user's supplied data and can't be opened. They are cited as the user's, not as verified.\nCould not verify: the survey, the 300-seat figure and the 12:25 end time. I took them as supplied.\nFixed:\n R1: Cut \"class schedule showing\u2026\" because the brief supplied a fact, not a document. Cut \"as provided by the school\" framing that implied documents I hadn't seen.\n R3: Cut the derived counts (238 and 172) and the 42% figure. They weren't supplied and rested on rounding and an assumption that nobody skipped the question.\n R7: The draft listed total enrollment as unknown. But 410 respondents means enrollment is at least 410, which is over 300. The fixed text states that. I also removed \"likely still in session\", an assumption, and wrote it as a plain consequence of 12:25.\n R4/R8: The recommendation now opens the piece, says what would change it, and has no placeholders. The 4\u20136 week trial and follow-up survey were my invention, so I cut them.\nDetails needed from the user: how many students eat in the cafeteria at once, total enrollment, and how the 12:00 lunch handles the 300-seat limit.\nFacts check: changed (see Fixed)\n```\n\nThe skill file wasn't at the path the brief gave. I found it at `/home/user/anti-slop/skills/real-reports/` and used it from there. The checker script ran only on the draft, which it flagged for numbers without a citation in the same paragraph. I haven't run it on the fixed version. I did one fix round.\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "m-heldout-1",
+      "skill": "human-media",
+      "agent": "media-specialist",
+      "report": " cal\u00e7ada portuguesa, the wave-patterned black-and-white limestone mosaic, its curving lines sweeping in from the lower left. A skateboarder, seen from behind and small in the frame, sits in the lower-right third mid-ollie, board tail kicked up, cropped by the right edge. Hands tucked and out of view, no face visible. Behind and above, a row of crumbling tiled facades with peeling paint, laundry lines and iron balcony railings, rendered as flat dark shapes. At the left edge, part of a Lisbon tram (Tram 28) in tonal grey. One light source: hard midday sun from the upper left, deep shadows falling right across the street. Palette: black toner, white paper, one mid grey. The top third is left as empty white paper. Flaw: toner streaks from the copier glass, a few dust specks, uneven black fill on the right edge. No text, no lettering, no color.\n\n**Human finishing (after generation)**\n\n1. Generate four to six versions. Pick one where the pavement waves read clearly and the rider's hands and board are sound. Inpaint or crop any bad ones.\n2. Photocopy or print and re-scan it once for real toner texture. Push the levels to pure black and white.\n3. Set the title \"CAL\u00c7ADA\" yourself in the empty top space. Cut and paste real letters, or use a bold font with a cedilla. Check that the \u00e7 renders.\n4. Add \"24 pages\" and \"skateboarding in Lisbon\" in a typewriter face along the bottom. Check the spelling.\n5. Shrink to thumbnail size and check that the title, rider and cal\u00e7ada waves still read.\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "g-heldout-1",
+      "skill": "human-games",
+      "agent": "games-specialist",
+      "report": "the draft, SKILL.md, craft.md and rubric.md.\nTuning log: none\nFixed (planned, not saved):\n  G2: the draft reworked the existing Chaser, but the brief asked for one more enemy. The fix is a new \"Sidestepper\" that dodges the first shot aimed at it. It still dies in one hit, and the Chaser is left unchanged.\n  G3: the draft said \"implement all four changes together\", and it set 4 changes at once. The fix is one new mechanic, with numbers labeled as starting values and tuned one at a time in a stated order.\n  G1: the draft's tests were playtest ratings with invented targets like \"median 4/5\". The fix is numeric pass/fail checks: dodge in 18 of 20 trials, tired window 1.5 s \u00b1 1 frame, 0 out-of-bounds, frame time under 33 ms for 2 s at the lowest quality, and enemy/particle/sound counts back to baseline after a wave. It states plainly that nothing was run.\n  G4: the draft had no sound or flash spec. The fix layers flash, sound with pitch variation, trail and dim, and adds a rule that no effect covers the enemy or its hitbox.\n  G5/G6: the fix marks art as placeholder and marks platform limits and palette as unchecked.\nNot tested: everything. No game, engine or build was available to run.\nDetails needed from the user: engine and how to run it, Chaser speed, bullet speed, arena size, palette/style bible, frame and particle budget (read from current docs).\n```\n\nCan you grant write access to that path, or tell me to write it somewhere else? I'll save the plan as soon as that's settled.\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "f-heldout-1",
+      "skill": "human-fiction",
+      "agent": "fiction-specialist",
+      "report": "Five working, three dead. At two in the morning the hum of the five sounds like an apology.\n\nDev comes in at ten past, a bag of whites under one arm, phone in the other hand. He nods. She nods back.\n\n\"Seven's knackered as well,\" she says. \"And two. And four.\"\n\n\"That's three.\" He counts them on the hand with the phone in it. \"Since when?\"\n\n\"Since Sunday. The man's coming.\"\n\n\"Which man?\"\n\nShe doesn't say. He sets the bag on the folding table and sorts: socks, shirts, a Partick Thistle top he handles like it might wake up. Tuesdays and Thursdays, four years. She has never once seen him use the dryers without asking which is warmest.\n\nUnder the float tin behind the counter, the envelope from the solicitor. Friday, eleven o'clock. The buyer is keeping the name. The buyer wants the machines too, or what's left of them.\n\n\"Six is warm,\" she says.\n\n\"Cheers, Fi.\" He feeds in coins. \"I've an interview Monday and this is the only shirt that fits.\"\n\n\"Monday.\"\n\n\"Eight-thirty. Don't tell my mum I'm sorting it at two in the morning.\"\n\n\"I'll not.\"\n\nShe counts the float again, though she knows the number. Out on Duke Street a bus goes by, lit up and empty. Card reader, the buyer's letter said, in the second paragraph. Coins phased out by spring.\n\n\"You all right?\" Dev says.\n\n\"Aye. Tired.\"\n\nThe drum turns. He pulls out a chair, then stops with his hand on it.\n\n\"Same time Thursday, then?\"\n\nFiona opens the tin, looks at the notes, and shuts it.\n\n\"Mind the door on your way,\" she says. \"It sticks.\"\n",
+      "error": "specialist wrote no fixed file"
+    },
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "agent": "ui-specialist",
+      "report": "\" (a typo). Now \"initial-scale=1.0\", so phones scale the page correctly.\n- The phone link was tel:+15550199. The +1 country code wasn't in the supplied facts and 555-0199 is only 7 digits. Now tel:5550199.\n- Added a visible focus style (a:focus-visible, 3px outline) for the phone link.\n- Price table: service names are now row headers (th scope=\"row\") and the table has a visually hidden caption, so screen readers pair each service with its price. The look is the same.\n- Scanner (scripts/scan_ui_defaults.py): flags: none, on both the draft and the fixed file.\nLeft alone:\n- Layout, type, colors and copy. The page is two sections and a footer with no gradients, cards, badges or buzzwords, so a redesign would have been change for its own sake.\n- The 2 services and 3 contact facts. Nothing was added.\n- Contrast: I did not compute it. The muted and accent colors look dark enough on the paper background, but this is unchecked.\nBrowser check: not verified in a browser (screenshot commands were not approved, so there are no 375px or 1280px screenshots, and keyboard tabbing and clipping were not checked)\nNeeded from the user: nothing required. Optional, if wanted: the real phone country code or area code for the tel link, and any other services or prices (the page lists only hemming and zip replacement).\nFacts check: all kept. Hemming $12, zip replacement $18, Mon to Fri 10 to 6, 22 Mill Lane and 555-0199 are unchanged. Only the tel href changed, and the visible number is the same.\n```\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 6,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          },
+          "B": {
+            "passes": 6,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "FAIL"
+          }
+        },
+        "better": "B",
+        "reason": "Both pages use only the supplied facts and fail U1 and U3. U1 is unverified for both because no browser was available. B adds a visible focus ring, row headers and a table caption. A's viewport tag has a typo, 'initial-scale:1.0', which is a concrete mobile-layout risk."
+      },
+      "before": {
+        "score": 0.75,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      },
+      "after": {
+        "score": 0.75,
+        "verdict": "Fix first",
+        "must_pass": "FAIL"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "agents": [
+    {
+      "task": "u-heldout-1",
+      "skill": "human-ui",
+      "agent": "ui-specialist",
+      "report": "html\nFixed:\n- Viewport meta had `initial-scale:1.0` (invalid); now `initial-scale=1`.\n- U2: the draft was the cream, Georgia and terracotta look with no reason behind it. It is now a tailor's counter: navy, a tape-measure strip in tape yellow, and prices set as a ticket with leader dots.\n- U3: two faces with contrast, a condensed bold sans in caps for display and Georgia for text. Colors are CSS variables, with navy on white about 15:1 and navy on yellow about 11:1.\n- U1 (by code only): added visible `:focus-visible` rings, a 48px tap target for the call button, 16px side inset on phones and a flexible price row.\n- U4: the table became a price ticket, and the hours/address/phone grid became two blocks.\n- U5: replaced the tagline \"Alterations and repairs\" with the supplied facts (address and hours), since \"alterations and repairs\" claims a wider scope than the brief gives. The button reads \"Call 555-0199\".\n- Footer phone number is now a link too.\nLeft alone: all five supplied facts, unchanged. Fonts are local stacks only, so Franklin Gothic may fall back to Arial Narrow or Arial depending on the device.\nBrowser check: not verified in a browser (screenshots not taken, approval needed)\nScanner: flags none.\nNeeded from the user: none required. Optional: a map link, weekend hours (I did not state \"closed Sat/Sun\"), and whether the \"Alterations and repairs\" tagline is accurate and should return.\nFacts check: all kept. Nothing invented: no reviews, stats, years or scope claims.\n```\n",
+      "judge": {
+        "files": {
+          "A": {
+            "passes": 5,
+            "applicable": 8,
+            "verdict": "Fix first",
+            "must_pass": "PASS"
+          },
+          "B": {
+            "passes": 8,
+            "applicable": 8,
+            "verdict": "Ship",
+            "must_pass": "PASS"
+          }
+        },
+        "better": "B",
+        "reason": "B has a tailor's-counter direction, two type faces, a visible focus ring and only the facts supplied, while A uses the cream-serif-terracotta default with one typeface, adds the unsupplied tagline \"Alterations and repairs\", and has a malformed viewport meta (\"initial-scale:1.0\")."
+      },
+      "before": {
+        "score": 0.625,
+        "verdict": "Fix first",
+        "must_pass": "PASS"
+      },
+      "after": {
+        "score": 1.0,
+        "verdict": "Ship",
+        "must_pass": "PASS"
+      }
+    }
+  ]
+}

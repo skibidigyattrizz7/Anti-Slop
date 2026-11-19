@@ -72,6 +72,27 @@ Does a plain request, with no slash command, load the right skill? 16 phrases pe
 
 The first trigger run found the writing skill loading only when the request mentioned AI. All 8 descriptions now start "Load before starting, even for a short task", which lifted writing from 1 to 6 of 8. Chat stays low because the model answers a question directly without loading anything. Chat rules probably belong in an always-on output style, not a skill.
 
+## Specialist test with the eval runner (2026-11-19)
+
+`python3 tools/run_evals.py --only agents`: each specialist fixes the no-skill output from the held-out run, then a blind judge scores before against after. Specialists ran on Sonnet.
+
+| Specialist | Before fix | After fix | Must-pass after |
+|---|---|---|---|
+| chat-specialist | 0.71 Fix first | 1.00 Ship | PASS |
+| code-specialist | 0.40 Fix first | 1.00 Ship | PASS |
+| fiction-specialist | 0.50 Fix first | 1.00 Ship | PASS |
+| games-specialist | 0.00 Fix first | 1.00 Ship | PASS |
+| media-specialist | 0.43 Fix first | 1.00 Ship | PASS |
+| ui-specialist | 0.62 Fix first | 1.00 Ship | PASS |
+| writing-specialist | 0.25 Fix first | 0.75 Fix first | PASS |
+| reports-specialist | 0.71 Fix first | 1.00 Ship | PASS |
+
+All 8 raised the score, and 7 of 8 reached Ship. The writing specialist kept every fact but stopped 42 percent short of the asked length, leaving `[detail needed]` notes in place of padding. That is the intended behaviour, so it stays "Fix first" until a person supplies the missing details. The UI result comes from a second run, after the judge was told to open each page with the screenshot script: in the first run neither page was opened, so U1 could not pass.
+
+## Chat rules always on (2026-11-19)
+
+The chat skill loaded for only 1 of 8 plain questions, because the model answers questions without loading anything. The plugin now has a startup hook (`hooks/hooks.json`) that adds a 7-rule chat summary to every session. A test run showed the hook context arriving and the reply opening with the answer. The full `human-chat` skill is still there for deeper work.
+
 ## Limits
 
 - One run per arm, one task per category (writing had three). That is far too few to call any difference proven.

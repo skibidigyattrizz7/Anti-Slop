@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa's Tailoring · 22 Mill Lane</title>
+<style>
+  :root {
+    --bg: #f2f3ef;
+    --surface: #ffffff;
+    --text: #1c2833;
+    --text-muted: #4a5762;
+    --navy: #1c2833;
+    --tape: #f0b92b;
+    --on-navy: #f2f3ef;
+    --line: #c9cdc6;
+    --focus: #1c2833;
+    --display: Rockwell, "Roboto Slab", "Courier New", Georgia, serif;
+    --body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --s1: 0.5rem; --s2: 1rem; --s3: 1.5rem; --s4: 2.5rem; --s5: 4rem;
+    --r-btn: 4px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 var(--s3); }
+
+  header {
+    background: var(--navy);
+    color: var(--on-navy);
+    padding: var(--s5) 0 var(--s4);
+  }
+  header a:focus-visible { outline-color: var(--tape); }
+  .tape {
+    height: 14px;
+    background: var(--tape)
+      repeating-linear-gradient(90deg, var(--navy) 0 1px, transparent 1px 10px) bottom / 100% 6px no-repeat;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.5rem, 9vw, 4.25rem);
+    line-height: 1.05;
+    margin: 0 0 var(--s1);
+  }
+  .sub { margin: 0 0 var(--s3); font-size: 1.125rem; }
+  .call {
+    display: inline-block;
+    background: var(--tape);
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.85rem 1.4rem;
+    border-radius: var(--r-btn);
+    min-height: 44px;
+  }
+  .call:hover { background: #ffd05a; }
+
+  main { padding: var(--s4) 0 var(--s5); }
+  section + section { margin-top: var(--s5); }
+  h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin: 0 0 var(--s2);
+  }
+
+  /* price board */
+  .prices { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+  .prices li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s2);
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.25rem;
+  }
+  .prices .dots { flex: 1; border-bottom: 2px dotted var(--text-muted); transform: translateY(-0.3em); min-width: 1rem; }
+  .prices .amt { font-family: var(--display); font-weight: 800; font-size: 2rem; line-height: 1; }
+
+  /* hours + address */
+  dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: var(--s1) var(--s3); }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  dd a { color: var(--text); font-weight: 700; text-underline-offset: 3px; }
+
+  footer { border-top: 2px solid var(--navy); padding: var(--s3) 0; color: var(--text-muted); font-size: 0.9375rem; }
+
+  @media (max-width: 30rem) {
+    .wrap { padding: 0 var(--s2); }
+    header { padding: var(--s4) 0 var(--s3); }
+    .call { display: block; text-align: center; }
+    dl { grid-template-columns: 1fr; gap: 0; }
+    dd { margin-bottom: var(--s2); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Rosa's Tailoring</h1>
+    <p class="sub">Alterations and repairs at 22 Mill Lane.</p>
+    <a class="call" href="tel:+15550199">Call 555-0199</a>
+  </div>
+</header>
+<div class="tape" aria-hidden="true"></div>
+
+<main class="wrap">
+
+  <section aria-labelledby="prices-h">
+    <h2 id="prices-h">Prices</h2>
+    <ul class="prices">
+      <li><span>Hemming</span><span class="dots" aria-hidden="true"></span><span class="amt">$12</span></li>
+      <li><span>Zip replacement</span><span class="dots" aria-hidden="true"></span><span class="amt">$18</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <h2 id="visit-h">Come in</h2>
+    <dl>
+      <dt>Open</dt>
+      <dd>Monday to Friday, 10:00 AM to 6:00 PM</dd>
+      <dt>Address</dt>
+      <dd>22 Mill Lane</dd>
+      <dt>Phone</dt>
+      <dd><a href="tel:+15550199">555-0199</a></dd>
+    </dl>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; Rosa's Tailoring</div>
+</footer>
+
+</body>
+</html>

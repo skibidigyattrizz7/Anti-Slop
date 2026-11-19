@@ -12,6 +12,7 @@ Usage (from anywhere):
   python3 tools/run_evals.py                      everything, 3 runs per side
   python3 tools/run_evals.py --skills human-ui --runs 1
   python3 tools/run_evals.py --only triggers
+  python3 tools/run_evals.py --only agents       specialists fix earlier no-skill outputs
   python3 tools/run_evals.py --selftest           no Claude calls
 
 Results go to evals/results/<timestamp>/ (results.json and summary.md).
@@ -58,8 +59,12 @@ def judge(task, files, model, cwd):
     """files: {"A": path, "B": path}. Returns parsed JSON or None."""
     body = (ROOT / "agents" / "judge.md").read_text(encoding="utf-8").split("---", 2)[2]
     names = ", ".join(f"{k} = {Path(p).name}" for k, p in files.items())
+    look = ""
+    if task["ext"] == "html":
+        look = (f"Open each page for real: run node {ROOT}/skills/see-it-run/scripts/shoot.cjs <file> --out {cwd}/shots-<label> "
+                "and look at phone.png and desktop.png with Read before you score.\n")
     prompt = (f"{body}\n\n## This job\n\nCategory skill folder: {task['skill']}. Skills live under {ROOT}/skills/.\n"
-              f"Brief: {task['brief']}\nFiles, in {cwd}: {names}. Judge each on its own. You do not know how they were made.\n\n"
+              f"Brief: {task['brief']}\nFiles, in {cwd}: {names}. Judge each on its own. You do not know how they were made.\n{look}\n"
               "After judging, reply with ONLY one JSON object and no other text:\n"
               '{"files": {"A": {"passes": 0, "applicable": 0, "verdict": "Ship or Fix first", "must_pass": "PASS or FAIL"}, '
               '"B": {...}}, "better": "A or B or tie", "reason": "one sentence"}')
@@ -97,6 +102,52 @@ def run_quality(task, runs, writer, judge_model, out):
         rows.append(row)
         shutil.rmtree(work, ignore_errors=True)
     return rows
+
+
+SPECIALIST = {"human-writing": "writing", "human-chat": "chat", "human-code": "code", "human-fiction": "fiction",
+              "human-ui": "ui", "human-media": "media", "human-games": "games", "real-reports": "reports"}
+
+
+def run_agent(task, model, judge_model, out, source):
+    """A specialist fixes the no-skill output from an earlier run, then a judge scores before vs after, blind."""
+    name = f"{task['id']}-run1-without.{task['ext']}"
+    found = [source / name] if source else sorted((ROOT / "evals" / "results").glob(f"*/{name}"))
+    before = found[-1] if found else None
+    if not before or not before.exists():
+        return [{"task": task["id"], "skill": task["skill"], "error": f"no earlier output named {name}"}]
+    work = Path(tempfile.mkdtemp(prefix="agent-"))
+    shutil.copy(before, work / f"draft.{task['ext']}")
+    agent = f"{SPECIALIST[task['skill']]}-specialist"
+    body = (ROOT / "agents" / f"{agent}.md").read_text(encoding="utf-8").split("---", 2)[2]
+    prompt = (f"{body}\n\n## This job\n\nSkills live under {ROOT}/skills/. Work to fix: {work}/draft.{task['ext']}.\n"
+              f"Brief: {task['brief']}\nWrite the fixed version to {work}/fixed.{task['ext']} and leave the draft as it is. "
+              "No writing sample from the user. Then give your report.")
+    args = ["--disable-slash-commands", "--tools", "Read,Glob,Grep,Write,Edit,Bash", "--add-dir", str(ROOT),
+            "--allowedTools", f"Read Glob Grep Write(/{work}/**) Edit(/{work}/**) Bash(python3:*) Bash(node:*)", "--model", model]
+    report = claude(args, prompt, work, timeout=900)
+    fixed = work / f"fixed.{task['ext']}"
+    row = {"task": task["id"], "skill": task["skill"], "agent": agent, "report": report[-1500:]}
+    if not fixed.exists():
+        row["error"] = "specialist wrote no fixed file"
+        return [row]
+    shutil.copy(fixed, out / f"{task['id']}-{agent}-fixed.{task['ext']}")
+    labels = ["A", "B"]
+    random.shuffle(labels)
+    files = {}
+    for arm, label in zip(("before", "after"), labels):
+        p = work / f"{label}.{task['ext']}"
+        shutil.copy(before if arm == "before" else fixed, p)
+        files[label] = p
+    verdict = judge(task, dict(sorted(files.items())), judge_model, work)
+    arm_of = dict(zip(labels, ("before", "after")))
+    row["judge"] = verdict
+    if verdict and "files" in verdict:
+        for label, arm in arm_of.items():
+            f = verdict["files"].get(label, {})
+            row[arm] = {"score": f.get("passes", 0) / max(f.get("applicable", 1), 1),
+                        "verdict": f.get("verdict"), "must_pass": f.get("must_pass")}
+    shutil.rmtree(work, ignore_errors=True)
+    return [row]
 
 
 def trigger_phrases(skill):
@@ -139,7 +190,7 @@ def run_trigger(skill, phrase, expected, model, cwd):
     return {"skill": skill, "phrase": phrase, "expected": expected, "called": called, "ok": hit == expected}
 
 
-def summarise(quality, triggers):
+def summarise(quality, triggers, agents=()):
     lines = ["# Eval run", "", "Scores are passes over applicable rubric checks, averaged over runs.", ""]
     if quality:
         lines += ["| Skill | Runs | With skill | Without | Judge preferred with skill | Must-pass held (with / without) |",
@@ -159,6 +210,15 @@ def summarise(quality, triggers):
             lines.append(f"| {skill} | {len(ok)} | {avg('with'):.2f} (spread {spread('with'):.2f}) | "
                          f"{avg('without'):.2f} (spread {spread('without'):.2f}) | {wins} of {len(ok)} | "
                          f"{mp('with')} / {mp('without')} |")
+        lines.append("")
+    if agents:
+        lines += ["| Specialist | Before fix | After fix | Must-pass after |", "|---|---|---|---|"]
+        for r in sorted(agents, key=lambda r: r["skill"]):
+            if "after" not in r:
+                lines.append(f"| {r.get('agent', r['skill'])} | {r.get('error', 'judge failed')} | | |")
+                continue
+            lines.append(f"| {r['agent']} | {r['before']['score']:.2f} {r['before']['verdict']} | "
+                         f"{r['after']['score']:.2f} {r['after']['verdict']} | {r['after']['must_pass']} |")
         lines.append("")
     if triggers:
         lines += ["| Skill | Triggered when it should | Stayed quiet when it should |", "|---|---|---|"]
@@ -183,6 +243,9 @@ def selftest():
     assert skills_called(stream) == ["anti-slop:human-ui"]
     rows = [{"skill": "x", "with": {"score": 1, "must_pass": "PASS"}, "without": {"score": 0.5, "must_pass": "FAIL"}, "better": "with"}]
     assert "1 of 1" in summarise(rows, [])
+    ag = [{"skill": "x", "agent": "x-specialist", "before": {"score": 0.5, "verdict": "Fix first"},
+           "after": {"score": 1.0, "verdict": "Ship", "must_pass": "PASS"}}]
+    assert "x-specialist | 0.50 Fix first | 1.00 Ship | PASS" in summarise([], [], ag)
     print("selftest ok")
 
 
@@ -193,7 +256,8 @@ def main():
     ap.add_argument("--writer", default="haiku")
     ap.add_argument("--judge", default="sonnet")
     ap.add_argument("--trigger-model", default="sonnet")
-    ap.add_argument("--only", choices=["quality", "triggers"])
+    ap.add_argument("--only", choices=["quality", "triggers", "agents"])
+    ap.add_argument("--from-run", help="results folder whose no-skill outputs the specialists fix (default: the latest output for each task)")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
@@ -208,10 +272,23 @@ def main():
         tasks = [t for t in tasks if t["skill"] in wanted]
     out = ROOT / "evals" / "results" / time.strftime("%Y-%m-%d-%H%M")
     out.mkdir(parents=True, exist_ok=True)
-    quality, triggers = [], []
+    quality, triggers, agents = [], [], []
+    if a.only == "agents":
+        source = ROOT / "evals" / "results" / a.from_run if a.from_run else None
+        with cf.ThreadPoolExecutor(a.workers) as pool:
+            for j in cf.as_completed([pool.submit(run_agent, t, a.judge, a.judge, out, source) for t in tasks]):
+                agents.extend(j.result())
+                print(".", end="", flush=True)
+        print()
+        (out / "results.json").write_text(json.dumps({"agents": agents}, indent=2), encoding="utf-8")
+        summary = summarise([], [], agents)
+        (out / "summary.md").write_text(summary, encoding="utf-8")
+        print(summary)
+        print(f"Saved to {out.relative_to(ROOT)}")
+        return 0
     with cf.ThreadPoolExecutor(a.workers) as pool:
         jobs = []
-        if a.only != "triggers":
+        if a.only not in ("triggers",):
             jobs += [pool.submit(run_quality, t, a.runs, a.writer, a.judge, out) for t in tasks]
         if a.only != "quality":
             skills = sorted(wanted or {p.name for p in (ROOT / "evals").iterdir() if (p / "prompts.md").exists()})

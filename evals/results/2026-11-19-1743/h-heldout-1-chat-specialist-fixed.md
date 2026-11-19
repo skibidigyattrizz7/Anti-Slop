@@ -1,0 +1,6 @@
+Probably not. Getting out of breath after two minutes is very common when you're starting out, because your lungs, heart and leg muscles haven't adapted to running yet. Most people who start feel the same, and it improves within a few weeks if you keep at it.
+
+The fix is to run slower and break it up. Try 1 minute of running, then 1 minute of walking, and repeat that 8 to 10 times. That's 16 to 20 minutes of moving, and the walking breaks stop you hitting the wall. Each week, make the running parts a bit longer and the walking parts shorter. Go slow enough that you could talk in full sentences, and if you can't, slow down or walk.
+Run 3 times a week with a rest day between, since your body adapts while you recover. Start with 5 minutes of brisk walking as a warm-up. Judge your progress by how long you can run before you need to walk, not by speed.
+
+One caution: if you get chest pain or pressure, dizziness, fainting, or unusual wheezing or coughing when you exercise, see a doctor before you push harder. Do the same if you have a heart condition or asthma you haven't talked about with a doctor. Breathlessness alone usually just means you're getting fitter, but those symptoms are worth getting checked.

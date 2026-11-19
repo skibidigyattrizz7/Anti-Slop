@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosa's Tailoring · 22 Mill Lane</title>
+<!--
+  Contract (short)
+  Audience: neighbours on a phone who want to know the price, the hours and where the door is.
+  Job: call or walk in.
+  Direction: a tailor's counter. Tape-measure strip, chalk-yellow, navy cloth. Price list reads like a ticket.
+  Not this: cream + serif + terracotta; hero with three cards.
+  Type: Franklin Gothic / Arial Narrow bold caps for display (shop signage), Georgia for text. Local fonts only.
+  Palette: navy ink on cool white, tape yellow as the one accent. Navy on white 15:1, navy on yellow 11:1.
+  States: static page, no data, forms or async content. Focus ring on every link.
+-->
+<style>
+  :root {
+    --bg: #f3f5f7;
+    --surface: #ffffff;
+    --text: #14213d;
+    --text-muted: #46526b;
+    --accent: #f4c430;
+    --accent-text: #14213d;
+    --line: #c9d1dc;
+    --focus: #1d4ed8;
+
+    --display: "Franklin Gothic Medium", "Franklin Gothic", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: Georgia, "Times New Roman", serif;
+
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 40px; --s5: 64px;
+    --radius: 4px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+  a { color: var(--text); text-underline-offset: 3px; }
+  a:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding-inline: var(--s2); }
+  @media (min-width: 600px) { .wrap { padding-inline: var(--s3); } }
+
+  /* Masthead */
+  header { background: var(--text); color: #fff; padding-top: var(--s4); }
+  header h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    font-size: clamp(2.5rem, 11vw, 5.5rem);
+  }
+  header p { margin: var(--s2) 0 var(--s4); color: #d6dce8; }
+  .tape {
+    height: 36px;
+    background-color: var(--accent);
+    background-image:
+      repeating-linear-gradient(90deg, var(--text) 0 2px, transparent 2px 12px),
+      repeating-linear-gradient(90deg, var(--text) 0 2px, transparent 2px 60px);
+    background-size: 100% 10px, 100% 20px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+  }
+
+  h2 {
+    margin: 0 0 var(--s2);
+    font-family: var(--display);
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  section { padding-block: var(--s4); }
+  section + section { border-top: 1px solid var(--line); }
+
+  /* Prices: a ticket, name left, leader dots, price right */
+  .prices { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .prices li {
+    display: flex; align-items: baseline; gap: var(--s2);
+    padding: var(--s2) var(--s3);
+  }
+  .prices li + li { border-top: 1px dashed var(--line); }
+  .prices .name { font-size: 1.375rem; }
+  .prices .dots { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-4px); min-width: 16px; }
+  .prices .amt {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  /* Visit */
+  .visit { display: grid; gap: var(--s4); }
+  @media (min-width: 700px) { .visit { grid-template-columns: 1fr 1fr; } }
+  .visit h3 { margin: 0 0 var(--s1); font-size: 1.125rem; }
+  .visit p { margin: 0; }
+  .visit .big { font-size: 1.5rem; line-height: 1.35; }
+
+  .call {
+    display: inline-block;
+    margin-top: var(--s2);
+    padding: 14px 24px;
+    min-height: 48px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: var(--radius);
+  }
+  .call:hover { background: #e0b11c; }
+  .call:focus-visible { outline-color: var(--focus); outline-offset: 3px; }
+
+  footer { background: var(--text); color: #d6dce8; padding-block: var(--s3); font-size: 0.95rem; }
+  footer a { color: #fff; }
+  footer a:focus-visible { outline-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Rosa's Tailoring</h1>
+    <p>22 Mill Lane. Open Monday to Friday, 10 to 6.</p>
+  </div>
+  <div class="tape" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="prices">
+    <h2 id="prices">Prices</h2>
+    <ul class="prices">
+      <li><span class="name">Hemming</span><span class="dots" aria-hidden="true"></span><span class="amt">$12</span></li>
+      <li><span class="name">Zip replacement</span><span class="dots" aria-hidden="true"></span><span class="amt">$18</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="visit">
+    <h2 id="visit">Find us</h2>
+    <div class="visit">
+      <div>
+        <h3>Hours</h3>
+        <p class="big">Monday to Friday<br>10:00 AM to 6:00 PM</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <p class="big">22 Mill Lane</p>
+        <a class="call" href="tel:+15550199">Call 555-0199</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; Rosa's Tailoring &middot; 22 Mill Lane &middot; <a href="tel:+15550199">555-0199</a></div>
+</footer>
+
+</body>
+</html>
