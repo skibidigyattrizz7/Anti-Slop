@@ -75,3 +75,25 @@ Everything else about craft (dynamics, space, idiom, performance direction, sile
 - [Sound on Sound, 2018, possibly outdated](https://www.soundonsound.com/music-business/ai-music)
 - [InterSpace Music (distributor blog, unverified)](https://interspacemusic.com/blog/?p=3887)
 - [Opus Pro, April 2026 (search snippet, unverified)](https://www.opus.pro/blog/ai-music-news-april-2026)
+
+## Second pass 2026-11-19
+
+Method: pages opened with WebFetch. Format: Tell or fact / Fix / Source. Producer-sourced tells are thin and dated; the author of one guide says they may expire within a year.
+
+### AI music tells named by practitioners
+- **Tell:** Hiss layered over the voice, stronger in quiet songs; a stray breath or word where it does not belong; vocal transitions too polished or crammed; instruments cut off in odd places; instruments hollow or compressed; whole mix "too slick, too manicured" (musician Dylan Paul Ware, quoted); generic "average of everything" phrasing. **Fix:** Re-record or replace the vocal and lead parts; edit stray breaths and cutoffs by hand; add dynamics and uneven human feel. **Source:** https://www.start-track.com/start-tracks-guide-on-how-to-spot-ai-music/ (Will Sisskind, 2026-02-15). The essay lists no structure or lyric tells.
+- **Not opened:** Newgrounds moderation guide (weak attacks on percussion, mixing issues) returned 403; claim seen only in a search snippet. Shimmer on hi-hats and sibilance came from vendor blogs only. Both are unverified.
+- **Detector paper (earlier pass):** SONICS, whole-song structure. Still the only structure claim.
+
+### AI voice and TTS
+- **Fact:** Interspeech 2025 study: voice clones often fail to reproduce dynamic pitch (F0) variation; a condition with 30% reduced F0 variation was rated lower. ElevenLabs was rated comparable to human speech; StyleTTS-2 and XTTS-v2 lower. **Fix:** Direct pitch and stress variation; do not accept flat reads. **Source:** https://www.isca-archive.org/interspeech_2025/bakkouche25_interspeech.html (Bakkouche et al., 2025).
+- **Fact (vendor guidance):** ElevenLabs v3/v4 docs: bracket audio tags (for example `[whispers]`, `[sighs]`) steer delivery; describe voice quality, since sound-cue-like tags can produce sound effects; ellipses add pauses and weight; capitals add emphasis; v3 and v4 do not support SSML break tags (older models allow `<break time="x.xs" />` up to 3 s); too many break tags cause speed-ups, noise or artifacts; explicit dialogue tags beat relying on context; speed range 0.7 to 1.2; extreme values hurt quality; tags that speak out loud can be cut in post. **Source:** https://elevenlabs.io/docs/best-practices/prompting/eleven-v3 (opened 2026-11-19, undated; the page mixes v3 and v4 wording, so check against the engine used).
+- **Fact:** Google SSML sentence-level wrapping advice (earlier pass) stands for engines that support SSML.
+
+### Platform disclosure
+- **Spotify (verified, primary):** Sept 2025: spam filter, impersonation policy against unauthorized voice clones, DDEX AI credits. Oct 2026 one-year post: AI Credits launched in April 2026 and show which roles and instruments used AI, in Song Credits on mobile; AI Personas are labeled (badge announced 2026-08-11) and excluded from editorial and algorithmic recommendations by default; more than 50 million slop and spam tracks removed from recommendations, over 75 million spam tracks removed (company-reported). This confirms the April 2026 beta date, which the first pass had only from a distributor blog. **Sources:** https://newsroom.spotify.com/2025-09-25/spotify-strengthens-ai-protections/ (search result, body not opened); https://newsroom.spotify.com/2026-10-20/prioritizing-human-artistry/ (opened 2026-11-19).
+- **YouTube (verified, primary help page):** Disclose realistic altered or synthetic content: a real person appearing to say or do something they did not, altered real events or places, realistic scenes that never happened, and AI-generated music that is the main focus of the video. Exempt: clearly unrealistic content, minor aesthetic edits, production help (scripts, titles, captions), audio repair, cloning your own voice for voiceovers or dubs, game footage. **Source:** https://support.google.com/youtube/answer/14328491 (opened 2026-11-19, undated).
+- **Audible/ACX (secondary only):** several vendor and publisher posts say ACX's 2026-04-15 submission requirements need human narration unless Audible authorizes otherwise, and list unauthorized TTS and AI recordings as prohibited; sanctioned routes are KDP Virtual Voice and ACX Voice Replica. One vendor blog says the opposite, so unreliable. The ACX page is script-rendered and could not be read. **Sources:** search results (inkfluenceai.com, troubador.co.uk, 2026). Treat as unverified; tell the user to read ACX directly.
+
+### Could not verify
+- Audible/ACX primary text. Newgrounds guide text. Suno and Udio version-specific tells. Deezer 44% figure. Voice-coaching sources on breath placement. Audio engineers' studies on AI mastering.

@@ -1,6 +1,6 @@
 # Audio craft
 
-Evidence status: thin. The audio research pass was partial. Only the points below are sourced. Everything else is labelled unverified or left out. I cannot hear audio, so this file gives direction and a listening checklist, not a verdict.
+Evidence status: thin, improved by a second pass on 2026-11-19. Only the points below are sourced. Everything else is labelled unverified or left out. I cannot hear audio, so this file gives direction and a listening checklist, not a verdict.
 
 ## Music
 
@@ -20,6 +20,10 @@ Craft moves (practice, not sourced in the research notes):
 Sourced:
 - Google Cloud TTS SSML docs: `<prosody>`, `<emphasis>` and `<break>` control pitch, rate, volume, emphasis and pauses. Wrap whole sentences, not single words, to avoid odd pauses. The docs are undated, so check them against the engine you use.
 
+Sourced:
+- Interspeech 2025 (Bakkouche et al.): clones often lack dynamic pitch variation; less F0 variation was rated less natural. So direct pitch and stress.
+- ElevenLabs docs (undated): bracket tags steer delivery, ellipses add pause, capitals add emphasis, no SSML breaks in v3 and later, too many breaks cause artifacts, speed 0.7 to 1.2.
+
 Craft moves (practice, not sourced):
 - Write for the ear: short sentences, contractions, one point per line.
 - Mark where the pauses and stresses go. Markup helps only where the writer decided them.
@@ -37,15 +41,16 @@ Practice only, no source retrieved:
 
 ## Disclosure and rights
 
-- Tell the user to check the current AI-disclosure rules of the platform, distributor or contest. No verified rule beyond Spotify's DDEX credits was found for Audible, ACX or YouTube.
+- Spotify (newsroom, 2026-10-20): AI Credits launched April 2026 and show which roles and instruments used AI; AI Personas are labeled and left out of recommendations by default.
+- YouTube (help page, undated, read 2026-11-19): disclose realistic synthetic content, including AI music that is the main focus of a video. Not needed for unrealistic content, minor edits, script help, audio repair or cloning your own voice.
+- Audible/ACX: only secondary sources (April 2026) say human narration is required unless authorized. Not read at source, so tell the user to check ACX directly.
 - Voice clones need the speaker's consent. Do not clone a real person's voice without it.
 - Describe what was AI-made (vocals, instruments, post-production), not just yes or no.
 
 ## Left out as unverified
 
-- Spotify AI Credits beta date (one distributor blog).
 - Suno stem and inpainting features, Deezer's share of AI uploads (one aggregator snippet).
-- Specific tells in chords, lyrics, breaths or cymbal shimmer: no source found.
+- Chord and lyric tells, cymbal shimmer: vendor blogs only. Practitioner tells that are sourced: hiss under vocals, stray breaths, abrupt instrument cutoffs, over-slick mix (Start-Track, 2026-02-15).
 - Claims that engineers cannot tell AI mastering from human mastering (vendor self-report).
 
 ## Longer before and after

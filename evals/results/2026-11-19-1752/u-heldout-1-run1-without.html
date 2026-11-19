@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosa's Tailoring</title>
+  <meta name="description" content="Rosa's Tailoring: hemming and zip replacement. 22 Mill Lane. Open Monday to Friday, 10 to 6.">
+  <style>
+    :root {
+      --ink: #2b2118;
+      --muted: #6b5d4f;
+      --cream: #fbf7f0;
+      --paper: #ffffff;
+      --accent: #9b4d3a;
+      --accent-dark: #7a3a2b;
+      --line: #e6dccd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: 0.02em;
+    }
+    header p {
+      margin: 0;
+      color: #d9cbb8;
+      font-style: italic;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: var(--accent-dark);
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .services li {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1.25rem;
+      background: var(--cream);
+    }
+    .services h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .price {
+      font-size: 1.75rem;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .services p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .info-grid h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+    .info-grid p {
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    td {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    td:first-child {
+      font-weight: bold;
+      width: 40%;
+    }
+    a.phone {
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    a.phone:hover, a.phone:focus {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 480px) {
+      section { padding: 1.25rem; }
+      td:first-child { width: 45%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rosa's Tailoring</h1>
+    <p>Hemming and zip replacement, done with care</p>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Services</h2>
+      <ul class="services">
+        <li>
+          <h3>Hemming</h3>
+          <div class="price">$12</div>
+          <p>Hems for trousers, skirts, and other garments.</p>
+        </li>
+        <li>
+          <h3>Zip Replacement</h3>
+          <div class="price">$18</div>
+          <p>Replacement of a broken or worn zip.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="visit">
+      <h2>Visit Us</h2>
+      <div class="info-grid">
+        <div>
+          <h3>Address</h3>
+          <p>22 Mill Lane</p>
+        </div>
+        <div>
+          <h3>Phone</h3>
+          <p><a class="phone" href="tel:+15555550199">555-0199</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours">
+      <h2>Opening Hours</h2>
+      <table>
+        <tr><td>Monday to Friday</td><td>10:00 to 18:00</td></tr>
+        <tr><td>Saturday</td><td>Closed</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Rosa's Tailoring &middot; 22 Mill Lane &middot; 555-0199</p>
+  </footer>
+</body>
+</html>
