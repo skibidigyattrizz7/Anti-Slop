@@ -34,3 +34,15 @@ Score is passes out of applicable checks. Report the score with the verdict, nev
 - Formal, simple or non-native English is not a failure.
 - If the user asked for a list, warmth, emoji or a long answer, H4, H7 and H8 pass on that point. Nothing overrides H1.
 - Use `scripts/count_chat_tells.py` counts as evidence only.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule for ordinary work.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Reader model | The reply fits the reader's level, from one question or from their own words, with no pile of questions | It teaches at the wrong level, or asks more than one calibrating question |
+| S2 | Misconception | The likely wrong model is named once and replaced | None is named where one is likely, or a list of them is |
+| S3 | Example then rule | A checked worked example comes before the rule | The rule comes first, or the example has an arithmetic error |
+| S4 | Analogy | An analogy maps real parts and states where it breaks | It would fit any topic, or no limit is given |
+| S5 | Depth and check | The first sentence stands alone, and a prediction task is offered once if the user is learning | One flat block of detail, or a quiz thrown at someone who wanted a result |

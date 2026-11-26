@@ -37,3 +37,15 @@ Report the score as passes out of applicable checks, with the verdict, never alo
 - An honest prototype may use placeholders. G5 applies to builds called finished.
 - A brief or the owner's style overrides G2, G7 and G8 defaults. It never overrides G1.
 - If the game cannot be run in this environment, say so, grade G1 as a plan if a plan exists (otherwise FAIL, not run), and list what a human should test.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict for ordinary work. Report them beside the score.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Target aesthetic | One or two aesthetics are named and each mechanic serves one | Mechanics listed with no target feeling |
+| S2 | Forgiveness constants | Grace, buffer and corner values are named constants, tuned one at a time; Celeste numbers are cited, and no jump-buffer length is quoted | Hard-coded windows, or a made-up buffer figure |
+| S3 | Playtest protocol | Fresh testers, no leading prompts, first confusion and quit point recorded; small counts are not called statistics | Developer-only testing, or "players loved it" with no evidence |
+| S4 | Difficulty and economy | One new variable per level; sinks and faucets modelled | Many changes per level, or an untested economy |
+| S5 | Slice and budgets | A vertical slice and non-goals exist; budgets are measured, and threejs numbers are credited as one author's starting points | Content built before a slice, or budgets stated as standards |

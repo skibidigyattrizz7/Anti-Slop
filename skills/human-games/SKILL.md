@@ -40,6 +40,7 @@ A brief or the owner's own style overrides these.
 | Designing mechanics, levels, feel, UI, sound, 3D assets or VFX | `references/craft.md` |
 | Checking a finished game | `references/rubric.md` |
 | You have a .obj file | `python3 scripts/check_mesh.py --max-tris 5000 FILE.obj` |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 Use deeper skills for game feel, physics tuning and camera systems when they are installed.
 

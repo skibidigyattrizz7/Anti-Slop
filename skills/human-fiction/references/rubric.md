@@ -37,3 +37,15 @@ Report the score (passes out of applicable checks) with the verdict, never alone
 - Script counts are evidence only. A stock name inside a parody or a quotation is exempt.
 - A brief or the user's own style can override F2 (e.g. a requested setting) and F7 (a requested happy ending). It never overrides F1.
 - Genre convention is not a fail: a lighthouse in a lighthouse-themed brief is fine.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule for ordinary work. Sourcing is thin, so treat a miss as a prompt to look, not proof.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Distance | Distance fits the scene and holds within a paragraph unless the shift is deliberate | An unmotivated jump between far and close in one paragraph |
+| S2 | Scene function | Each scene has a goal, opposition and a change, or is a sequel ending in a decision | A scene where nothing is wanted, opposed or changed |
+| S3 | Want and need | The lead's want and need can be stated and differ, and the want costs something | They are the same, or no cost lands |
+| S4 | Subtext | At least one spoken line differs from what the speaker wants, and no line explains it | Every line says what the speaker feels |
+| S5 | Revision | Passes were run in order (structure, want, dialogue, distance, rhythm, cut, proof) | Tells were polished before the shape was fixed |

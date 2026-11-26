@@ -42,6 +42,7 @@ The user's style or request overrides these.
 | Explaining, tutoring, advising, giving feedback, or replying in a given setting | `references/craft.md` |
 | Checking a finished reply | `references/rubric.md` |
 | You can run code | `python3 scripts/count_chat_tells.py FILE` |
+| Big job, senior review, or the user asks for senior-level work | `references/senior.md` |
 
 ## Before and after
 

@@ -42,6 +42,7 @@ A brief or the user's writing sample overrides these.
 | Marketing, product, email, academic or explainer copy | `references/craft.md` |
 | Checking a finished piece | `references/rubric.md` |
 | You can run code | `python3 scripts/count_tells.py FILE` |
+| Big job, senior review, or the user asks for senior-level work | `references/senior.md` |
 
 ## Before and after
 

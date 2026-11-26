@@ -44,6 +44,7 @@ A brief or the user's own style overrides these.
 | Writing an image or video prompt | `references/prompt-brief.md` |
 | Scanning for dated tells | `references/tells.md` |
 | Checking a finished piece | `references/rubric.md` |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 

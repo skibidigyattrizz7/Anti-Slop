@@ -55,4 +55,4 @@ Use when installed. Each has an inline fallback.
 
 ## Credits
 
-No text copied. Celeste constants are read from its MIT-licensed source; budgets are cited, not reproduced.
+No text copied. Celeste constants are read from its public source; budgets are cited, not reproduced.
