@@ -43,6 +43,7 @@ A brief, a brand or an existing design system overrides these.
 | Choosing type, color, layout, states, copy, slides, dashboards | `references/craft.md` |
 | Checking finished work | `references/rubric.md` |
 | You can run code | `python3 scripts/scan_ui_defaults.py FILE` |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 

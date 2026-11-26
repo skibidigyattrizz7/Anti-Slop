@@ -34,3 +34,15 @@ Report passes out of applicable checks with the verdict, never the score alone.
 - Generated, vendored and fixture files are N/A for C3 to C5.
 - Project conventions and the brief override C4, C5 and C8 defaults. They never override C1 or C7.
 - Script counts are evidence for a reviewer. A reviewer reads the code.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule for ordinary work. Report them beside the verdict, not inside it.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Design | Each new abstraction has two real callers or a stated reason, and each new interface is simpler than its body | A one-use wrapper, a pass-through method, or one likely change touching several modules |
+| S2 | Tests | Tests assert behaviour, names state scenario and outcome, and a bug fix has a test that fails without the fix | Tests that break on a rename, a fix with no failing test first, or a flaky test rerun until green |
+| S3 | Reviewable | One logical change of about 100 to 400 lines, refactor kept apart, description gives why, tests and risk | A mixed change over about 1,000 lines, or a description that restates the diff |
+| S4 | Reliability | Every remote call has a timeout, retries are idempotent at one layer with backoff and jitter, writes are idempotent | A call with no timeout, a blind retry of a POST, or stacked retries |
+| S5 | Boundaries and change | Input is validated by allowlist at each boundary, no secret in source, breaking edits are expand then contract, each new flag has an owner and expiry | Unvalidated input, a key in the repo, a breaking change in one step, or a flag with no removal plan |

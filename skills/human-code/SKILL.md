@@ -41,6 +41,7 @@ A brief, the project's style or the user's habits override these.
 | Writing or fixing code, a README, a commit or a PR | `references/craft.md` |
 | Checking a finished change | `references/rubric.md` |
 | You can run code | `python3 scripts/count_code_smells.py FILE` |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 
