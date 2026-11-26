@@ -10,9 +10,9 @@ A model picks the most likely next phrase, so its prose drifts to the average: s
 ## Top rules
 
 1. **Write the point in one sentence before drafting.** If you can't, ask what the piece is for.
-2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place, from the user or a source you opened. State each fact once, in the words given (bent stays bent).
+2. **Put a checkable specific in every paragraph, from what you were given.** A name, number, date or place from the user or an opened source. State each fact once, in the words given (bent stays bent).
 3. **Open on the point, end on something new, and hit the length.** Land within about 20 percent of the asked length. With few facts, fill it from those facts: what they mean for this reader, what to do and by when. Use `[detail needed: ...]` only for what the reader cannot act without, at most two.
-4. **State only what is true.** Write "Y". Leave out the "not X" half, whether it comes first ("it's not X, it's Y") or last ("Y, not X"). Name who acts: "we decided".
+4. **State only what is true.** Write "Y". Drop the "not X" half, first ("it's not X, it's Y") or last ("Y, not X"). Name who acts: "we decided".
 5. **Vary rhythm on purpose.** Mix short and long sentences and uneven paragraphs.
 6. **Use the plain word and take a view.** "Use", "help", "said". Give your view where the genre allows. State real doubt once.
 7. **Format for where it will be read.** Prose by default, lists for real lists, markdown only where it renders.
@@ -38,11 +38,11 @@ A brief or the user's writing sample overrides these.
 |---|---|
 | Rewriting or editing text that already exists | `references/rewrite.md` |
 | Scanning a draft for tells | `references/tells.md` |
-| Fixing one pattern: staging, rhythm, inflation, formatting, chat leftovers, wrong reader | the matching `references/patterns-*.md` |
+| Fixing one pattern (staging, rhythm, inflation, formatting, leftovers, wrong reader) | `references/patterns-*.md` |
 | Marketing, product, email, academic or explainer copy | `references/craft.md` |
 | Checking a finished piece | `references/rubric.md` |
 | You can run code | `python3 scripts/count_tells.py FILE` |
-| Big job, senior review, or the user asks for senior-level work | `references/senior.md` |
+| Big job or senior review | `references/senior.md` |
 
 ## Before and after
 

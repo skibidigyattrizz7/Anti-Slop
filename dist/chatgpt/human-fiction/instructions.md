@@ -40,6 +40,7 @@ A brief or the user's own style overrides these.
 | Drafting or revising a scene, poem, quest or NPC | `craft.md` (knowledge file) |
 | Checking a finished piece | `rubric.md` (knowledge file) |
 | Plot numbers | `storyscope.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | `senior.md` (knowledge file) |
 
 ## Before and after
 

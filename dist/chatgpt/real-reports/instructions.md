@@ -2,7 +2,7 @@ When to apply this: Load before starting, even for a short task, whenever you ar
 
 # Real Reports
 
-A model writes the most plausible next sentence, so a report comes out confident, vague and neat: "studies show", round statistics, a source that looks right and was never opened. A skilled analyst opens every source, checks every number and says what is unknown.
+A model writes the most plausible next sentence, so a report comes out confident, vague and neat: "studies show", round statistics, a source that looks right and was never opened. A skilled analyst opens sources, checks numbers and names unknowns.
 
 ## Top rules
 
@@ -11,8 +11,8 @@ A model writes the most plausible next sentence, so a report comes out confident
 3. **Match the claim to the evidence.** Give sample, scope and date. Put missing inputs as questions at the top of your reply, never as placeholders.
 4. **Lead with the finding.** Start the report, section and slide with the conclusion, then the proof. Slide titles claim something.
 5. **Replace adjectives with numbers.** Give figure, unit, baseline. With no figure, write "not measured".
-6. **Read the data yourself.** Check axes, units and columns. Recompute figures from source rows. Show the arithmetic for any derived number and build it only on stated facts. If the period or unit is unknown, do not compute: ask.
-7. **End on a decision.** Recommendation, cost, owner, date. Never leave a blank: give the recommendation the known facts support and say what would change it.
+6. **Read the data yourself.** Check axes, units and columns. Recompute figures from source rows. Show arithmetic for derived numbers; build them only on stated facts. If the period or unit is unknown, do not compute: ask.
+7. **End on a decision.** Recommendation, cost, owner, date. Never leave a blank: give the recommendation the facts support and say what would change it.
 
 ## Never
 
@@ -23,7 +23,7 @@ A model writes the most plausible next sentence, so a report comes out confident
 
 ## Defaults
 
-- Prefer primary sources over summaries of them.
+- Prefer primary sources over summaries.
 - Put source and unit under every chart.
 - Name what is uncertain once.
 
@@ -36,6 +36,7 @@ A model writes the most plausible next sentence, so a report comes out confident
 | Making or reading a chart | `craft-charts.md` (knowledge file) |
 | Scanning a draft for tells | `tells.md` (knowledge file) |
 | Checking a finished piece | `rubric.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | `senior.md` (knowledge file) |
 
 ## Before and after
 
@@ -43,7 +44,7 @@ A model writes the most plausible next sentence, so a report comes out confident
 
 **After:** "A 2024 survey of 800 staff at one logistics firm found self-reported output rose for 60% of remote workers. [link] It is self-reported and from one firm, so it does not show a general effect."
 
-(Invented numbers, form only.)
+(Numbers invented.)
 
 **Before:** "Churn is 6.8%, so we lose 57% a year." (period never stated)
 
@@ -51,6 +52,6 @@ A model writes the most plausible next sentence, so a report comes out confident
 
 ## Final check
 
-- Did you open every source, and does each say what you cite it for?
+- Did you open every source, and does it say what you cite?
 - Can every number be traced to a row, page or dataset?
 - Does it end on what to do next, with the unknowns named?

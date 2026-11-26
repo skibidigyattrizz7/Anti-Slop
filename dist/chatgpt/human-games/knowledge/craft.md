@@ -73,3 +73,9 @@ Roblox (check current docs, these change): a ParticleEmitter has a per-second ca
 **Intentional:** a quarter-second anticipation with a shrinking ring and a rising whine. At impact, a one-frame white flash part, a short hit-stop for the attacker, and camera shake that decays over about a third of a second. Layers: a small burst of large flipbook fireball particles that ease out fast, a few dozen small squashed sparks with gravity, a handful of dark normal-blend smoke particles that rise slowly and fade out, a point light that flares then fades, and a scorch decal that lingers. Palette runs white core, yellow, orange, charcoal. Around fifty particles total, not hundreds.
 
 **Mechanic, generic:** "Player shoots enemies. Enemy HP drops by 10." **Intentional:** a slow, heavy slug. On hit the enemy flashes white for two frames, a short hit-stop lands, knockback scales with damage, and a low thump plays at randomized pitch. Twist: every shot pushes you back, so firing is also how you move.
+
+## Before and after: a spell effect
+
+**Before:** a "magic spell" that is one orange sparkle emitter at a high rate.
+
+**After:** a short charge ring, a one-frame white flash, a few large fast-fading puffs, small sparks with gravity, and a thump at randomized pitch.

@@ -41,6 +41,7 @@ A brief or the user's own style overrides these.
 | Writing an image or video prompt | `prompt-brief.md` (knowledge file) |
 | Scanning for dated tells | `tells.md` (knowledge file) |
 | Checking a finished piece | `rubric.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 

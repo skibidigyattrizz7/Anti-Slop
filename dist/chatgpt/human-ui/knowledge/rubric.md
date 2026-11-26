@@ -25,6 +25,18 @@ Used by the judge agent and for self-checks. Each check is PASS, FAIL or N/A. A 
 - **U6, invented detail:** "from $65" (a range), "Full tune-up for your bike" (a scope) and a meta description that adds either fail. Use "$65" as given or drop the line.
 - **U8, zero flags:** read the font fields and the counts against the page. A clean scan alone is not a PASS.
 
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule for ordinary work. Read `senior.md` for the rules behind each.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Type system | One scale ratio, body measure about 45 to 90 characters, tabular figures in number columns | Sizes picked ad hoc, long lines, wobbling number columns |
+| S2 | Colour tokens | Role tokens over raw values, dark mode by token swap, measured contrast reported | Hex inside components, dark mode patched per component, contrast guessed |
+| S3 | Targets and states | Controls at least 24 px (44 px on touch) and the eight states exist, focus not hidden by sticky bars | Small hit areas, missing hover or focus or error states |
+| S4 | Loading and motion | Loading follows the 0.1 s, 1 s, 10 s limits, one duration table, reduced motion honoured | Spinner with no progress on long waits, mixed durations, no reduced-motion rule |
+| S5 | Critique | The 30-second critique was run and its findings listed | No critique, or only "looks good" |
+
 ## Verdict
 
 - **Ship:** U1 and U6 pass and at most one other check fails.

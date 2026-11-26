@@ -33,3 +33,14 @@ Report the score with the verdict. List what was not checkable, such as audio, m
 - Deliberate lo-fi, glitch or symmetrical styles are not failures when the brief asks for them.
 - A brief or the user's style overrides M2 to M5 defaults. It never overrides M1.
 - Never advise on defeating detectors.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict for ordinary work. Report them beside the score.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Iteration log | Images change one variable per round, with a reference board or stated references | Several things changed at once, no references |
+| S2 | Shot purpose | Every shot or section has a one-verb purpose, and a broken cut rule is named with its reason | Shots with no purpose, or Rule of Six weights stated as measured fact |
+| S3 | Loudness | A target is named with its source (EBU R 128 -23 LUFS, Spotify -14 LUFS) and true peak is stated; unverified platform figures are flagged | Loudness claimed with no number, or an unofficial figure presented as a platform rule |
+| S4 | Mix and voice | Mix order or layers are described, and a voice line has a want and an obstacle; audio not heard is flagged | "Make it punchy" with no layers, or audio called good without a listening note |

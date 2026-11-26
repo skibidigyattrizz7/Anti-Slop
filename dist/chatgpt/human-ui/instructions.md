@@ -39,6 +39,7 @@ A brief, a brand or an existing design system overrides these.
 | Scanning for default looks | `tells.md` (knowledge file) |
 | Choosing type, color, layout, states, copy, slides, dashboards | `craft.md` (knowledge file) |
 | Checking finished work | `rubric.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 

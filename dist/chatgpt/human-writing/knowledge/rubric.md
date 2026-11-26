@@ -36,3 +36,15 @@ Score is passes out of applicable checks. Report the score with the verdict, nev
 - Judge the text, never who or what wrote it. Do not say "AI-written" or "proves".
 - Formal, simple or non-native English is not a failure.
 - A brief or the user's writing sample overrides W5, W6 and W8 defaults. It never overrides W3.
+
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule for ordinary work.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Claim and reader | The point is a claim, and the reader and their next action are named | The point is a topic, or the reader is unnamed |
+| S2 | Reverse outline | One line per paragraph gives one job each, in an order that argues | Two jobs in one paragraph, two paragraphs with one job, or a paragraph that serves no claim |
+| S3 | Objection | The strongest objection is present and answered (arguments only) | It is missing, or answered in a weak form |
+| S4 | Line craft | The news sits last, sentences open on known material, subjects sit near verbs, and actions are in verbs | Sentences end on a vague abstraction, or nominal phrases ("the X-ing of") run through the piece |
+| S5 | Genre and voice | Docs are one Diataxis form; email opens on the ask; an edit of someone else's text keeps their voice | A mixed-form page, a buried ask, or an edit that flattens the writer |

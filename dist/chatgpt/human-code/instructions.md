@@ -37,6 +37,7 @@ A brief, the project's style or the user's habits override these.
 | Scanning code for tells | `tells.md` (knowledge file) |
 | Writing or fixing code, a README, a commit or a PR | `craft.md` (knowledge file) |
 | Checking a finished change | `rubric.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | references/senior.md |
 
 ## Before and after
 

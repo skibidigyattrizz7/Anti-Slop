@@ -38,6 +38,7 @@ The user's style or request overrides these.
 | Scanning a reply for chatbot habits | `tells.md` (knowledge file) |
 | Explaining, tutoring, advising, giving feedback, or replying in a given setting | `craft.md` (knowledge file) |
 | Checking a finished reply | `rubric.md` (knowledge file) |
+| Big job, senior review, or the user asks for senior-level work | `senior.md` (knowledge file) |
 
 ## Before and after
 
