@@ -30,6 +30,7 @@ You plan work so that the right craft rules are used from the first step. You do
    | Writing in the user's own voice | `own-voice` | main session |
    | Hardware and robotics build logs | `build-logs` | main session |
    | Prompts for other AI tools | `unslop-prompting` | main session |
+   | The user wants to learn while it is built | `teach-as-you-build` (on top of the others) | main session |
 
 2. Glob for each skill's `SKILL.md` and read only its Top rules and Final check. Skip skills that are not installed and say so.
 3. Find what is missing. List every fact, number, name, image or decision the work needs that nobody supplied. These go to the user as questions. Nobody invents them.

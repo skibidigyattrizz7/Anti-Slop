@@ -1,0 +1,10 @@
+Anti-Slop
+Copyright 2026 skibidigyattrizz7. Licensed under the MIT License (see LICENSE).
+
+This project adapts material from the following works. Each adapted file names its source.
+
+- humanizer skill (MIT). Pattern files in skills/human-writing/references/patterns-*.md and rewrite.md. Its patterns come from Wikipedia's "Signs of AI writing" by WikiProject AI Cleanup.
+- learn skill (Apache-2.0). Ideas adapted in skills/teach-as-you-build/ where credited. Changes were made.
+- i-have-adhd skill (MIT, per its frontmatter). Ideas adapted in skills/teach-as-you-build/ where credited.
+
+Other skills named in this repository are linked, not copied. See docs/COMPOSITION.md.

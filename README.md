@@ -24,6 +24,7 @@ Each skill is a short set of craft rules that loads when you ask for that kind o
 | `own-voice` | Writing that must sound like you |
 | `build-logs` | Hardware and robotics project logs |
 | `unslop-prompting` | Prompts for other AI tools |
+| `teach-as-you-build` | Optional: explains the key decisions as it builds, or gives a short lesson. Say "teach me as you go" |
 
 ### Agents
 
@@ -87,6 +88,8 @@ Version 0.1.0. Honest state of things:
 - The scripts are tested on their own samples and a few eval files, not on large real projects.
 - The research notes for games and audio are thin, and some items are marked unverified.
 - Tells go out of date. Each `tells.md` carries a `last_verified` date and a re-check schedule.
+
+Every craft skill also has a senior layer, `references/senior.md`, with sourced rules and pass/fail checks for big jobs and senior reviews. How the skills combine, and which wins when they disagree, is in `docs/COMPOSITION.md`.
 
 The research behind the skills is in `research_notes/`. The plan and the build rules are in `docs/`.
 

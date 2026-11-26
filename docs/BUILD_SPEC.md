@@ -61,3 +61,13 @@ Same sections as `agents/writing-specialist.md`: frontmatter (name, description 
 ## House style for every file
 
 Plain words. Sentence-case headings. No em dashes, no emoji, no "it's not X, it's Y" sentences, no filler intros or summary endings. Short sentences. Examples beat adjectives.
+
+## Senior layer (added 2026-11-26)
+
+Each craft skill gets `references/senior.md`. It adds to the skill; nothing existing is removed.
+
+- About 900 words, hard cap 1,100. Sections by sub-area.
+- Each rule has four parts: the rule, why, a pass/fail check, and a source tag: `[verified: URL]` for a page that was opened, `[practice]` for common professional practice with no opened source. Never quote a number tagged `[practice]` as fact.
+- Ends with "Build on" (installed skills to use when present, each with an inline fallback in one line) and "Credits" (any text adapted from an MIT or Apache-2.0 skill, with its name and licence). Skills with no licence may be linked or paraphrased, never copied.
+- SKILL.md gets one "Read when" row: `| Big job, senior review, or the user asks for senior-level work | references/senior.md |`. Nothing else in SKILL.md changes.
+- rubric.md gets a "Senior checks" section of 3 to 5 checks with IDs S1 to S5. They apply only when the brief is a full project or the user asks for a senior review, and they never change the verdict rule for ordinary work.

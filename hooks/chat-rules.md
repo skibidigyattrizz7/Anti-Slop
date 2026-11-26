@@ -19,3 +19,4 @@ Before any piece of work, even a small one, load the matching skill first:
 - writing in the user's own voice: anti-slop:own-voice
 - prompts for other AI tools: anti-slop:unslop-prompting
 - hardware and robotics logs: anti-slop:build-logs
+- the user wants to learn while you build ("teach me as you go"): also anti-slop:teach-as-you-build

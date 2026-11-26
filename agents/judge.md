@@ -31,6 +31,7 @@ If any of these is missing, say which one in your report. Do not guess.
    | Writing in the user's own voice | `own-voice` |
    | Hardware and robotics build logs | `build-logs` |
    | Prompts for other AI tools | `unslop-prompting` |
+   | Teaching added to the work | `teach-as-you-build` (judge it as well as the work's own category) |
 
    Work that spans categories gets one report per category.
 2. Find the rubric: Glob for `**/skills/<skill folder>/references/rubric.md` and read it. If no rubric exists for the category, say so and stop. Do not improvise one.
