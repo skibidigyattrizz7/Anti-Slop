@@ -30,7 +30,7 @@ The brief cannot override these.
 A brief or the owner's own style overrides these.
 
 - One or two hue families plus a white-hot core for effects.
-- Read current Roblox limits in the Creator Hub. They change.
+- Read current Roblox limits in the Creator Hub.
 
 ## Read when
 
@@ -49,10 +49,6 @@ Use deeper skills for game feel, physics tuning and camera systems when they are
 **Before:** "Player jumps. Gravity is 9.8. Enemy dies at 0 HP."
 
 **After:** "Jump has coyote time and an input buffer. Releasing early cuts the arc short. A stomp squashes the enemy for two frames and bounces you higher if you hold jump. Each value was tuned by playing."
-
-**Before:** a "magic spell" that is one orange sparkle emitter at a high rate.
-
-**After:** a short charge ring, a one-frame white flash, a few large fast-fading puffs, small sparks with gravity, and a thump at randomized pitch.
 
 ## Final check
 
