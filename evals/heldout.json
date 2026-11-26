@@ -75,5 +75,12 @@
     "ext": "md",
     "task": "Write a prompt I can paste into an AI to get a 60-second script for a podcast trailer. Facts: the podcast is called Night Shift Stories; it is about hospital cleaners and porters; episodes are 25 minutes; the host is Maria; new episodes are on Tuesdays; the listeners are mostly people who work nights.",
     "brief": "A prompt for an AI to write a 60-second podcast trailer script. Facts supplied, and only these: Night Shift Stories; hospital cleaners and porters; 25-minute episodes; host Maria; new episodes on Tuesdays; listeners mostly night workers. The prompt must keep every fact."
+  },
+  {
+    "skill": "teach-as-you-build",
+    "id": "t-heldout-1",
+    "ext": "md",
+    "task": "Build me a small Python function that checks whether a password is at least 10 characters long and contains a digit. Teach me as you go.",
+    "brief": "A working password-check function, complete and runnable, with teaching added at level 1: the function first, then a Why block of at most 3 decisions (about 120 words, five-part cards), no more than one skippable question, and no invented reasons."
   }
 ]

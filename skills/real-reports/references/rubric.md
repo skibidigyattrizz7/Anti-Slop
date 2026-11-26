@@ -31,6 +31,18 @@ Used by the judge agent and for self-checks. Each check is PASS, FAIL or N/A. A 
 
 Report the score (passes out of applicable checks) with the verdict, never alone. Name what you could not verify.
 
+## Senior checks
+
+Apply only when the brief is a full project or the user asks for a senior review. They never change the verdict rule above for ordinary work. Report them beside the score, not inside it.
+
+| ID | Check | PASS when | FAIL when |
+|---|---|---|---|
+| S1 | Decision and structure | The decision is stated first, and the sections follow an issue tree with no overlap and no gap | The report starts from the data, or sections overlap or leave out part of the question |
+| S2 | Plan and base rates | A hypothesis and what would overturn it are stated. Every comparison made is listed. Each percentage has its base and who is missing from the sample | Only the comparisons that worked are shown, or a percentage has no base |
+| S3 | Splits and uncertainty | A likely confounder was checked and a flip is shown. Uncertainty is in plain words and charted only when it changes the reading | One headline cut is treated as settled, or a bare p-value or standard error stands alone |
+| S4 | Chart and deck craft | Chart type follows the question, titles state the takeaway, labels are direct. Titles alone tell the story | Topic-label titles, a colour key where direct labels fit, or a slide that fails the sorter test |
+| S5 | Models and "we don't know" | Model inputs are separate and labelled, with no typed constants in formulas and a visible check. Open questions use the five-part form | Hardcodes in formulas, no check row, or an unknown hedged instead of answered with a next step |
+
 ## Guards
 
 - Judge the text, never who or what wrote it.
